@@ -808,15 +808,22 @@
   position: relative;
 }
 .design-process-title {
-  font-size: var(--fds-fs-900);
-  line-height: 2rem;
+  font-size: 40px;
+  line-height: 47px;
   color: var(--fds-green);
 }
 .design-process-sub-title {
-  font-size: var(--fds-fs-600);
-  line-height: var(--fds-fs-710);
+  font-size: 20px;
+  line-height: 24px;
   color: var(--fds-grey-700);
 }
+
+.design-process-subtitle {
+  font-size: 30px;
+  line-height: 35px;
+  font-weight: 500;
+}
+
 .specification-content-design-process {
   margin-left: 0px;
   border-left: 2px solid var(--fds-green);
@@ -959,18 +966,31 @@
     transform: translateY(-50%);
     width: 350px;
   }
+  .desktop-step-2-img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 350px;
+  }
   .mobile-horizontal-scroll {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     overflow-x: hidden;
   }
   .design-process-title {
-    font-size: 3.75rem;
-    line-height: 3.375rem;
+    font-size: 75px;
+    line-height: 89px;
   }
   .design-process-sub-title {
-    font-size: var(--fds-fs-905);
-    line-height: var(--fds-fs-925);
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .design-process-subtitle {
+    font-size: 28px;
+    line-height: 33px;
   }
   .padding-left-5 {
     padding-left: 5rem;
@@ -1059,6 +1079,11 @@
     line-height: var(--fds-fs-750);
   }
   .desktop-step-1-img {
+    width: auto;
+    height: 100%;
+  }
+
+  .desktop-step-2-img {
     width: auto;
   }
   .accordion-variation .accordion-body .col-lg {
