@@ -528,7 +528,7 @@
   font-size: 24px;
   line-height: 1.1;
   margin-bottom: 2rem;
-  border-bottom: 0.5px solid #707070;
+  border-bottom: 0.5px solid #7070704f;
   padding-bottom: 1rem;
 }
 
@@ -564,28 +564,6 @@
 
 .titanSliderDetailsUpper {
   border-bottom: 0.5px solid #707070;
-  margin-bottom: 1.5rem;
-}
-
-.apple-logo {
-  display: block;
-  width: 100%;
-  max-width: 150px;
-  margin-inline: auto;
-  margin-bottom: 2rem;
-}
-
-.apple-quote {
-  font-size: 26px;
-  line-height: 32px;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.steve-title {
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
   margin-bottom: 1.5rem;
 }
 
@@ -671,18 +649,6 @@
   .design-details-wrapper .sub-title {
     font-size: 11px;
     text-align: center;
-  }
-  .design-details-grid {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  .design-details-wrapper {
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .detail-header-text {
-    border-bottom: unset;
-    padding-bottom: unset;
   }
 
   .text-column__desc {
