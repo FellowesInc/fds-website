@@ -313,8 +313,7 @@
 }
 
 .titanSliderThumbnails {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
   gap: 3px;
 }
 
