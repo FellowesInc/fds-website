@@ -314,6 +314,7 @@
 
 .titanSliderThumbnails {
   display: flex;
+  flex-wrap: nowrap;
   gap: 3px;
 }
 
