@@ -306,6 +306,11 @@ img.kata-prod-item-img {
   z-index: -1;
 }
 
+img.monitor-mounts-item-img {
+  display: block;
+  max-width: 100%;
+}
+
 @media (max-width: 991.9px) {
   .options-color-wrapper {
     grid-template-columns: 1fr 1fr 1fr;
