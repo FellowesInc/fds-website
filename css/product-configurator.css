@@ -24,6 +24,11 @@
   margin-bottom: 0.5rem;
 }
 
+.config-item__title {
+  font-weight: 700;
+  font-size: 12px;
+}
+
 .prod-grid-item {
   background-color: #efefef;
   padding: 1rem;
