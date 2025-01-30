@@ -2271,20 +2271,24 @@
       <!-- Start your project here-->
 
       <!-- Hero Section -->
-      <section class="band position-relative dark-img-overlay">
-        <img src="./img/product-configurator/header-img-desktop.jpg" class="img-fluid w-100 d-none d-sm-block" />
-        <img src="./img/product-configurator/header-img-mobile.jpg" class="img-fluid w-100 d-sm-none" />
-        <div class="header-banner-text">
-          <h1 class="banner-text__header">Configurator</h1>
+      <section class="hero-section band position-relative dark-img-overlay">
+        <div class="placeholder-glow position-relative">
+          <div class="header-img placeholder"></div>
+          <div class="header-banner-text">
+            <h1 class="placeholder banner-text__header col-8"></h1>
+          </div>
         </div>
+
       </section>
 
       <!-- Page Title & Description -->
 
-      <section class="pt-5 pb-4 px-4 text-center">
-        <h1 class="page_title">Select One</h1>
-        <div class="page_description">
-          Select an image below to customize in 3D and see pricing.
+      <section class="title-section pt-5 pb-4 px-4 text-center">
+        <div class="placeholder-glow d-flex flex-column">
+          <h1 class="page_title placeholder col-3 mx-auto">Select One</h1>
+          <div class="page_description placeholder col-6 mx-auto">
+            Select an image below to customize in 3D and see pricing.
+          </div>
         </div>
       </section>
 
@@ -2306,29 +2310,57 @@
                 </div>
               </div>
             </div>
-            <div class="filter-section__filter-wrapper">
-              <div class="filter-section__block">
-                <div class="filter-header">
-                  <div>Office Front Sizes</div>
+            <div id="prod-config-filters" class="filter-section__filter-wrapper">
+              <div class="placeholder-glow">
+                <div class="filter-section__block">
+                  <div class="placeholder placeholder-lg col-7 filter-header"></div>
+                  <div class="filters">
+                    <div class="form-check gap-1">
+                      <div class="placeholder col-1"></div>
+                      <label class="form-check-label placeholder col-3"></label>
+                    </div>
+                    <div class="form-check gap-1">
+                      <div class="placeholder col-1"></div>
+                      <label class="form-check-label placeholder col-3"></label>
+                    </div>
+                    <div class="form-check gap-1">
+                      <div class="placeholder col-1"></div>
+                      <label class="form-check-label placeholder col-3"></label>
+                    </div>
+                  </div>
                 </div>
-                <div class="filters">
-                  <div class="form-check">
-                    <input name="office-front-size-filter" class="filter-form-check-input form-check-input rounded-0" type="checkbox" value="" id="eight-foot" />
-                    <label class="form-check-label" for="eight-foot">
-                      8'
-                    </label>
+                <div class="filter-section__block">
+                  <div class="placeholder placeholder-lg col-7 filter-header"></div>
+                  <div class="filters">
+                    <div class="form-check gap-1">
+                      <div class="placeholder col-1"></div>
+                      <label class="form-check-label placeholder col-3"></label>
+                    </div>
+                    <div class="form-check gap-1">
+                      <div class="placeholder col-1"></div>
+                      <label class="form-check-label placeholder col-3"></label>
+                    </div>
+                    <div class="form-check gap-1">
+                      <div class="placeholder col-1"></div>
+                      <label class="form-check-label placeholder col-3"></label>
+                    </div>
                   </div>
-                  <div class="form-check">
-                    <input name="office-front-size-filter" class="filter-form-check-input form-check-input rounded-0" type="checkbox" value="" id="ten-foot" />
-                    <label class="form-check-label" for="ten-foot">
-                      10'
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input name="office-front-size-filter" class="filter-form-check-input form-check-input rounded-0" type="checkbox" value="" id="forteen-foot" />
-                    <label class="form-check-label" for="forteen-foot">
-                      14'
-                    </label>
+                </div>
+                <div class="filter-section__block">
+                  <div class="placeholder placeholder-lg col-7 filter-header"></div>
+                  <div class="filters">
+                    <div class="form-check gap-1">
+                      <div class="placeholder col-1"></div>
+                      <label class="form-check-label placeholder col-3"></label>
+                    </div>
+                    <div class="form-check gap-1">
+                      <div class="placeholder col-1"></div>
+                      <label class="form-check-label placeholder col-3"></label>
+                    </div>
+                    <div class="form-check gap-1">
+                      <div class="placeholder col-1"></div>
+                      <label class="form-check-label placeholder col-3"></label>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2342,11 +2374,44 @@
             <div class="results-section__title">RESULTS (<span id="results-count">6</span>)</div>
           </div>
 
-          <!-- Product Listing Container -->
-          <div class="results-section plp-inner-wrapper">
+          <!-- Configurator Listing Container -->
+          <div class="results-section config-item-wrapper">
 
-            <div class="prod-config-item">
-              Configurator Items will go here eventually
+            <div class="config-item">
+              <img src="./img/product-configurator/typical-img-1.jpg" alt="8' Frameless Front and Swing Door" class="config-item__img w-100">
+              <div class="config-item__title">
+                8' Frameless Front and Swing Door
+              </div>
+            </div>
+            <div class="config-item">
+              <img src="./img/product-configurator/typical-img-2.jpg" alt="8' with Framed Front and Frameless Sliding Door" class="config-item__img w-100">
+              <div class="config-item__title">
+                8' with Framed Front and Frameless Sliding Door
+              </div>
+            </div>
+            <div class="config-item">
+              <img src="./img/product-configurator/typcial-img-3.jpg" alt="8' Frameless Front and Frameless Sliding Door" class="config-item__img w-100">
+              <div class="config-item__title">
+                8' Frameless Front and Frameless Sliding Door
+              </div>
+            </div>
+            <div class="config-item">
+              <img src="./img/product-configurator/typical-img-1.jpg" alt="8' Frameless Front and Swing Door" class="config-item__img w-100">
+              <div class="config-item__title">
+                8' Frameless Front and Swing Door
+              </div>
+            </div>
+            <div class="config-item">
+              <img src="./img/product-configurator/typical-img-2.jpg" alt="8' with Framed Front and Frameless Sliding Door" class="config-item__img w-100">
+              <div class="config-item__title">
+                8' with Framed Front and Frameless Sliding Door
+              </div>
+            </div>
+            <div class="config-item">
+              <img src="./img/product-configurator/typcial-img-3.jpg" alt="8' Frameless Front and Frameless Sliding Door" class="config-item__img w-100">
+              <div class="config-item__title">
+                8' Frameless Front and Frameless Sliding Door
+              </div>
             </div>
             
           </div>
@@ -2537,7 +2602,7 @@
     <script type="text/javascript" src="./js/core.js"></script>
     <script type="text/javascript" src="./js/desktop.js"></script>
     <script type="text/javascript" src="./js/mobile.js"></script>
-    <script type="text/javascript" src="./js/subcategory.js"></script>
     <script type="text/javascript" src="./js/product-configurator.js"></script>
+    <script type="text/javascript" src="./js/subcategory.js"></script>
   </body>
 </html>
