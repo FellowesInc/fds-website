@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Product Configurator Template</title>
+    <title>Product Configurator Landing Template</title>
     <!-- MDB icon -->
     <link rel="icon" href="./img/Favicon.ico" type="image/x-icon" />
     <!-- Font Awesome -->
@@ -2272,11 +2272,11 @@
 
       <!-- Hero Section -->
       <section class="hero-section band position-relative dark-img-overlay">
-        <div class="placeholder-glow position-relative">
-          <div class="header-img placeholder"></div>
-          <div class="header-banner-text">
-            <h1 class="placeholder banner-text__header col-8"></h1>
-          </div>
+
+        <img src="./img/product-configurator-landing/header-desktop-img.jpg" class="header-img img-fluid w-100 d-none d-sm-block" />
+        <img src="./img/product-configurator-landing/header-mobile-img.jpg" class="header-img img-fluid w-100 d-sm-none" />
+        <div class="header-banner-text">
+          <h1 class="banner-text__header">Product Configurator</h1>
         </div>
 
       </section>
@@ -2284,170 +2284,30 @@
       <!-- Page Title & Description -->
 
       <section class="title-section pt-5 pb-4 px-4 text-center">
-        <div class="placeholder-glow d-flex flex-column">
-          <h2 class="page_title placeholder col-3 mx-auto">Select One</h2>
-          <div class="page_description placeholder col-6 mx-auto">
-            Select an image below to customize in 3D and see pricing.
-          </div>
+        <div class="d-flex flex-column">
+          <h2 class="page_title mx-auto">Customize your Perfect Solution</h2>
         </div>
       </section>
 
-      <!-- Product Listing Section -->
+      <!-- Product Grid Section -->
 
-      <section class="plp-ci-section plp-section plp-horizontal d-flex container pb-3">
-        <div class="filter-section">
-          <form action="" method="post">
-            <div class="filter-section__header d-flex justify-content-between align-content-center flex-wrap">
-              <div class="filter-section__title">FILTER</div>
-              <div class="filter-section__wrapper">
-                <div class="filter-section__btn-wrapper">
-                  <button class="filter-section__BTN filter-submit-btn fds-tan-bg btn btn-rounded text-black shadow-0" type="submit">Apply Filters</button>
-                  <button class="filter-section__BTN filter-clear-btn fds-tan-bg btn btn-rounded text-black shadow-0" type="reset">Clear All</button>
-                </div>
-                <div class="filter-header__icons d-lg-none">
-                  <i class="filter-icon filter-open fa-solid fa-chevron-down"></i>
-                  <i class="filter-icon filter-close fa-solid fa-xmark"></i>
-                </div>
-              </div>
-            </div>
-            <div id="prod-config-filters" class="filter-section__filter-wrapper">
-              <div class="placeholder-glow">
-                <div class="filter-section__block">
-                  <div class="placeholder placeholder-lg col-7 filter-header"></div>
-                  <div class="filters">
-                    <div class="form-check gap-1">
-                      <div class="placeholder col-1"></div>
-                      <label class="form-check-label placeholder col-3"></label>
-                    </div>
-                    <div class="form-check gap-1">
-                      <div class="placeholder col-1"></div>
-                      <label class="form-check-label placeholder col-3"></label>
-                    </div>
-                    <div class="form-check gap-1">
-                      <div class="placeholder col-1"></div>
-                      <label class="form-check-label placeholder col-3"></label>
-                    </div>
-                  </div>
-                </div>
-                <div class="filter-section__block">
-                  <div class="placeholder placeholder-lg col-7 filter-header"></div>
-                  <div class="filters">
-                    <div class="form-check gap-1">
-                      <div class="placeholder col-1"></div>
-                      <label class="form-check-label placeholder col-3"></label>
-                    </div>
-                    <div class="form-check gap-1">
-                      <div class="placeholder col-1"></div>
-                      <label class="form-check-label placeholder col-3"></label>
-                    </div>
-                    <div class="form-check gap-1">
-                      <div class="placeholder col-1"></div>
-                      <label class="form-check-label placeholder col-3"></label>
-                    </div>
-                  </div>
-                </div>
-                <div class="filter-section__block">
-                  <div class="placeholder placeholder-lg col-7 filter-header"></div>
-                  <div class="filters">
-                    <div class="form-check gap-1">
-                      <div class="placeholder col-1"></div>
-                      <label class="form-check-label placeholder col-3"></label>
-                    </div>
-                    <div class="form-check gap-1">
-                      <div class="placeholder col-1"></div>
-                      <label class="form-check-label placeholder col-3"></label>
-                    </div>
-                    <div class="form-check gap-1">
-                      <div class="placeholder col-1"></div>
-                      <label class="form-check-label placeholder col-3"></label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </form>
-        </div>
-
-        <div class="product-listing-section">
-
-          <div class="results-section-counter filter-section__header">
-            <div class="results-section__title">RESULTS (<span id="results-count">6</span>)</div>
+      <section class="py-4 py-lg-5 px-4 text-center">
+        <div class="container prod-grid-section">
+          <div class="prod-grid-item">
+            <img src="./img/product-configurator-landing/solution-img-volo.jpg" alt="Image of a Volo office" class="prod-item__img w-100">
+            <h3 class="prod-item__title">Volo</h3>
           </div>
-
-          <!-- Configurator Listing Container -->
-          <div id="configResults" class="results-section config-item-wrapper">
-
-            <div class="config-item placeholder-glow">
-              <div class="config-item__img w-100 placeholder"></div>
-              <div class="config-item__title placeholder">
-                8' Frameless Front and Swing Door
-              </div>
-            </div>
-            <div class="config-item placeholder-glow">
-              <div class="config-item__img w-100 placeholder"></div>
-              <div class="config-item__title placeholder">
-                8' Frameless Front and Swing Door
-              </div>
-            </div>
-            <div class="config-item placeholder-glow">
-              <div class="config-item__img w-100 placeholder"></div>
-              <div class="config-item__title placeholder">
-                8' Frameless Front and Swing Door
-              </div>
-            </div>
-            <div class="config-item placeholder-glow">
-              <div class="config-item__img w-100 placeholder"></div>
-              <div class="config-item__title placeholder">
-                8' Frameless Front and Swing Door
-              </div>
-            </div>
-            <div class="config-item placeholder-glow">
-              <div class="config-item__img w-100 placeholder"></div>
-              <div class="config-item__title placeholder">
-                8' Frameless Front and Swing Door
-              </div>
-            </div>       
+          <div class="prod-grid-item">
+            <img src="./img/product-configurator-landing/solution-img-markerboard.jpg" alt="Image of a markerboard in an office" class="prod-item__img w-100">
+            <h3 class="prod-item__title">Markerboard</h3>
           </div>
-
-          <!-- Data Loading Container -->
-          <div class="loading-section config-item-wrapper position-relative">
-
-            <div class="config-item placeholder-glow">
-              <div class="config-item__img w-100 placeholder"></div>
-              <div class="config-item__title placeholder">
-                8' Frameless Front and Swing Door
-              </div>
-            </div>
-            <div class="config-item placeholder-glow">
-              <div class="config-item__img w-100 placeholder"></div>
-              <div class="config-item__title placeholder">
-                8' Frameless Front and Swing Door
-              </div>
-            </div>
-            <div class="config-item placeholder-glow">
-              <div class="config-item__img w-100 placeholder"></div>
-              <div class="config-item__title placeholder">
-                8' Frameless Front and Swing Door
-              </div>
-            </div>
-            <div class="config-item placeholder-glow">
-              <div class="config-item__img w-100 placeholder"></div>
-              <div class="config-item__title placeholder">
-                8' Frameless Front and Swing Door
-              </div>
-            </div>
-            <div class="config-item placeholder-glow">
-              <div class="config-item__img w-100 placeholder"></div>
-              <div class="config-item__title placeholder">
-                8' Frameless Front and Swing Door
-              </div>
-            </div> 
-
-            <div class="loading-spinner">
-              <div class="spinner-border text-dark" role="status">
-                <span class="visually-hidden">Loading...</span>
-              </div>
-            </div>
+          <div class="prod-grid-item">
+            <img src="./img/product-configurator-landing/solution-img-rising.jpg" alt="Image of a Rising Monitor Arm" class="prod-item__img w-100">
+            <h3 class="prod-item__title">Rising Monitor Arms</h3>
+          </div>
+          <div class="prod-grid-item">
+            <img src="./img/product-configurator-landing/solution-img-sena.jpg" alt="Image of a Sena Monitor Arm" class="prod-item__img w-100">
+            <h3 class="prod-item__title">Sena Monitor Arms</h3>
           </div>
         </div>
       </section>
@@ -2589,7 +2449,5 @@
     <script type="text/javascript" src="./js/core.js"></script>
     <script type="text/javascript" src="./js/desktop.js"></script>
     <script type="text/javascript" src="./js/mobile.js"></script>
-    <script type="text/javascript" src="./js/product-configurator.js"></script>
-    <script type="text/javascript" src="./js/subcategory.js"></script>
   </body>
 </html>

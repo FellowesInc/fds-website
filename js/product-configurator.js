@@ -29,7 +29,7 @@ $(window).on('load', function () {
     var prodConfigTitleSection = '';
 
     if (prodConfigData.pageTitle != '') {
-      prodConfigTitleSection += '<h1 class="page_title">' + prodConfigData.pageTitle + '</h1><div class="page_description">' + prodConfigData.pageDesc + '</div>';
+      prodConfigTitleSection += '<h2 class="page_title">' + prodConfigData.pageTitle + '</h2><div class="page_description">' + prodConfigData.pageDesc + '</div>';
 
       $('.title-section').html(prodConfigTitleSection);
     }
@@ -132,19 +132,46 @@ $(window).on('load', function () {
   // Define Data Object
   var configResults = [
     {
-      resImgUrl: '',
-      resImgAlt: '',
-      resTitle: '',
+      resImgUrl: 'https://raw.githubusercontent.com/FellowesInc/fds-website/refs/heads/main/img/product-configurator/typical-img-1.jpg',
+      resImgAlt: "8' Frameless Front and Swing Door",
+      resTitle: "8' Frameless Front and Swing Door",
     },
     {
-      resImgUrl: '',
-      resImgAlt: '',
-      resTitle: '',
+      resImgUrl: 'https://raw.githubusercontent.com/FellowesInc/fds-website/refs/heads/main/img/product-configurator/typical-img-2.jpg',
+      resImgAlt: "8' with Framed Front and Frameless Sliding Door",
+      resTitle: "8' with Framed Front and Frameless Sliding Door",
     },
     {
-      resImgUrl: '',
-      resImgAlt: '',
-      resTitle: '',
+      resImgUrl: 'https://raw.githubusercontent.com/FellowesInc/fds-website/refs/heads/main/img/product-configurator/typcial-img-3.jpg',
+      resImgAlt: "8' Frameless Front and Frameless Sliding Door",
+      resTitle: "8' Frameless Front and Frameless Sliding Door",
+    },
+    {
+      resImgUrl: 'https://raw.githubusercontent.com/FellowesInc/fds-website/refs/heads/main/img/product-configurator/typical-img-1.jpg',
+      resImgAlt: "8' Frameless Front and Swing Door",
+      resTitle: "8' Frameless Front and Swing Door",
+    },
+    {
+      resImgUrl: 'https://raw.githubusercontent.com/FellowesInc/fds-website/refs/heads/main/img/product-configurator/typical-img-2.jpg',
+      resImgAlt: "8' with Framed Front and Frameless Sliding Door",
+      resTitle: "8' with Framed Front and Frameless Sliding Door",
+    },
+    {
+      resImgUrl: 'https://raw.githubusercontent.com/FellowesInc/fds-website/refs/heads/main/img/product-configurator/typcial-img-3.jpg',
+      resImgAlt: "8' Frameless Front and Frameless Sliding Door",
+      resTitle: "8' Frameless Front and Frameless Sliding Door",
     },
   ];
+
+  if (configResults != '') {
+    // Setup Config Results section if there is data in the configResults data object
+
+    var configResultsSection = '';
+
+    $.each(configResults, function (index, configResult) {
+      configResultsSection += '<div class="config-item"><img src="' + configResult.resImgUrl + '" alt="' + configResult.resImgAlt + '" class="config-item__img w-100"><div class="config-item__title">' + configResult.resTitle + '</div></div>';
+    });
+
+    $('#configResults').html(configResultsSection);
+  }
 });
