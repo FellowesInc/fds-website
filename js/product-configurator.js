@@ -4,7 +4,7 @@ $(window).on('load', function () {
   // Setup Data Object
   var prodConfigData = '';
 
-  // Define Data Object
+  // // Define Data Object
   var prodConfigData = {
     heroDesktopUrl: 'https://raw.githubusercontent.com/FellowesInc/fds-website/40c5c99130d25ca3b731e1abf5ad64ca01eded8d/img/product-configurator/header-img-desktop.jpg',
     heroMobileUrl: 'https://raw.githubusercontent.com/FellowesInc/fds-website/40c5c99130d25ca3b731e1abf5ad64ca01eded8d/img/product-configurator/header-img-mobile.jpg',
@@ -114,7 +114,7 @@ $(window).on('load', function () {
 
       if (filter.checkboxes != 0) {
         $.each(filter.checkboxes, function (index, checkbox) {
-          prodConfigFilterSection += "<div class='form-check'><input name='office-front-size-filter' class='filter-form-check-input form-check-input rounded-0' type='checkbox' value='' id='" + checkbox.checkboxId + "' /><label class='form-check-label' for='" + checkbox.checkboxId + "'></label>" + checkbox.checkboxLabel + '</div>';
+          prodConfigFilterSection += "<div class='form-check'><input name='" + filter.slug + "' class='filter-form-check-input form-check-input rounded-0' type='checkbox' value='' id='" + checkbox.checkboxId + "' /><label class='form-check-label' for='" + checkbox.checkboxId + "'></label>" + checkbox.checkboxLabel + '</div>';
         });
       }
 
