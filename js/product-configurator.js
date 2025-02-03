@@ -1,177 +1,156 @@
 $(window).on('load', function () {
-  // Header and Title Functionality
+  // Setup JSON data fetch
+  fetch('./data/ConfiguratorDataStructure.json')
+    .then((response) => response.json())
+    .then((data) => {
+      // Filter data with URL Param
 
-  // Setup Data Object
-  var prodConfigData = '';
+      const prodId = getUrlParams().id ?? 0;
+      let prodData = data.configurator.products;
 
-  // // Define Data Object
-  var prodConfigData = {
-    heroDesktopUrl: 'https://raw.githubusercontent.com/FellowesInc/fds-website/40c5c99130d25ca3b731e1abf5ad64ca01eded8d/img/product-configurator/header-img-desktop.jpg',
-    heroMobileUrl: 'https://raw.githubusercontent.com/FellowesInc/fds-website/40c5c99130d25ca3b731e1abf5ad64ca01eded8d/img/product-configurator/header-img-mobile.jpg',
-    bannerTitle: 'Volo Configurator',
-    pageTitle: 'Select a Volo Typical',
-    pageDesc: 'Select an image below to customize in 3D and see pricing.',
-  };
+      function getUrlParams() {
+        let result = []; // [] empty array at the start
 
-  // Setup the Hero Image section if there is data in the prodConfigData object
+        const stringArray = location.search // "?id=number&other=string&another=string" , this get the last part of the URL
+          .substring(1) // delete the "?" character from the location.search
+          .split('&'); // ["id=number", "other=string", "another=string"]
 
-  if (prodConfigData != '') {
-    var prodConfigHeader = '';
+        stringArray.forEach((string) => {
+          result.push(string.split('='));
+        }); // [[id, number], [other, string], [another, string]]
 
-    if (prodConfigData.heroDesktopUrl != '') {
-      prodConfigHeader += '<img src="' + prodConfigData.heroDesktopUrl + '" class="header-img img-fluid w-100 d-none d-sm-block" /><img src="' + prodConfigData.heroMobileUrl + '" class="header-img img-fluid w-100 d-sm-none" /><div class="header-banner-text"><h1 class="banner-text__header">' + prodConfigData.bannerTitle + '</h1></div>';
+        return Object.fromEntries(result); // {id: number, other: string, another: string}
+      }
 
-      $('.hero-section').html(prodConfigHeader);
-    }
+      const filteredData = prodData
+        .filter((product) => {
+          return product.id === prodId;
+        })
+        .map((product) => {
+          return product.data;
+        });
 
-    // Setup The Title Section Dynamically if there is data in the prodConfigData object
+      // Header and Title Functionality
 
-    var prodConfigTitleSection = '';
+      // Setup the Hero Image section if there is data in the prodConfigData object
+      let hero = filteredData[0].hero_section;
 
-    if (prodConfigData.pageTitle != '') {
-      prodConfigTitleSection += '<h2 class="page_title">' + prodConfigData.pageTitle + '</h2><div class="page_description">' + prodConfigData.pageDesc + '</div>';
+      function displayHeader(hero) {
+        let prodConfigHeader = '';
 
-      $('.title-section').html(prodConfigTitleSection);
-    }
-  }
+        if (hero.desktopImage != '') {
+          prodConfigHeader += '<img src="' + hero.desktopImage + '" class="header-img img-fluid w-100 d-none d-sm-block" alt="' + hero.alt + '" /><img src="' + hero.mobileImage + '" class="header-img img-fluid w-100 d-sm-none" alt="' + hero.alt + '" /><div class="header-banner-text"><h1 class="banner-text__header">' + hero.title + '</h1></div>';
 
-  // Filters Functionality
+          $('.hero-section').html(prodConfigHeader);
+        }
+      }
 
-  // Setup Data Object
-  var filters = '';
+      displayHeader(hero);
 
-  // Define Data Object
-  var filters = [
-    {
-      header: 'Office Front Sizes',
-      slug: 'office-front-size-filter',
-      checkboxes: [
-        {
-          checkboxId: 'eight-foot',
-          checkboxLabel: "8'",
-        },
-        {
-          checkboxId: 'ten-foot',
-          checkboxLabel: "10'",
-        },
-        {
-          checkboxId: 'forteen-foot',
-          checkboxLabel: "14'",
-        },
-      ],
-    },
-    {
-      header: 'Glass Type',
-      slug: 'glass-type-filter',
-      checkboxes: [
-        {
-          checkboxId: 'framed-quarter-inch',
-          checkboxLabel: 'Framed 1/4"',
-        },
-        {
-          checkboxId: 'frameless-half-inch',
-          checkboxLabel: 'Frameless 1/2"',
-        },
-      ],
-    },
-    {
-      header: 'Door Type',
-      slug: 'door-type-filter',
-      checkboxes: [
-        {
-          checkboxId: 'sliding-door',
-          checkboxLabel: 'Sliding Door',
-        },
-        {
-          checkboxId: 'swing-door',
-          checkboxLabel: 'Swing Door',
-        },
-      ],
-    },
-    {
-      header: 'Model Type',
-      slug: 'model-type-filter',
-      checkboxes: [
-        {
-          checkboxId: 'front-only',
-          checkboxLabel: 'Front Only',
-        },
-        {
-          checkboxId: 'front-and-side',
-          checkboxLabel: 'Front and 1 side',
-        },
-      ],
-    },
-  ];
+      // Setup The Title Section Dynamically if there is data in the prodConfigData object
 
-  if (filters != '') {
-    // Setup the repeating Filter section if there is data in the filters object
+      let pageTitle = filteredData[0].page_title;
+      let pageDesc = filteredData[0].page_description;
 
-    var prodConfigFilterSection = '';
+      function displayTitles(title, descr) {
+        let prodConfigTitleSection = '';
 
-    $.each(filters, function (index, filter) {
-      prodConfigFilterSection += "<div class='filter-section__block'><div class='filter-header'>" + filter.header + "</div><div class='filters'>";
+        if (title != '') {
+          prodConfigTitleSection += '<h2 class="page_title">' + pageTitle + '</h2><div class="page_description">' + pageDesc + '</div>';
 
-      if (filter.checkboxes != 0) {
-        $.each(filter.checkboxes, function (index, checkbox) {
-          prodConfigFilterSection += "<div class='form-check'><input name='" + filter.slug + "' class='filter-form-check-input form-check-input rounded-0' type='checkbox' value='' id='" + checkbox.checkboxId + "' /><label class='form-check-label' for='" + checkbox.checkboxId + "'></label>" + checkbox.checkboxLabel + '</div>';
+          $('.title-section').html(prodConfigTitleSection);
+        }
+      }
+
+      displayTitles(pageTitle, pageDesc);
+
+      // Filters Functionality
+
+      // Setup the repeating Filter section if there is data in the filters object
+      let filters = filteredData[0].filters;
+
+      function displayFilters(filters) {
+        let prodConfigFilterSection = '';
+
+        $.each(filters, function (index, filter) {
+          prodConfigFilterSection += "<div class='filter-section__block'><div class='filter-header'>" + filter.name + "</div><div class='filters'>";
+
+          if (filter.options != 0) {
+            $.each(filter.options, function (index, checkbox) {
+              prodConfigFilterSection += "<div class='form-check'><input name='" + filter.slug + "' class='filter-checkbox filter-form-check-input form-check-input rounded-0' type='checkbox' value='' id='" + checkbox.checkboxId + "' data-feature='" + checkbox.checkboxId + "' /><label class='form-check-label' for='" + checkbox.checkboxId + "'></label>" + checkbox.checkboxLabel + '</div>';
+            });
+          }
+
+          prodConfigFilterSection += '</div></div>';
+        });
+
+        $('#prod-config-filters').html(prodConfigFilterSection);
+      }
+
+      displayFilters(filters);
+
+      // Config Results Functionality
+
+      // Setup Config Results section if there is data in the configResults data object
+      let results = filteredData[0].results;
+
+      function displayProducts(results) {
+        let configResultsSection = '';
+
+        $.each(results, function (index, configResult) {
+          configResultsSection += '<a href="' + configResult.url + '" class="config-item"><img src="' + configResult.image + '" alt="' + configResult.alt + '" class="config-item__img w-100"><img src="' + configResult.imageHover + '" alt="' + configResult.alt + '" class="config-item__img-hover w-100"><div class="config-item__title">' + configResult.title + '</div></a>';
+        });
+
+        $('#configResults').html(configResultsSection);
+
+        //Update Results Count
+        let resultsCount = document.querySelector('#results-count');
+        $(resultsCount).html(results.length);
+
+        //Animated image on hover functionality
+        let resultWrappers = document.querySelectorAll('a.config-item');
+
+        resultWrappers.forEach((resultWrapper) => {
+          $(resultWrapper)
+            .on('mouseenter', function () {
+              resultWrapper.classList.add('show');
+            })
+            .on('mouseleave', function () {
+              resultWrapper.classList.remove('show');
+            });
         });
       }
 
-      prodConfigFilterSection += '</div></div>';
+      displayProducts(results);
+
+      // Filtering of Results functionality starts here
+
+      const checkboxes = document.querySelectorAll('.filter-checkbox');
+
+      checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener('change', () => {
+          // Collect selected features
+          let selectedFeatures = Array.from(checkboxes)
+            .filter((cb) => cb.checked)
+            .map((cb) => cb.getAttribute('data-feature'));
+
+          // Function to filter products based on selected features
+          filterProducts(selectedFeatures);
+        });
+      });
+
+      function filterProducts(features) {
+        //Filter products that match the selected features
+
+        let filteredProducts = results.filter((product) => {
+          return features.every((feature) => product.filters.includes(feature));
+        });
+
+        displayProducts(filteredProducts);
+      }
+    })
+    .catch((error) => {
+      // Handle any errors
+      console.error('Error:', error);
     });
-
-    $('#prod-config-filters').html(prodConfigFilterSection);
-  }
-
-  // Config Results Functionality
-
-  // Setup Data Object
-  var configResults = '';
-
-  // Define Data Object
-  var configResults = [
-    {
-      resImgUrl: 'https://raw.githubusercontent.com/FellowesInc/fds-website/refs/heads/main/img/product-configurator/typical-img-1.jpg',
-      resImgAlt: "8' Frameless Front and Swing Door",
-      resTitle: "8' Frameless Front and Swing Door",
-    },
-    {
-      resImgUrl: 'https://raw.githubusercontent.com/FellowesInc/fds-website/refs/heads/main/img/product-configurator/typical-img-2.jpg',
-      resImgAlt: "8' with Framed Front and Frameless Sliding Door",
-      resTitle: "8' with Framed Front and Frameless Sliding Door",
-    },
-    {
-      resImgUrl: 'https://raw.githubusercontent.com/FellowesInc/fds-website/refs/heads/main/img/product-configurator/typcial-img-3.jpg',
-      resImgAlt: "8' Frameless Front and Frameless Sliding Door",
-      resTitle: "8' Frameless Front and Frameless Sliding Door",
-    },
-    {
-      resImgUrl: 'https://raw.githubusercontent.com/FellowesInc/fds-website/refs/heads/main/img/product-configurator/typical-img-1.jpg',
-      resImgAlt: "8' Frameless Front and Swing Door",
-      resTitle: "8' Frameless Front and Swing Door",
-    },
-    {
-      resImgUrl: 'https://raw.githubusercontent.com/FellowesInc/fds-website/refs/heads/main/img/product-configurator/typical-img-2.jpg',
-      resImgAlt: "8' with Framed Front and Frameless Sliding Door",
-      resTitle: "8' with Framed Front and Frameless Sliding Door",
-    },
-    {
-      resImgUrl: 'https://raw.githubusercontent.com/FellowesInc/fds-website/refs/heads/main/img/product-configurator/typcial-img-3.jpg',
-      resImgAlt: "8' Frameless Front and Frameless Sliding Door",
-      resTitle: "8' Frameless Front and Frameless Sliding Door",
-    },
-  ];
-
-  if (configResults != '') {
-    // Setup Config Results section if there is data in the configResults data object
-
-    var configResultsSection = '';
-
-    $.each(configResults, function (index, configResult) {
-      configResultsSection += '<div class="config-item"><img src="' + configResult.resImgUrl + '" alt="' + configResult.resImgAlt + '" class="config-item__img w-100"><div class="config-item__title">' + configResult.resTitle + '</div></div>';
-    });
-
-    $('#configResults').html(configResultsSection);
-  }
 });
