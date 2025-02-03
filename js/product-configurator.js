@@ -85,6 +85,40 @@ $(window).on('load', function () {
         });
 
         $('#prod-config-filters').html(prodConfigFilterSection);
+
+        const filterSection = document.querySelector('.filter-section');
+        const mediaQueryMax992 = window.matchMedia('(max-width: 992px)');
+        if (mediaQueryMax992.matches && filterSection) {
+          const clickHeader = document.querySelector('.filter-section__title');
+          const clickIcon = document.querySelectorAll('.filter-icon');
+          const btnWrapper = document.querySelector('.filter-section__btn-wrapper');
+          const filterWrapper = document.querySelector('.filter-section__filter-wrapper');
+          const openIcon = document.querySelector('.filter-open');
+          const closeIcon = document.querySelector('.filter-close');
+          const filterHeader = document.querySelectorAll('.filter-header');
+
+          $(clickHeader).click(function () {
+            $(btnWrapper).toggleClass('show');
+            $(filterWrapper).toggleClass('show');
+            $(closeIcon).toggleClass('show');
+            $(openIcon).toggleClass('hide');
+          });
+          $(clickIcon).click(function () {
+            $(btnWrapper).toggleClass('show');
+            $(filterWrapper).toggleClass('show');
+            $(closeIcon).toggleClass('show');
+            $(openIcon).toggleClass('hide');
+          });
+
+          $(filterHeader).each(function () {
+            $(this).click(function () {
+              const filterSection = $(this).siblings('.filters');
+              $(filterSection).toggleClass('show');
+              $(this).find('.filter-subhead__open').toggleClass('hide');
+              $(this).find('.filter-subhead__close').toggleClass('show');
+            });
+          });
+        }
       }
 
       displayFilters(filters);
@@ -148,6 +182,12 @@ $(window).on('load', function () {
 
         displayProducts(filteredProducts);
       }
+
+      //Clear Filters resets data
+      const filterClear = document.querySelector('#filter-clear-btn');
+      $(filterClear).click(function () {
+        displayProducts(results);
+      });
     })
     .catch((error) => {
       // Handle any errors
