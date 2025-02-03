@@ -130,10 +130,20 @@ $(window).on('load', function () {
 
       function displayProducts(results) {
         let configResultsSection = '';
+        let noResultsWrapper = document.querySelector('#noResults');
+        let noResultsClear = document.querySelector('.no-results__reset');
 
-        $.each(results, function (index, configResult) {
-          configResultsSection += '<a href="' + configResult.url + '" class="config-item"><img src="' + configResult.image + '" alt="' + configResult.alt + '" class="config-item__img w-100"><img src="' + configResult.imageHover + '" alt="' + configResult.alt + '" class="config-item__img-hover w-100"><div class="config-item__title">' + configResult.title + '</div></a>';
-        });
+        if (results != '') {
+          $.each(results, function (index, configResult) {
+            configResultsSection += '<a href="' + configResult.url + '" class="config-item" target="' + configResult.target + '"><img src="' + configResult.image + '" alt="' + configResult.alt + '" class="config-item__img w-100"><img src="' + configResult.imageHover + '" alt="' + configResult.alt + '" class="config-item__img-hover w-100"><div class="config-item__title">' + configResult.title + '</div></a>';
+          });
+        } else {
+          noResultsWrapper.classList.add('show');
+          noResultsClear.addEventListener('click', clearFilters);
+          noResultsClear.addEventListener('click', () => {
+            $(checkboxes).prop('checked', false);
+          });
+        }
 
         $('#configResults').html(configResultsSection);
 
@@ -184,10 +194,12 @@ $(window).on('load', function () {
       }
 
       //Clear Filters resets data
-      const filterClear = document.querySelector('#filter-clear-btn');
-      $(filterClear).click(function () {
+      function clearFilters() {
         displayProducts(results);
-      });
+      }
+
+      const filterClear = document.querySelector('#filter-clear-btn');
+      filterClear.addEventListener('click', clearFilters);
     })
     .catch((error) => {
       // Handle any errors

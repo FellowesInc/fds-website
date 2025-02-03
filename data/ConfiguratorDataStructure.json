@@ -81,6 +81,7 @@
               "imageHover": "https://raw.githubusercontent.com/FellowesInc/fds-website/refs/heads/main/img/product-configurator/typcial-img-1-hover.jpg",
               "alt": "8' Frameless Front and Swing Door",
               "url": "#",
+              "target": "_self",
               "filters": ["eight-foot", "frameless-half-inch", "swing-door", "front-only"]
             },
             {
@@ -89,6 +90,7 @@
               "imageHover": "https://raw.githubusercontent.com/FellowesInc/fds-website/refs/heads/main/img/product-configurator/typical-img-2-hover.jpg",
               "alt": "8' with Framed Front and Frameless Swing Door",
               "url": "#",
+              "target": "_blank",
               "filters": ["ten-foot", "framed-quarter-inch", "swing-door", "front-only"]
             },
             {
@@ -97,6 +99,7 @@
               "imageHover": "https://raw.githubusercontent.com/FellowesInc/fds-website/refs/heads/main/img/product-configurator/typcial-img-3-hover.jpg",
               "alt": "8' with Framed Front and Frameless Swing Door",
               "url": "#",
+              "target": "_self",
               "filters": ["eight-foot", "frameless-half-inch", "swing-door", "front-and-side"]
             },
             {
@@ -105,6 +108,7 @@
               "imageHover": "https://raw.githubusercontent.com/FellowesInc/fds-website/refs/heads/main/img/product-configurator/typcial-img-1-hover.jpg",
               "alt": "8' Frameless Front and Swing Door",
               "url": "#",
+              "target": "_blank",
               "filters": ["eight-foot", "frameless-half-inch", "swing-door", "front-only"]
             },
             {
@@ -113,6 +117,7 @@
               "imageHover": "https://raw.githubusercontent.com/FellowesInc/fds-website/refs/heads/main/img/product-configurator/typical-img-2-hover.jpg",
               "alt": "14' with Framed Front and Frameless Sliding Door",
               "url": "#",
+              "target": "_self",
               "filters": ["forteen-foot", "frameless-half-inch", "sliding-door", "front-only"]
             },
             {
@@ -121,6 +126,7 @@
               "imageHover": "https://raw.githubusercontent.com/FellowesInc/fds-website/refs/heads/main/img/product-configurator/typcial-img-3-hover.jpg",
               "alt": "8' with Frameless Front and Frameless Swing Door",
               "url": "#",
+              "target": "_self",
               "filters": ["eight-foot", "framed-quarter-inch", "swing-door", "front-and-side"]
             }
           ]
