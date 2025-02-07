@@ -156,7 +156,7 @@ span.ci-prod-list-aftertext {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding-block: 1rem;
   opacity: 0.6;
   border: 1px solid var(--fds-tan);
   transition: all 0.3s ease-in-out;
@@ -171,13 +171,14 @@ span.ci-prod-list-aftertext {
 .series-filter-item-img {
   display: block;
   width: 100%;
-  max-width: 100px;
+  max-width: 150px;
 }
 
 .series-filter-title {
   align-self: flex-start;
   font-size: 12px;
   line-height: 14px;
+  padding: 1rem 1rem 0rem 1rem;
 }
 
 .series-filter-section-wrapper {
