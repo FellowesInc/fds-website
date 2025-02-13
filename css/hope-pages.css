@@ -1,0 +1,224 @@
+.mw-1100 {
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+.page-title {
+  font-size: 40px;
+  font-weight: 400;
+  color: #032145;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 40px;
+  font-weight: 400;
+  color: #032145;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.section-text {
+  color: #000;
+  font-size: 18px;
+  line-height: 33px;
+  font-weight: 500;
+}
+
+.blue-btn {
+  width: fit-content;
+  display: block;
+  background-color: #0074bc;
+  color: #d9f3ff;
+  text-transform: capitalize;
+  border-radius: 500px;
+  line-height: 1;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0.75rem 2rem;
+  margin-top: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.blue-btn:hover,
+.blue-btn:focus {
+  background-color: #01558a;
+  color: #d9f3ff;
+}
+
+.video-section {
+  background: rgb(255, 255, 255);
+  background: -moz-linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, rgba(246, 245, 243, 1) 50%);
+  background: -webkit-linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, rgba(246, 245, 243, 1) 50%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, rgba(246, 245, 243, 1) 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#f6f5f3",GradientType=1);
+}
+
+.video-wrapper {
+  cursor: pointer;
+  overflow: hidden;
+  width: 90%;
+  padding-inline: 0;
+}
+
+.video-play-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.video-play-wrapper img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-wrapper video {
+  z-index: 10;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.video-play-wrapper.hide {
+  z-index: -1;
+  opacity: 0;
+}
+
+.video-wrapper video.hide {
+  opacity: 0;
+  z-index: -1;
+}
+
+.hope-date-svg {
+  max-width: 265px;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+}
+
+.hope-date-separator {
+  max-width: 100px;
+  margin-inline: auto;
+}
+
+.step-run-ride-icons {
+  max-width: 350px;
+  margin-inline: auto;
+  margin-block: 2rem;
+}
+
+.events-wrapper {
+  display: grid;
+  gap: 3rem;
+}
+
+.event-item {
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.event-content-wrapper {
+  padding-block: 2rem;
+  padding-inline: 1rem;
+}
+
+.event-title {
+  font-size: 40px;
+  font-weight: 400;
+  color: #032145;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.event-date {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+.event-desc {
+  color: #000;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  margin-top: 2rem;
+}
+
+.event-img-desktop {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .page-title {
+    font-size: 60px;
+    margin-bottom: 3rem;
+  }
+
+  .section-title {
+    font-size: 55px;
+    margin-bottom: 3rem;
+  }
+
+  .section-text {
+    font-size: 26px;
+    line-height: 42px;
+  }
+
+  .blue-btn {
+    padding: 0.75rem 2.5rem;
+    margin-top: 3rem;
+  }
+
+  .video-section {
+    padding-block: 2rem;
+  }
+
+  .hope-date-svg {
+    max-width: 355px;
+    margin-bottom: 3rem;
+  }
+
+  .step-run-ride-icons {
+    margin-block: 4rem 3rem;
+  }
+
+  .events-wrapper {
+    gap: 4rem;
+  }
+
+  .event-item {
+    -webkit-box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .event-title {
+    font-size: 47px;
+    margin-bottom: 0rem;
+  }
+
+  .event-date {
+    font-size: 23px;
+  }
+
+  .event-desc {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 992px) {
+  .events-wrapper {
+    gap: 5rem;
+  }
+
+  .event-content-wrapper {
+    padding-inline: 4rem;
+  }
+
+  .event-desc {
+    padding-bottom: 2rem;
+  }
+}
