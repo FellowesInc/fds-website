@@ -7,6 +7,11 @@
   margin-inline: auto;
 }
 
+.mw-1030 {
+  max-width: 1030px;
+  margin-inline: auto;
+}
+
 .mw-720 {
   max-width: 720px;
   margin-inline: auto;
@@ -195,6 +200,13 @@
   left: 0;
   width: 100%;
   z-index: 0;
+  min-height: 530px;
+  object-fit: cover;
+}
+
+.donation-img {
+  width: 80%;
+  max-width: 680px;
 }
 
 .centered-hero-content {
@@ -208,9 +220,10 @@
 
 .hero-logo {
   width: 100%;
-  max-width: 285px;
   -webkit-margin-start: auto;
   margin-inline-start: auto;
+  filter: drop-shadow(0px 0px 65px rgba(0, 0, 0, 0.75));
+  margin-bottom: 1rem;
 }
 
 .hero-desc {
@@ -515,8 +528,13 @@
     font-size: 18px;
   }
 
+  .hero-bg-img {
+    min-height: 530px;
+  }  
+
   .hero-logo {
-    max-width: 460px;
+    max-width: 660px;
+    margin-bottom: 0rem;
   }
 
   .hero-desc {
