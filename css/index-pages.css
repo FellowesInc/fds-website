@@ -33,9 +33,44 @@
     top: inherit;
 }
 
+.multi-carousel-item a {
+    display: block;
+}
+
+.array-lineup-carousel-title {
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.air-lineup-section .carousel-control-next, 
+.air-lineup-section .carousel-control-prev {
+    width: auto;
+    color: #707070;
+}
+
+.air-lineup-section .carousel-control-next-icon, 
+.air-lineup-section .carousel-control-prev-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.air-lineup-section {
+    margin-bottom: 2rem;
+}
+
 @media (min-width: 768px) {
     .inner-page-wrapper {
         padding-block: 4rem;
+    }
+
+    .array-lineup-carousel-title {
+        font-size: 24px;
+    }
+
+    .air-lineup-section {
+        margin-bottom: 6rem;
     }
 }
 
