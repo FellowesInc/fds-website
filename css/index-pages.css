@@ -17,6 +17,7 @@
 
 .tois-content-title {
     font-size: 30px;
+    font-weight: 200;
     margin-bottom: 1rem;
     text-align: center;
 }
@@ -40,7 +41,7 @@
 .array-lineup-carousel-title {
     font-size: 14px;
     line-height: 1;
-    font-weight: 400;
+    font-weight: 200;
 }
 
 .air-lineup-section .carousel-control-next, 

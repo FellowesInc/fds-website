@@ -68,7 +68,7 @@
 
 .array-section-title {
     font-size: 23px;
-    font-weight: 400;
+    font-weight: 200;
     line-height: 27px;
     margin-bottom: 1.5rem;
     color: #000;
@@ -92,6 +92,7 @@
 
 .array-section-ul span {
     font-size: 16px;
+    font-weight: 200;
     line-height: 20px;
     color: #000;
 }
