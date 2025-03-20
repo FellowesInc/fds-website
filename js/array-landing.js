@@ -1,23 +1,51 @@
-// Custom JS Goes Here
-
-// Setup Media Queries
-var mqMax992 = window.matchMedia('(max-width: 991.98px)');
-
 $(document).ready(function () {
+
+  // Setup Media Queries
+  var mqMax992 = window.matchMedia('(max-width: 991.98px)');
+
   if (mqMax992.matches) {
-    var tabdropdown = document.querySelector('.mobile-tab-dropdown');
-    var tabList = document.querySelector('#purifiers-tabs');
-    var tabItems = document.querySelectorAll('.purifiers-tab-item');
+    const tabLists = document.querySelectorAll('.purifiers-inner-wrapper');
 
-    $(tabdropdown).click(function () {
-      $(tabList).toggleClass('show');
-    });
+    if (tabLists) {
 
-    $.each(tabItems, function () {
-      $(this).click(function () {
-        $(tabdropdown).html($(this).children().text());
-        $(tabList).removeClass('show');
+      $.each(tabLists, function() {
+        let tabDropdown = $(this).find('.mobile-tab-dropdown');
+        let tabList = $(this).find('.purifiers-tabs');
+        let tabItems = $(this).find('.purifiers-tab-item');
+
+        $(tabDropdown).click(function () {
+          $(tabList).toggleClass('show');
+        });
+
+        $.each(tabItems, function () {
+          $(this).click(function () {
+            $(tabDropdown).html($(this).children().text());
+            $(tabList).removeClass('show');
+          });
+        });
+
+      })
+    }
+  }
+
+  const formCheckContainers = document.querySelectorAll('.form-check');
+
+  if (formCheckContainers) {
+
+    $.each(formCheckContainers, function () {
+      let container = $(this);
+      let checkbox = $(this).find('.form-check-input');
+
+
+      $(checkbox).on('change', function() {
+        if (this.checked) {
+          $(container).addClass('checked');
+        } else {
+          $(container).removeClass('checked');
+        }
       });
     });
+
   }
+
 });
