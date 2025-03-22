@@ -1,20 +1,3 @@
-.floating-text-section-img {
-    display: block;
-    width: 100%;
-    position: relative;
-    z-index: 1;
-}
-
-.floating-text-section-container {
-    margin-bottom: -3rem;
-    position: relative;
-    z-index: 10;
-}
-
-.floating-text-section-text {
-    max-width: 230px;
-}
-
 .system-design-icon {
     display: block;
     width: 100%;
@@ -31,32 +14,6 @@
 }
 
 @media (min-width: 768px) {
-    .floating-text-section {
-        display: flex;
-    }
-
-    .floating-text-section-img {
-        display: block;
-        width: 50%;
-        height: 100%;
-        min-height: 600px;
-        max-height: 800px;
-        -o-object-fit: cover;
-            object-fit: cover;
-        -o-object-position: left center;
-            object-position: left center;
-        -webkit-margin-start: auto;
-                margin-inline-start: auto;
-    }
-    
-    .floating-text-section-container {
-        width: 100%;
-        margin-bottom: unset;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
     .ventilation-section-text {
         max-width: 330px;
     }
