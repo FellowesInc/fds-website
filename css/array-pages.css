@@ -1,0 +1,131 @@
+.mw-920 {
+    max-width: 920px;
+    margin-inline: auto;
+}
+
+.px-4-5 {
+    padding-inline: 2rem;
+}
+
+.array-header img {
+    height: 600px;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+.bluesection-icon {
+    display: block;
+    width: 100%;
+    max-width: 60px;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+}
+
+.bluesection-title {
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.bluesection-desc {
+    font-size: 18px;
+    line-height: 26px;
+    color: #fff;
+}
+
+.array-section-heading {
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 27px;
+    color: var(--fds-blue);
+    margin-bottom: 1rem;
+}
+
+.array-section-text {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 22px;
+    color: var(--fds-blue);
+}
+
+.video-section {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, rgba(246, 245, 243, 1) 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#f6f5f3",GradientType=1);
+}
+
+.video-wrapper {
+    cursor: pointer;
+    overflow: hidden;
+    width: 90%;
+    padding-inline: 0;
+}
+
+.video-play-wrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.video-play-wrapper img {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.video-wrapper video {
+    z-index: 10;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.video-play-wrapper.hide {
+    z-index: -1;
+    opacity: 0;
+}
+
+.video-wrapper video.hide {
+    opacity: 0;
+    z-index: -1;
+}
+
+@media (min-width: 768px) {
+    .break-on-desktop {
+        display: block;
+    }
+    
+    .bluesection-icon {
+        max-width: 95px;
+        margin-bottom: 3rem;
+    }
+
+    .bluesection-title {
+        font-size: 40px;
+        line-height: 60px;
+        margin-bottom: 1.5rem;
+    }
+
+    .bluesection-desc {
+        font-size: 22px;
+        line-height: 39px;
+    }
+
+    .array-section-heading {
+        font-size: 36px;
+        line-height: 42px;
+        padding-bottom: 1.5rem;
+    }
+
+    .array-section-text {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .video-section {
+        padding-block: 2rem;
+    }
+}
