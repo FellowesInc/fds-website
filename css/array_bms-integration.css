@@ -1,0 +1,349 @@
+.bms-header-logo-wrapper {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bms-header-logo {
+    display: block;
+    width: 100%;
+    max-width: 333px;
+    height: auto !important;
+    -o-object-fit: none !important;
+        object-fit: none !important; 
+    -webkit-filter: drop-shadow(0px 0px 15px #344667); 
+        filter: drop-shadow(0px 0px 15px #344667);
+}
+
+.bms-header-title {
+    font-size: 46px;
+    line-height: 54px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.bms-title {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: var(--fds-blue);
+}
+
+.bms-bluesection-title {
+    max-width: 1070px;
+    margin-inline: auto;
+    color: #fff;
+}
+
+.bms-bluesection-subtitle {
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.bms-bluesection-subtitle .bolded {
+    font-weight: 800;
+}
+
+.bms-bluesection-img {
+    display: block;
+    width: 100%;
+    max-width: 240px;
+    margin-inline: auto;
+    margin-block: 1.5rem;
+}
+
+.bms-desc {
+    font-size: 15px;
+    line-height: 20px;
+    color: var(--fds-blue);
+}
+
+.bms-bluesection-desc {
+    max-width: 280px;
+    margin-inline: auto;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.bms-bluesection-footer {
+    font-size: 29px;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+.rt-savings-section .sensors-icon-wrapper {
+    background-color: #fff;
+}
+
+.iaq-data-grid .video-wrapper {
+    width: 100%;
+}
+
+.data-grid-item-title {
+    font-size: 20px;
+    line-height: 29px;
+    font-weight: 700;
+    color: var(--fds-blue);
+}
+
+.data-grid-item-desc {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    color: var(--fds-blue);
+}
+
+.data-grid-item {
+    display: grid;
+    gap: 1rem;
+}
+
+.data-grid-item-wrapper {
+    display: grid;
+    grid-template-columns: 65px 1fr;
+    gap: 1rem;
+}
+
+.data-grid-item-icon img {
+    display: block;
+    width: 100%;
+    margin-inline: auto;
+}
+
+.co2-icon {
+    max-width: 65px;
+}
+
+.pm-icon, .occupancy-icon {
+    max-width: 55px;
+}
+
+.humidity-icon {
+    max-width: 45px;
+}
+
+.iaq-data-grid {
+    display: grid;
+    gap: 3rem;
+}
+
+.command-title {
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 400;
+    color: var(--fds-blue);
+    margin-bottom: 1.5rem;
+}
+
+.command-desc {
+    font-size: 18px;
+    line-height: 30px;
+    color: var(--fds-blue);
+}
+
+.command-laptop-img {
+    display: block;
+    width: 100%;
+    max-width: 630px;
+    margin-inline: auto;
+    margin-block: 1.5rem;
+}
+
+.function-grid {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.function-grid-title {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 500;
+    color: var(--fds-blue);
+}
+
+.function-grid-icon {
+    display: block;
+    width: 100%;
+    max-width: 45px;
+    margin-inline: auto;
+    margin-bottom: .5rem;
+}
+
+.relay-section-img {
+    display: block;
+    width: 100%;
+    max-width: 715px;
+    margin-inline: auto;
+    margin-block: 2rem 1rem;
+}
+
+.why-bacnet-img {
+    display: block;
+    width: 100%;
+}
+
+.why-bacnet-title {
+    font-size: 27px;
+    line-height: 31px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.bacnet-logo {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 3rem;
+}
+
+.why-bacnet-subtitle {
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 500;
+    margin-bottom: .5rem;
+}
+
+.why-bacnet-desc {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .bms-header-logo {
+        max-width: 570px;
+        margin-bottom: .5rem;
+    }
+
+    .bms-header-title {
+        font-size: 80px;
+        line-height: 94px;
+    }
+
+    .bms-title {
+        font-size: 38px;
+        line-height: 45px;
+        font-weight: 400;
+        margin-bottom: 2.5rem;
+    }
+
+    .bms-bluesection-subtitle {
+        font-size: 33px;
+        line-height: 30px;
+    }
+
+    .bms-bluesection-img {
+        max-width: 330px;
+        margin-block: 2.5rem;
+    }
+
+    .bms-desc {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .bms-bluesection-desc {
+        margin-bottom: 2.5rem;
+        max-width: 830px;
+    }
+
+    .bms-bluesection-footer {
+        font-size: 39px;
+        line-height: 40px;
+    }
+
+    .data-grid-item-title {
+        font-size: 26px;
+        line-height: 34px;
+    }
+
+    .data-grid-item-desc {
+        font-size: 17px;
+        line-height: 29px;
+        max-width: 290px;
+    }
+
+    .data-grid-item {
+        gap: 0rem;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .data-grid-item-wrapper {
+        grid-template-columns: 100px 1fr;
+        gap: 1.5rem;
+    }
+
+    .co2-icon {
+        max-width: 100px;
+    }
+
+    .pm-icon, .occupancy-icon {
+        max-width: 85px;
+    }
+
+    .humidity-icon {
+        max-width: 65px;
+    }
+
+    .iaq-data-grid {
+        gap: 4rem;
+    }
+
+    .command-title {
+        font-size: 38px;
+        line-height: 45px;
+    }
+    
+    .command-desc {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .command-laptop-img {
+        margin-block: 0rem 2.5rem;
+    }
+
+    .function-grid {
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        flex-wrap: nowrap;
+        gap: 2rem;
+        justify-content: center;
+    }
+    
+    .function-grid-title {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    
+    .function-grid-icon {
+        max-width: 50px;
+        margin-bottom: 1rem;
+    }
+
+    .relay-section-img {
+        margin-block: 4rem 2rem;
+    }
+
+    .why-bacnet-title {
+        font-size: 35px;
+        line-height: 41px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .why-bacnet-subtitle {
+        font-size: 25px;
+    }
+
+    .bacnet-logo {
+        margin-bottom: 4rem;
+    }
+}
