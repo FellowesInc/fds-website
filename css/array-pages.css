@@ -391,5 +391,13 @@
         height: 800px;
         -o-object-fit: cover;
            object-fit: cover;
+        -o-object-position: top center;
+           object-position: top center;
+    }
+}
+
+@media (min-width: 1200px) {
+    .array-slider-section {
+        grid-template-columns: 1fr 1fr;
     }
 }

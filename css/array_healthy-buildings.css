@@ -73,7 +73,9 @@
         top: 50%;
         transform: translateY(-50%);
     }
-
+    .merv-13-text {
+        max-width: 100%;
+    }
 }
 
 @media (min-width: 1200px) {
