@@ -271,6 +271,7 @@
   padding: 0.5rem 1rem;
   border-radius: 50px;
   line-height: 1;
+  transition: all .3s ease-in-out;
 }
 
 .tabContent__btn--grey {
@@ -282,6 +283,18 @@
 
 .tabContent__btn--blue {
   background-color: #748597;
+  color: #fff;
+}
+
+.tabContent__btn--grey:hover,
+.tabContent__btn--grey:focus {
+  background-color: var(--mdb-link-hover-color);
+  color: #fff;
+}
+
+.tabContent__btn--blue:hover,
+.tabContent__btn--blue:focus {
+  background-color: var(--mdb-link-hover-color);
   color: #fff;
 }
 
