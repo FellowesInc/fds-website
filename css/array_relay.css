@@ -42,6 +42,19 @@
     height: 65px;
 }
 
+.relay-bluesection-title {
+    color: #fff;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.relay-bluesection-desc {
+    color: #fff;
+    font-size: 15px;
+    line-height: 20px;
+}
+
 .bms-title {
     font-weight: 600;
     font-size: 30px;
@@ -125,6 +138,17 @@
 
     .sensors-icon {
         height: 65px;
+    }
+
+    .relay-bluesection-title {
+        font-size: 38px;
+        line-height: 45px;
+        font-weight: 400;
+    }
+    
+    .relay-bluesection-desc {
+        font-size: 20px;
+        line-height: 30px;
     }
 
     .bms-title {
