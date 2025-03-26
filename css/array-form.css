@@ -9,6 +9,28 @@
     width: 1px;
 }
 
+.form-group {
+    margin-bottom: 0.938rem;
+}
+
+.form-outline .form-control {
+    padding: 0.75rem 1.75rem;
+    color: var(--fds-grey-800);
+    font-size: var(--fds-fs-400);
+}
+
+.form-outline .form-control.form-control-lg, .form-outline .form-control.form-control-lg ~ .form-label {
+    font-size: var(--fds-fs-400);
+}
+
+.form-outline .form-control.form-control-lg ~ .form-label {
+    padding-top: 1rem;
+}
+
+.form-outline .form-control.form-control-lg, .form-outline .form-control.form-control-lg ~ .form-label {
+    font-size: var(--fds-fs-400);
+}
+
 .form-section-title {
     font-size: 23px;
     line-height: 27px;
