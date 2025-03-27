@@ -74,6 +74,7 @@
 
 .header-banner-text {
     max-width: unset;
+    width: 100%;
 }
 
 .header-logo-wrapper {
@@ -98,9 +99,6 @@
     display: block;
     width: 100%;
     max-width: 333px;
-    height: auto !important;
-    -o-object-fit: none !important;
-        object-fit: none !important; 
     -webkit-filter: drop-shadow(0px 0px 15px #344667); 
         filter: drop-shadow(0px 0px 15px #344667);
 }
@@ -108,10 +106,8 @@
 .header-logo-sub-img {
     display: block;
     width: 100%;
-    height: auto !important;
-    -o-object-fit: contain !important;
-    object-fit: contain !important;
     max-width: 300px;
+    height: auto;
     margin-inline: auto;
     margin-top: 2rem;
 }
@@ -123,7 +119,7 @@
     color: #fff;
 }
 
-.array-header img {
+.array-header .header-bg-img {
     height: 600px;
     -o-object-fit: cover;
     object-fit: cover;
@@ -552,6 +548,7 @@
     .header-logo-sub-img {
         max-width: 590px;
         margin-top: unset;
+        margin-inline: unset;
     }
     
     .bluesection-icon {
