@@ -34,6 +34,10 @@ lightboxVideo.on('slide_changed', ({ prev, current }) => {
     }
 });
 
-const glightboxIframe = GLightbox({
-    selector: '.glightboxIframe'
+const glightboxDocs = GLightbox({
+    selector: '.glightboxDocs'
+});
+
+const glightboxPDF = GLightbox({
+    selector: '.glightboxPDF'
 });
