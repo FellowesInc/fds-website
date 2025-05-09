@@ -44,6 +44,33 @@
     background-repeat: no-repeat;
 }
 
+.glightbox-clean .gslide-title {
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: inherit;
+    color: #fff;
+    margin-bottom: unset;
+    line-height: 1;
+}
+
+.glightbox-clean .gdesc-inner {
+    padding: 0px;
+}
+
+.gslide-description {
+    background: transparent !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.glightbox-clean .gslide-desc {
+    font-family: inherit;
+    color: #bfbfbf;
+    margin-top: .25rem;
+}
+
 @media (min-width: 768px) {
     .aqm-header .header-bg-img {
         height: 700px;
@@ -83,5 +110,9 @@
 
     .aqm-assessment-section {
         background-image: url(../img/aqm-videos-tutorials/section-bg-img-assessment-desktop.jpg);
+    }
+
+    .glightbox-clean .gslide-title {
+        font-size: 1.25rem;
     }
 }
