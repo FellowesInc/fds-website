@@ -15,6 +15,7 @@
   --fds-blue: #778495;
   --fds-light-blue: #dce5f1;
   --fds-green: #657471;
+  --fds-gold: #FCCF69;
   --fds-medium-brown: #ebe5df;
   --fds-lighter-brown: #b7b2ae;
   --fds-tan: #f6f5f3;
@@ -252,6 +253,40 @@ a.hero-link {
   .cta-header {
     font-size: var(--fds-fs-800);
   }
+}
+
+/* Lightbox Styles */
+.glightbox-clean .gslide-title {
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: inherit;
+    color: #fff;
+    margin-bottom: unset;
+    line-height: 1;
+}
+
+.glightbox-clean .gdesc-inner {
+    padding: 0px;
+}
+
+.gslide-description {
+    background: transparent !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.glightbox-clean .gslide-desc {
+    font-family: inherit;
+    color: #bfbfbf;
+    margin-top: .25rem;
+}
+
+@media (min-width: 768px) {
+    .glightbox-clean .gslide-title {
+        font-size: 1.25rem;
+    }
 }
 
 /* Custom Icons */
@@ -1409,6 +1444,7 @@ fieldset:disabled .btn {
   color: var(--fds-grey-700);
   font-size: var(--fds-fs-250) !important;
   transition: color opacity width 0.5s ease-in-out;
+  text-transform: uppercase;
 }
 
 .navbar .right-nav .nav-link #lang-text.lang-active {
@@ -1438,7 +1474,7 @@ fieldset:disabled .btn {
 }
 
 .country-selector-modal .btn-close {
-  background: transparent url(/img/xmark-solid.svg) 50%/1em auto no-repeat;
+  background: transparent url(//cdn.fellowes.com/assets/repositories/themes/images/icons/modal/xmark-solid.svg) 50%/1em auto no-repeat;
   opacity: 1;
   position: absolute;
   top: 1em;
@@ -1626,8 +1662,8 @@ fieldset:disabled .btn {
   flex-direction: column;
   background-color: #dfdfdf;
   padding: 14px 1rem;
-  justify-content: end;
-  align-items: end;
+  justify-content: flex-end;
+  align-items: flex-end;
   gap: 0.5rem;
 }
 
@@ -1690,7 +1726,7 @@ fieldset:disabled .btn {
 #fpp-cart-trigger:focus-visible .bottom-indicator,
 #fpp-cart-trigger:active .bottom-indicator,
 #fpp-cart-trigger.openned .bottom-indicator {
-  opacity: 1;
+  /* opacity: 1; */
 }
 
 .bottom-indicator i {
