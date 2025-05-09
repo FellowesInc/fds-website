@@ -1,43 +1,48 @@
-const lightbox = GLightbox({
-    selector: '.glightbox'
-});
+function GalleryViewModel() {
+    var self = this;
 
-const lightboxVideo = GLightbox({
-    selector: '.glightboxVideo'
-});
+    self.assets = ko.observableArray([
+        {
+            href: 'https://www.youtube.com/embed/gsHKWmBhT04?si=459aAg6gt-_QwtdE',
+            type: 'video',
+            heading: 'Video 1',
+            imageSrc: './img/aqm-videos-tutorials/video-thumb-1.jpg',
+            lightBoxID: 'glightbox1',
+        },
+        {
+            href: 'https://www.youtube.com/embed/rfYtzvNU1GU?si=WNwnllD0OFen7JOG',
+            type: 'video',
+            heading: 'Video 2',
+            imageSrc: './img/aqm-videos-tutorials/video-thumb-2.jpg',
+            lightBoxID: 'glightbox2',
+        },
+        {
+            href: 'https://www.youtube.com/embed/AUoNjCAAkns?si=HRBw9zfiAC5QeYwn',
+            type: 'video',
+            heading: 'Video 3',
+            imageSrc: './img/aqm-videos-tutorials/video-thumb-3.jpg',
+            lightBoxID: 'glightbox3',
+        },
+    ]);
 
-lightboxVideo.on('slide_changed', ({ prev, current }) => {
-    console.log('Prev slide', prev);
-    console.log('Current slide', current);
+    // Initialize GLightbox with all assets
+    const glightbox = GLightbox({
+        elements: self.assets(),
+        autoplayVideos: true,
+    });
 
-    const { slideIndex, slideNode, slideConfig, player } = current;
+    // Open based on lightBoxID
+    self.openByLightboxID = function (element) {
+        const elClass = element.lightBoxID;
+        const index = self.assets().findIndex(asset => asset.lightBoxID === elClass);
 
-    if (player) {
-        if (!player.ready) {
-            // If player is not ready
-            player.on('ready', (event) => {
-                // Do something when video is ready
-            });
+        if (index !== -1) {
+            console.log('I clicked the element with the lightBoxID of ' + elClass + ', and the index of ' + index);
+            glightbox.settings.startAt = index
+            glightbox.open();
         }
+    };
 
-        player.on('play', (event) => {
-            console.log('Started play');
-        });
+}
 
-        player.on('volumechange', (event) => {
-            console.log('Volume change');
-        });
-
-        player.on('ended', (event) => {
-            console.log('Video ended');
-        });
-    }
-});
-
-const glightboxDocs = GLightbox({
-    selector: '.glightboxDocs'
-});
-
-const glightboxPDF = GLightbox({
-    selector: '.glightboxPDF'
-});
+ko.applyBindings(new GalleryViewModel());

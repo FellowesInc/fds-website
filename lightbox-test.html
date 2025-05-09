@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="./css/mobile.css" />
     <!-- Custsom Styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <link rel="stylesheet" href="./css/lightbox-test.css" />
   </head>
 
   <body style="position: relative">
@@ -2267,45 +2268,6 @@
 
     <!-- Temporary Hero -->
     <main id="primary-content" class="position-relative">
-    
-      <section>
-        <div class="container py-5">
-          <div class="row py-5">
-            <div class="col-12">
-              <h2 class="text-center">MDBootstrap Lightbox</h2>
-              <h3 class="text-center">Does not work with anything other than Images, so not a solution</h3>
-              <div class="lightbox" data-mdb-lightbox-init>
-                <div class="row">
-                  <div class="col-lg-4">
-                    <img
-                      src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Slides/1.webp"
-                      data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
-                      alt="Table Full of Spices"
-                      class="w-100"
-                    />
-                  </div>
-                  <div class="col-lg-4">
-                    <img
-                      src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Slides/2.webp"
-                      data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/2.webp"
-                      alt="Winter Landscape"
-                      class="w-100"
-                    />
-                  </div>
-                  <div class="col-lg-4">
-                    <img
-                      src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Slides/3.webp"
-                      data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/3.webp"
-                      alt="View of the City in the Mountains"
-                      class="w-100"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section>
         <div class="container py-5">
@@ -2313,29 +2275,11 @@
             <div class="col-12">
               <h2 class="text-center">GLightbox Lightbox</h2>
               <a href="https://biati-digital.github.io/glightbox/" class="d-block text-center text-black mb-4" target="_blank">https://biati-digital.github.io/glightbox/</a>
-              <div class="row">
-                <div class="col-12 col-lg-3">
-                  <h3 class="text-center">Image Lightbox</h3>
-                  <a href="./img/asset-previewer-test/gm10.jpg" class="glightbox" data-glightbox="title:Image Lightbox; description: This is an Image Lightbox">
-                    <img src="./img/asset-previewer-test/gm10.jpg" alt="image" class="d-block w-100">
-                  </a>
-                </div>
-                <div class="col-12 col-lg-3">
-                  <h3 class="text-center">Video Lightbox</h3>
-                  <a href="https://www.youtube.com/embed/gsHKWmBhT04?si=459aAg6gt-_QwtdE" class="glightboxVideo">
-                    <img src="./img/asset-previewer-test/gm11.jpg" alt="image" class="d-block w-100">
-                  </a>
-                </div>
-                <div class="col-12 col-lg-3">
-                  <h3 class="text-center">Microsoft Lightbox</h3>
-                  <a href="https://view.officeapps.live.com/op/embed.aspx?src=https://github.com/FellowesInc/fds-website/raw/refs/heads/main/img/asset-previewer-test/Fellowes%20Contract%20Interiors%20Design%20Package%202023_072823.pptx" class="glightboxDocs">
-                    <img src="./img/asset-previewer-test/gm12.jpg" alt="image" class="d-block w-100">
-                  </a>
-                </div>
-                <div class="col-12 col-lg-3 d-flex flex-column align-items-center">
-                  <h3 class="text-center">PDF Lightbox</h3>
-                  <a href="https://docs.google.com/gview?url=https://github.com/FellowesInc/fds-website/raw/refs/heads/main/img/asset-previewer-test/Fellowes-VictoryLX%20Series-Brochure-112024.pdf&embedded=true" class="glightboxPDF">
-                    <img src="./img/download-icon.svg" alt="image" class="d-block w-100 " style="max-width: 20px;">
+              <div class="lightbox-wrapper" data-bind="foreach: assets">
+                <div class="lightbox-item">
+                  <h3 class="text-center" data-bind="text: heading"></h3>
+                  <a href="" class="" data-bind="attr: { href: href, class: lightBoxID }, click: $parent.openByLightboxID">
+                    <img src="" alt="" class="d-block w-100" data-bind="attr: { src: imageSrc, alt: heading }">
                   </a>
                 </div>
               </div>
@@ -2530,6 +2474,7 @@
     <script type="text/javascript" src="./js/core.js"></script>
     <script type="text/javascript" src="./js/desktop.js"></script>
     <script type="text/javascript" src="./js/mobile.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
     <script type="text/javascript" src="./js/glightbox.js"></script>
   </body>

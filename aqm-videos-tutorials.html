@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="./css/core.css" />
     <link rel="stylesheet" href="./css/desktop.css" />
     <link rel="stylesheet" href="./css/mobile.css" />
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <link rel="stylesheet" href="./css/aqm-videos-tutorials.css" />
   </head>
 
   <body style="position: relative">
@@ -2263,23 +2266,107 @@
       </div>
     </div>
 
-    <!-- Temporary Hero -->
     <main id="primary-content" class="position-relative">
-      <div class="p-5 text-center bg-image" style="background-color: var(--fds-grey-800); height: 100vh">
-        <div class="d-flex justify-content-center align-items-center h-100">
-          <div class="text-white">
-            <h1 class="mb-md-5 mb-4 fw-bold">Hero Section placeholder</h1>
-            <h3 class="mb-0">
-              <a href="#" class="hero-link">
-                Call to Action
-                <i class="custom-chevron"></i>
-              </a>
-            </h3>
+      
+      <!-- Main Banner Image -->
+      <section class="aqm-header position-relative dark-img-overlay">
+        <img
+          src="./img/aqm-videos-tutorials/header-img-desktop.jpg"
+          class="header-bg-img img-fluid w-100 d-none d-md-block"
+          alt="Photo of an office space with Array Ceiling devices mounted"
+        />
+        <img
+          src="./img/aqm-videos-tutorials/header-img-mobile.jpg"
+          class="header-bg-img img-fluid w-100 d-md-none"
+          alt="Photo of an office space with Array Ceiling devices mounted"
+        />
+        <div class="header-banner-text">
+          <h1 class="banner-text__header">
+            Videos & Tutorials
+          </h1>
+        </div>
+      </section>
+
+      <!-- Latest Videos Section -->
+      <section class="latest-vids-section pt-5">
+        <div class="container pt-md-5 px-4 px-md-0">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="section-heading text-center mb-4 mb-md-5">Fellowes AQM Latest Videos</h2>
+              <div class="lightbox-wrapper" data-bind="foreach: assets">
+                <div class="lightbox-item">
+                  <a href="" class="" data-bind="attr: { href: href, class: lightBoxID }, click: $parent.openByLightboxID">
+                    <img src="" alt="" class="d-block w-100" data-bind="attr: { src: imageSrc, alt: heading }">
+                  </a>
+                  <h3 class="text-center mb-0 mt-2" data-bind="text: heading"></h3>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      <!-- Youtube Channel Section -->
+      <section class="youtube-section py-5">
+        <div class="container py-4 py-md-5 px-4 px-md-0">
+          <div class="row align-items-center text-center text-md-start g-4 g-md-0">
+            <div class="col-12 col-md-5">
+              <div class="content-wrapper">
+                <h2 class="section-heading mb-md-4">See More on our YouTube Channel</h2>
+                <div class="section-text mb-md-5">
+                  Visit our YouTube page for access to all our videos and shorts.
+                </div>
+                <a href="https://www.youtube.com/@FellowesAirQualityManagement" class="aqm-tuts-link link-left link-underlined text-black position-relative d-none d-md-inline-block" target="_blank">View More</a>
+              </div>
+            </div>
+            <div class="col-12 col-md-7">
+              <img src="./img/aqm-videos-tutorials/Laptop-YouTube.png" alt="Image of a laptop with the Fellowes AQM Youtube Channel up" class="laptop-img d-block w-100 mb-4 mb-md-0">
+              <a href="https://www.youtube.com/@FellowesAirQualityManagement" class="aqm-tuts-link link-underlined text-black position-relative d-md-none" target="_blank">View More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Video Downloads Section -->
+      <section class="video-downloads-section py-5 mb-1">
+        <div class="container py-md-5 px-4 px-md-0">
+          <div class="row align-items-center text-center text-md-start g-4 g-md-0 py-md-5">
+            <div class="col-12 col-md-6 order-2 order-md-1">
+              <div class="content-wrapper text-white">
+                <h2 class="section-heading mb-md-4">Air Quality Management<br>Video Downloads</h2>
+                <div class="section-text mb-4 mb-md-5 mw-475">
+                  Download from the extensive library of Fellowes Air Quality Management videos.
+                </div>
+                <a href="#" class="aqm-tuts-link link-left link-underlined text-white position-relative d-none d-md-inline-block">Download Here</a>
+                <a href="#" class="aqm-tuts-link link-underlined text-white position-relative d-md-none">Download Here</a>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 order-1 order-md-2">
+              <img src="./img/aqm-videos-tutorials/play-icon-img.svg" alt="Decorative" class="play-img">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AQM Assessment Section -->
+      <section class="aqm-assessment-section py-5 mb-1">
+        <div class="container py-md-5 px-4 px-md-0">
+          <div class="row text-center text-md-start py-md-5">
+            <div class="col-12 col-md-6">
+              <div class="content-wrapper text-white">
+                <h2 class="section-heading mb-md-4">Start an air quality assessment</h2>
+                <div class="section-text mb-4 mb-md-5">
+                  Fellowes offers a comprehensive assessment to help you determine the IAQ Levels for your facility so you can take action where needed.
+                </div>
+                <a href="#" class="aqm-tuts-link link-left link-underlined text-white position-relative d-none d-md-inline-block">Schedule Complimentary<br>IAQ Assessment</a>
+                <a href="#" class="aqm-tuts-link link-underlined text-white position-relative d-md-none">Schedule Complimentary IAQ Assessment</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
-    <!-- Temporary Hero -->
 
     <!-- Global Footer Start -->
 
@@ -2464,5 +2551,8 @@
     <script type="text/javascript" src="./js/core.js"></script>
     <script type="text/javascript" src="./js/desktop.js"></script>
     <script type="text/javascript" src="./js/mobile.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script type="text/javascript" src="./js/glightbox.js"></script>
   </body>
 </html>
