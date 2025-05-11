@@ -1722,12 +1722,12 @@ fieldset:disabled .btn {
   transition: opacity 0.5s ease-in-out;
 }
 
-#fpp-cart-trigger:hover .bottom-indicator,
+/* #fpp-cart-trigger:hover .bottom-indicator,
 #fpp-cart-trigger:focus-visible .bottom-indicator,
 #fpp-cart-trigger:active .bottom-indicator,
 #fpp-cart-trigger.openned .bottom-indicator {
-  /* opacity: 1; */
-}
+  opacity: 1;
+} */
 
 .bottom-indicator i {
   font-size: 15px;
