@@ -257,35 +257,35 @@ a.hero-link {
 
 /* Lightbox Styles */
 .glightbox-clean .gslide-title {
-    font-size: 1rem;
-    font-weight: 400;
-    font-family: inherit;
-    color: #fff;
-    margin-bottom: unset;
-    line-height: 1;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    font-family: inherit !important;
+    color: #fff !important;
+    margin-bottom: unset !important;
+    line-height: 1 !important;
 }
 
 .glightbox-clean .gdesc-inner {
-    padding: 0px;
+    padding: 0px !important;
 }
 
 .gslide-description {
     background: transparent !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 0;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 1rem 0 !important;
 }
 
 .glightbox-clean .gslide-desc {
-    font-family: inherit;
-    color: #bfbfbf;
-    margin-top: .25rem;
+    font-family: inherit !important;
+    color: #bfbfbf !important;
+    margin-top: .25rem !important;
 }
 
 @media (min-width: 768px) {
     .glightbox-clean .gslide-title {
-        font-size: 1.25rem;
+        font-size: 1.25rem !important;
     }
 }
 
