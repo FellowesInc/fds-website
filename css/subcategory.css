@@ -3,13 +3,6 @@
   padding-block-start: 2.875rem;
   -webkit-padding-after: 2.875rem;
   padding-block-end: 2.875rem;
-
-  -webkit-box-orient: vertical;
-
-  -webkit-box-direction: normal;
-
-  -ms-flex-direction: column;
-
   flex-direction: column;
 }
 
@@ -29,21 +22,17 @@
 
 .banner-btn {
   font-size: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin-inline: auto;
   gap: 7px;
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
 .banner-btn:hover,
 :not(.btn-check) + .banner-btn:hover {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -78,26 +67,16 @@
 }
 
 .plp-item__footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
   align-items: flex-end;
 }
 
 .product-price {
   font-size: var(--fds-fs-725);
   font-weight: 500;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 0.5rem;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
   align-items: flex-end;
 }
 
@@ -111,14 +90,8 @@
 }
 
 .options__prod-image {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
   flex: 1;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -129,29 +102,18 @@
 /* Vertical Styles */
 
 .plp-vertical .plp-item__options {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 1rem;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   margin-block: 2rem;
 }
 
 @media (max-width: 325px) {
   .plp-vertical .plp-item__options {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
     align-items: flex-start;
   }
   .plp-vertical .options__color-selector {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     gap: 10px;
   }
@@ -178,8 +140,6 @@
 
 @media (max-width: 768px) {
   .plp-vertical .plp-inner-wrapper {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
   }
 }
@@ -212,14 +172,8 @@
 }
 
 .plp-horizontal .options__color-selector {
-  -webkit-box-ordinal-group: 3;
-  -ms-flex-order: 2;
   order: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
   align-items: flex-end;
 }
 
@@ -317,14 +271,8 @@
 
 .filter-header {
   font-size: var(--fds-fs-325);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -335,11 +283,7 @@
 
 .filter-section__block .form-check {
   padding-left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   margin-bottom: 0;
 }
@@ -378,22 +322,14 @@
 
 .filter-section__wrapper,
 .filter-section__btn-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 10px;
 }
 
 .filter-header__icons {
   width: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -422,8 +358,6 @@
 }
 
 .filter-section__btn-wrapper.show {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -437,9 +371,6 @@
 
 @media (min-width: 992px) {
   .plp-section {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
     flex-direction: row;
     gap: 1.75rem;
   }
@@ -472,17 +403,9 @@
 
 .results-section,
 .loading-section {
-  -webkit-transition-property: max-height, opacity;
-  -o-transition-property: max-height, opacity;
   transition-property: max-height, opacity;
-  -webkit-transition-duration: 1s;
-  -o-transition-duration: 1s;
   transition-duration: 1s;
-  -webkit-transition-timing-function: ease-in-out;
-  -o-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
-  -webkit-transform-origin: top center;
-  -ms-transform-origin: top center;
   transform-origin: top center;
 }
 
