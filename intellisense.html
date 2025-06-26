@@ -1,0 +1,236 @@
+<html>
+
+<head>
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+	<!-- Google Fonts Raleway -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+	<!-- MDB ESSENTIAL -->
+	<link rel="stylesheet" href="//cdn.fellowes.com/assets/repositories/themes/styles/mdb-css/mdb.min.css" />
+	<!-- MDB PLUGINS -->
+	<link rel="stylesheet" href="//cdn.fellowes.com/assets/repositories/themes/styles/mdb-css/plugins/css/all.min.css" />
+	<!-- Core Styles -->
+	<link rel="stylesheet" type="text/css" href="https://staging.fellowes.com/_layouts/15/combres.axd/rsStylesCoreR02/-1975352558/"/>
+
+	<link href="https://staging.fellowes.com/us/en/_layouts/15/_Application/Fellowes/Responsive/Styles/R01/Site/us/en-US.css?v=20250318-015357" rel="stylesheet" type="text/css" />
+	<!-- CSS End -->
+
+	<!-- Header Scripts Begin -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<!-- Custom Css TODO -->
+	<link rel="stylesheet" href="intellisense-ui.css" />
+</head>
+
+<body>
+
+	<!-- Temp Elements -->
+	<div class="cart-dropdown-div"></div>
+
+	<!-- Elements UI TODO - Start -->
+	<button id="btnSearchClear" type="button" class="btn btn-primary btn-lg remove-search-text-trigger">Clear</button>
+	<input  id="txtSearch" type="search" class="form-control form-control-lg" aria-label="Search">
+	<button id="btnSearchTrigger" type="button" class="btn btn-primary btn-lg">Search</button>
+
+	<div id="intellisense-container" class="container">
+        <div class="row align-items-center">
+            
+            <div class="select-wrapper container">
+                <!-- ko with: intellisenseSelectModel() -->
+                <div class="col-md-6 col-12 mb-md-0 mb-3 select-container select-catalog container" data-bind="visible: showCatalogDataPack()">
+                    <!-- ko foreach: catalogDataPack -->
+                    <div class="row mb-3">                        
+                        <div class="select-item-image col-md-2">
+                            <img class="heroshot" data-bind="src: heroShot().productIconUrl, attr: { 'alt': heroShot().description, title: heroShot().description }"/>
+                        </div>
+                        <div class="select-item-detail col-md-10">
+                            <div class="row justify-content-start">
+                                <a class="select-item-detail-title text-black" href='#' class='changePage' data-bind="html: displayName, attr: { href: url, title: displayName }"></a>
+                                <!--
+                                <img class="select-item-detail-review" data-bind="src:reviewsImagePath()" alt="ratings" style="vertical-align: bottom; width: inherit;"/>
+                                -->
+                                <div class="row">
+                                    <div class="col-sm-auto"><a class="select-item-detail-link" data-bind="attr: { href: downloadsUrl(), title: 'Downloads - ' + displayName() }">Downloads</a></div>
+                                    <div class="col-sm-auto"><a class="select-item-detail-link" data-bind="attr: { href: registerUrl(), title: 'Register - ' + displayName() }">Register</a></div>
+                                    <div class="col-sm-auto"><a class="select-item-detail-link" data-bind="attr: { href: reviewsUrl(), title: 'Review - ' + displayName() }">Review</a></div>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="clear"></div>                        
+                    </div>
+                    <!-- /ko -->
+                </div>
+                <div class="col-md-6 col-12 mb-md-0 mb-3 select-container select-content container" data-bind="visible: showContentDataPack()">
+                    <!-- ko foreach: contentDataPack -->
+                    <div class="row mb-3">
+                        <div class="select-content-image col-md-2">
+                            <img class="heroshot" data-bind="src: image, attr: { 'alt': description, title: title }" style="max-height: 50px;" />
+                        </div>
+                        <div class="select-content-detail col-md-10">
+                            <div class="row justify-content-start">
+                                <a href='#' class='select-content-detail-title text-black' data-bind="html: cleanTitle, attr: { href: url, title: title }"></a>
+                                <div class="select-content-detail-desc" data-bind="html: description"></div>
+                            </div>
+                        </div>                        
+                    </div>
+                    <!-- /ko -->
+                </div>
+                <!-- /ko -->
+            </div>
+
+            <div class="spell-wrapper" data-bind="visible: !intellisenseSelectModel().show()">
+                <!-- ko with: intellisenseSpellModel() -->
+                <div class="spell-container" data-bind="visible: show()">
+                    <h4>Did you mean ...</h4>
+                    <div id="spell-cloud" data-bind="tagCloud: cloudDataPack()"></div>
+                </div>
+                <!-- /ko -->
+            </div>
+
+        </div>
+    </div>
+    <!-- Elements UI TODO - End -->
+
+</body>
+
+<script>
+    /*
+    Site Header Search Scripts
+    */
+    $(function () {
+        // attach search clear event
+        $('#btnSearchClear').click(function (event) {
+            $('#txtSearch').val('');
+            $("#txtSearch").focus();
+            event.stopPropagation();
+        });
+
+        // catch enter key and submit form
+        $('#txtSearch').returnPress(function (event) {
+            goToResults();
+        });
+
+        // Remove Default Enter Key Behavior
+        $('div').keypress(function (e) {
+            if ((e.keyCode == '13') && (!$('#txtSearch').is(':focus'))) {
+                return false;
+            }
+            return true;
+        });
+    });
+
+    function goToResults(trigger) {
+    	// set the action to include the search info
+    	trigger = window.empty(trigger) ? "catalog" : "content";
+        var action = "https://webdev.fellowes.com/foo/results.html";//FellowesAppSettings.Core.SearchResultUrl;
+        if (action.indexOf('#', 0) > 0)
+            action += '&';
+        else
+            action += '#';
+
+        var txtSearch = trim($('#txtSearch').val());
+        // Leave the search keyword intact
+        //$('#txtSearch').val('');
+
+        if (txtSearch && !empty(txtSearch)) {
+            if (location.href.indexOf(action, 0) < 0)
+                location.href = action + 'q=' + txtSearch + 't=' + trigger;
+            else
+                Fellowes.PostBox.notifySubscribers(
+                    { 'query': txtSearch, 'resetFilters': true },
+                    Fellowes.PostBoxMessages.Search.TriggerSearch);
+        }
+    }
+</script>
+
+<script>
+    /*
+    Site Header Intellisense Scripts
+    */
+    $(function () {
+        window.fellowesIntellisense = new FellowesIntellisense({
+            source: '#txtSearch',
+            trigger: '#btnSearchTrigger',
+            destination: 'div#intellisense-container',
+            clear: '#btnSearchClear'
+        });
+
+        // Only allowed when Intellisense Enabled
+        // Or when it is not on Search page already
+        if (FellowesAppSettings.Core.IntellisenseEnabled &&
+            window.location.pathname.toLowerCase().indexOf(FellowesAppSettings.Core.SearchResultUrl.toLowerCase(), 0) < 0)
+            window.fellowesIntellisense.bindMe(document.getElementById("intellisense-container"));
+        else
+            $("#intellisense-container").remove();
+    });
+</script>
+
+<!-- Scripts for Model -->
+<script src="https://staging.fellowes.com/us/en/_layouts/15/_Application/Fellowes/Responsive/Scripts/R01/appsettings.js.axd?v=20250620-113547&d=fellowes.com&s=us&c=en-US" type="text/javascript"></script>
+
+<script type="text/javascript" src="https://cdn.fellowes.com/assets/repositories/themes/scripts/mdb-js/mdb.min.js"></script>
+<script type="text/javascript" src="https://cdn.fellowes.com/assets/repositories/themes/scripts/mdb-js/plugins/js/all.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.js"></script>
+<script type="text/javascript" src="https://cdn.fellowes.com/assets/repositories/themes/scripts/noty.js"></script>
+<script type="text/javascript" src="https://cdn.fellowes.com/assets/repositories/themes/scripts/knockout-3.2.0.js"></script>
+<script type="text/javascript" src="https://cdn.fellowes.com/assets/repositories/themes/scripts/knockout.validation.js"></script>
+<script type="text/javascript" src="https://cdn.fellowes.com/assets/repositories/themes/scripts/knockout.extended.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
+<script type="text/javascript" src="https://staging.fellowes.com/_layouts/15/_Application/Fellowes/Responsive/Scripts/R01/fellowes.js?8bbadcf90b11a9db75504685f6b44140"></script>
+<script type="text/javascript" src="https://staging.fellowes.com/_layouts/15/_Common/Responsive/Scripts/util.js?87b995661d2ee2965f368d4efbfa4c68"></script>
+<script type="text/javascript" src="https://staging.fellowes.com/_layouts/15/_Common/Responsive/Scripts/jquery-scripts.js?cdd8fce578fb978fa90b21ed5af2c6ee"></script>
+<script type="text/javascript" src="https://staging.fellowes.com/_layouts/15/_Application/Fellowes/Responsive/Scripts/R02/core.js?410506f9ec65e6a520fef99932191af6"></script>
+<script type="text/javascript" src="https://staging.fellowes.com/_layouts/15/_Application/Fellowes/Responsive/Scripts/R02/desktop.js?5976a189eb10c4336bff280bf0dcded0"></script>
+<script type="text/javascript" src="https://staging.fellowes.com/_layouts/15/_Application/Fellowes/Responsive/Scripts/R02/mobile.js?3fc90712afa4696dadefe77823d63f70"></script>
+
+<script src="https://staging.fellowes.com/us/en/_layouts/15/_Common/Responsive/Scripts/property.js.axd?v=20250620-113914&d=fellowes.com&s=us&c=en-US" type="text/javascript"></script>
+
+<script type="text/javascript">
+    fellowesCore.isAuthenticated = false;
+    fellowesCore.isVisitor = false;
+    
+    fellowesCore.cultureCode = "en-US";
+    fellowesCore.countryCode = "US";
+    fellowesCore.countryDisplay = "United States";
+    fellowesCore.country = {"Locale":"en","CountryCode":"US","DisplayName":"United States","Site":"US","Url":"/us/en","Culture":"en","SupportedCultures":["en-US"],"HasProvinces":true};
+    fellowesCore.queryHash = {};
+    fellowesCore.rootCategory = getQuerystring("cat", "").toUpperCase();
+    fellowesCore.parentCategory = getQuerystring("tercat", getQuerystring("subcat", "N/A")).toUpperCase();
+    fellowesCore.currentCategory = getQuerystring("quadcat", getQuerystring("tercat", getQuerystring("subcat", getQuerystring("cat", "N/A")))).toUpperCase();
+    fellowesCore.currentProduct = getQuerystring("prod", getQuerystring("bvproductid", "N/A"));
+    fellowesCore.currentItem = (!fellowesCore.currentProduct || fellowesCore.currentProduct == "N/A")
+        ? "N/A"
+        : fellowesCore.currentProduct.indexOf('-') >= 0
+            ? fellowesCore.currentProduct.split('-')[1]
+            : "N/A";
+    fellowesCore.currentNodeKey = "__US__EN__CATALOG__CONTRACT-INTERIORS";
+    fellowesCore.site = "us";
+    fellowesCore.variation = "en";
+    fellowesCore.storefrontContext = "fellowes.b2c";
+    fellowesCore.isDisplayMode = true;
+    fellowesCore.isPublic = true;
+    fellowesCore.countries = [{"CountryCode":"US","DisplayName":"United States of America","Culture":"en","SupportedCultures":[],"HasProvinces":true}];
+    
+    
+    fellowesCore.resetSession();
+    
+    var consumerProxyUrl = "";
+
+</script>
+
+<!-- Intellisense -->
+<script type="text/javascript" src="https://cdn.fellowes.com/assets/repositories/themes/scripts/jquery-typeahead.js"></script>
+<script type="text/javascript" src="https://cdn.fellowes.com/assets/repositories/themes/scripts/jquery-jqcloud.js"></script>
+<script type="text/javascript" src="https://staging.fellowes.com/_layouts/15/_Common/Responsive/Scripts/solr.js?ac42588c5ac22e613493386c77756575"></script>
+<script type="text/javascript" src="https://staging.fellowes.com/_layouts/15/_Common/Responsive/Scripts/content.js?d2df350ee35442aafab332d1b40da9c6"></script>
+<script type="text/javascript" src="https://staging.fellowes.com/_layouts/15/_Common/Responsive/Scripts/asset.js?fbb306bf9533544e78d808f39f71a7e3"></script>
+<script type="text/javascript" src="https://staging.fellowes.com/_layouts/15/_Common/Responsive/Scripts/product.js?0581b5b0eb86a986700f5544412d931d"></script>
+<script type="text/javascript" src="https://staging.fellowes.com/_layouts/15/_Common/Responsive/Scripts/intellisense.js?c2a374a4a0ae769fa6b0e7de6069f79a"></script>
+
+<!-- Custom JS TODO --> 
+<script type="text/javascript" src="intellisense-ui.js"></script>
+</html>
