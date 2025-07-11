@@ -292,7 +292,7 @@ a.hero-link {
 /* Custom Icons */
 
 .custom-chevron {
-  background: url('/img/custom-chevron.svg') no-repeat;
+  background: url('./img/custom-chevron.svg') no-repeat;
   height: 14px;
   width: 10px;
   display: inline-block;

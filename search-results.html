@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>AQM Mega Category</title>
-    <!-- MDB icon -->
-    <link rel="icon" href="img/Favicon.ico" type="image/x-icon" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <!-- Google Fonts Raleway -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet" />
-    <!-- MDB ESSENTIAL -->
-    <link rel="stylesheet" href="css/mdb-css/mdb.min.css" />
-    <!-- MDB PLUGINS -->
-    <link rel="stylesheet" href="css/mdb-css/plugins/css/all.min.css" />
-    <!-- Global Styles -->
-    <link rel="stylesheet" href="./css/core.css" />
-    <link rel="stylesheet" href="./css/desktop.css" />
-    <link rel="stylesheet" href="./css/mobile.css" />
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="css/categorypage.css" />
-    <link rel="stylesheet" href="css/megacat-aqm.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Intellisense Template</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="./img/Favicon.ico" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Google Fonts Raleway -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+  <!-- MDB ESSENTIAL -->
+  <link rel="stylesheet" href="//cdn.fellowes.com/assets/repositories/themes/styles/mdb-css/mdb.min.css" />
+  <!-- MDB PLUGINS -->
+  <link rel="stylesheet" href="//cdn.fellowes.com/assets/repositories/themes/styles/mdb-css/plugins/css/all.min.css" />
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="./css/core.css" />
+  <link rel="stylesheet" href="./css/desktop.css" />
+  <link rel="stylesheet" href="./css/mobile.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.fellowes.com/assets/repositories/themes/styles/noty.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
+  <link href="https://staging.fellowes.com/us/en/_layouts/15/_Application/Fellowes/Responsive/Styles/R01/Site/us/en-US.css?v=20250318-015357" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="https://staging.fellowes.com/_layouts/15/_Application/Fellowes/Responsive/Styles/R02/catalog-listing.css?276508ac42d7e360f723908e066c13b6"/>
+  <!-- CSS End -->
+	<!-- Header Scripts Begin -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="./css/search-results-ui.css" />
+</head>
 
-  <body class="position-relative">
+  <body style="position: relative">
     <a href="#primary-content" class="skip-to-main-content-link">Skip to main content</a>
 
     <header role="banner">
@@ -2265,674 +2272,344 @@
         </div>
       </div>
     </div>
-
-    <main id="primary-content" class="position-relative">
+    
+    <main id="primary-content" class="position-relative" data-loading="true" data-source-context="listing">
       <!-- Start your project here-->
-      
-      <!-- Hero Section -->
-      <section class="band position-relative dark-img-overlay">
-        <div class="ratio ratio-16x9">
-          <video playsinline autoplay muted loop>
-            <source src="img/megacat-aqm/closing-family-animation.mp4" type="video/mp4" />
-          </video>
-        </div>
-      </section>
 
-      <!-- Blue Text Section -->
-      <section class="band section-spacing bluesection px-4 py-5">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-lg-10 offset-lg-1 text-center text-white">
-              <h2 class="mb-md-4 mb-3 font-weight-300">Build The Air Purification System that <br class="d-md-block d-none" />Meets the Highest Standards…Yours</h2>
-              <p class="mb-0 bigptext">Whether your space is large or small, private or shared, Fellowes Air can make it safe.</p>
+      <!-- Search Listing Section -->
+      <!-- Defined for Each Tab -->
+      <section class="plp-section plp-vertical d-flex container px-3">
+        <div id="filter-section" class="filter-section" style="display: none;">
+          <div class="d-flex justify-content-between align-content-center flex-wrap">
+            <div class="filter-section__block filter-section__title">Refine Your Search</div>
+            <div class="" data-bind="if: filters().length > 0">
+              <div class="filter-section__title">Your Selections</div>
+              <div class="filters" data-bind="foreach: filters">
+                <div class="form-check">
+                  <div>
+                    <input type="checkbox" class="form-check-input rounded-0" data-bind="value: id, attr: { id: id, 'class': 'css-filterbox' }, click: $root.filterRemoved, checked: isChecked, enable: isEnabled" />
+                    <label class="form-check-label" data-bind="attr: { 'for': id, 'class': 'css-label' }"></label>
+                    <label class="form-check-label" data-bind="text: parentTitle + ':  '"></label>
+                    <label class="form-check-label" data-bind="text: facetText"></label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Clear Filter Button-->
+            <!--ko if: filters().length > 0-->
+            <div>
+              <button href="#" class="filter-section__BTN filter-clear-btn fds-tan-bg btn btn-rounded text-black shadow-0" type="reset" data-bind="click: clearFilters">Clear All</button>
+            </div>
+
+            <!-- /ko-->
+            <div class="filter-section__filter-wrapper" style="width: 100%;" data-bind="foreach: facets">
+              <div class="filter-section__block" data-bind="attr: { id: id }">
+                <div class="filter-header">
+                  <div data-bind="text: displayName"></div>
+                  <div class="filter-subhead__icons d-lg-none">
+                    <i class="filter-subhead__open fa-solid fa-chevron-right"></i>
+                    <i class="filter-subhead__close fa-solid fa-chevron-down"></i>
+                  </div>
+                </div>
+                <div class="filters" data-bind="foreach: facetItems">
+                  <div class="form-check">
+                    <input class="form-check-input rounded-0" type="checkbox" data-bind="value: id, attr: { id: id }, click: $root.filterClicked, checked: isChecked, enable: isEnabled, condition: isChecked()" />
+                    <label class="form-check-label" data-bind="attr: { 'for': id }, text: facetText + ' (' + facetCount() + ')'"></label>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- Product Carousel Section -->
-      <section class="band overflow-hidden">
-        <div class="container-fluid p-0">
-          <div id="aqmslider" class="carousel slide carousel-fade" data-mdb-ride="carousel">
-            <!-- Slides -->
-            <div class="row gx-2">
-              <div class="col-lg-9 col-12 d-lg-flex d-none">
-                <div class="carousel-inner">
-                  <div class="carousel-item active dark-img-overlay">
-                    <img src="img/aqm-slider-imgs/slide_networked.jpg" class="d-block w-100" alt="NETWORKED AIR PURIFICATION" />
-                    <div class="carousel-caption container">
-                      <div class="banner-title-aqm mb-3">NETWORKED<br />AIR PURIFICATION</div>
-                      <p class="mb-0">LTE connected air quality management that monitors and responds to improve air quality across your entire space.</p>
-                    </div>
+        <div id="product-listing-section" class="product-listing-section">
+          <!-- Product Lising Container -->
+          <!-- ko if: HasResults() -->
+          <!-- Top Pagination -->
+          <div>
+            <p>
+              <span>Showing results for</span>&nbsp;<span class="search-term" data-bind=" text: SearchTerm()"></span>:&nbsp; <span data-bind="text: StartRange"></span>-<span data-bind="text: EndRange"></span>
+              <span>of</span>&nbsp;<span data-bind="text: TotalCount"></span>
+            </p>
+            <div class="pagination top">
+              <ul class="pagination pagination-circle flex-wrap">
+                <li class="page-item" data-bind="if: ShowPrevious">
+                  <a href="#" class="page-link" data-bind="click: changePage.bind($data, CurrentPosition - ResultsPerPage, false)">
+                    <span>Prev</span>
+                  </a>
+                </li>
+                <!-- ko foreach: Pages -->
+                <li>
+                  <a href="#" class="page-link" data-bind="css: { active: IsCurrent }, click: $parent.changePage.bind($data, Position, false), text: PageNumber"></a>
+                </li>
+                <!-- /ko -->
+                <li class="page-item" data-bind="if: ShowNext">
+                  <a href="#" class="page-link" data-bind=" click: changePage.bind($data, CurrentPosition + ResultsPerPage, false)">
+                    <span>Next</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Top Pagination -->
+
+          <div id="plp-inner-wrapper" class="results-section plp-inner-wrapper" data-bind="css: 'container_' + fellowesCore.currentCategory">
+            <!-- ko foreach: Nodes  -->
+            <div class="plp-item fds-tan-bg" data-bind="attr: { 'data-id': catalogItemId }, fadeVisible: show()">
+              <div class="plp-item__title-section">
+                <div class="product-crc fw-700 mb-2" data-bind="text: consumerReferenceCode"></div>
+                <div class="product-name" data-bind="text: displayName"></div>
+              </div>
+              <div class="plp-item__options">
+                <!-- ko if: variances().length > 0 -->
+                <div class="options__color-selector" style="display: none;">
+                  <!-- ko foreach: variances() -->
+                  <!-- ko foreach: views -->
+                  <!-- ko if:(dimensionType == 'text' && $parent.property.Name =='Color') -->
+                  <div class="form-check">
+                    <input
+                      class="btn-check"
+                      type="radio"
+                      name="colorRadio"
+                      data-bind="attr:{id: 'colorRadio_' + catalogItemId + '_' + dimensionId, value: dimensionId, name: 'colorRadio_' + catalogItemId}, click: $parentContext.$parent.swapVariant"
+                    />
+                    <label class="clr-picker-label btn rounded-circle shadow-0" for="colorRadioBlack" data-bind="attr:{for: 'colorRadio_' + catalogItemId + '_' + dimensionId}, css: 'bg-' + dimensionId.toLowerCase()"></label>
                   </div>
-                  <div class="carousel-item dark-img-overlay">
-                    <img src="img/aqm-slider-imgs/slide_commercial.jpg" class="d-block w-100" alt="COMMERCIAL AIR PURIFICATION" />
-                    <div class="carousel-caption container">
-                      <div class="banner-title-aqm mb-3">COMMERCIAL<br />AIR PURIFICATION</div>
-                      <p class="mb-0">AeraMax Pro commercial grade air purifiers bring together smart and effective technology in an integrated and reliable solution to remove 99.97% of all airborne contaminants.</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item dark-img-overlay">
-                    <img src="img/aqm-slider-imgs/slide_small_office.jpg" class="d-block w-100" alt="SMALL OFFICE AIR PURIFICATION" />
-                    <div class="carousel-caption container">
-                      <div class="banner-title-aqm mb-3">SMALL OFFICE<br />AIR PURIFICATION</div>
-                      <p class="mb-0">Improve your home or small office air quality with AeraMax Air Purifiers which safely remove 99.97% of airborne contaminants.</p>
-                    </div>
-                  </div>
+                  <!-- /ko -->
+                  <!-- /ko -->
+                  <!-- /ko -->
+                </div>
+                <!-- /ko -->
+                <div class="options__prod-image">
+                  <a data-bind="attr: { href: url}"><img data-bind="src: heroShot().productLargeUrl, attr: { 'alt': heroShot().description, title: heroShot().description},click:click" /></a>
                 </div>
               </div>
-              <div class="col-lg-3 col-12">
-                <!-- Thumbnails -->
-                <div class="carousel-indicators">
-                  <button type="button" data-mdb-target="#aqmslider" data-mdb-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
-                    <div class="position-relative thumb-before">
-                      <img class="d-block w-100" src="img/aqm-slider-imgs/thumb_networked.jpg" class="img-fluid" />
-                      <div class="thumb-caption">
-                        <div class="thumb-title">NETWORKED <br class="d-none d-lg-block" />AIR PURIFICATION</div>
-                        <div class="d-lg-none d-block mobile-aqm-subtext">LTE connected air quality management that monitors and responds to improve air quality across your entire space.</div>
-                      </div>
-                    </div>
-                  </button>
-                  <button type="button" data-mdb-target="#aqmslider" data-mdb-slide-to="1" aria-label="Slide 2">
-                    <div class="position-relative thumb-before">
-                      <img class="d-block w-100" src="img/aqm-slider-imgs/thumb_commercial.jpg" class="img-fluid" />
-                      <div class="thumb-caption">
-                        <div class="thumb-title">COMMERCIAL <br class="d-none d-lg-block" />AIR PURIFICATION</div>
-                        <div class="d-lg-none d-block mobile-aqm-subtext">AeraMax Pro commercial grade air purifiers bring together smart and effective technology in an integrated and reliable solution to remove 99.97% of all airborne contaminants.</div>
-                      </div>
-                    </div>
-                  </button>
-                  <button type="button" data-mdb-target="#aqmslider" data-mdb-slide-to="2" aria-label="Slide 3" class="position-relative">
-                    <div class="position-relative thumb-before">
-                      <img class="d-block w-100" src="img/aqm-slider-imgs/thumb_small_office.jpg" class="img-fluid" />
-                      <div class="thumb-caption">
-                        <div class="thumb-title">SMALL OFFICE <br class="d-none d-lg-block" />AIR PURIFICATION</div>
-                        <div class="d-lg-none d-block mobile-aqm-subtext">Improve your home or small office air quality with AeraMax Air Purifiers which safely remove 99.97% of airborne contaminants.</div>
-                      </div>
-                    </div>
-                  </button>
+              <div class="plp-item__desc">
+                <div class="desc-snippet" data-bind="html:shortDescription()"></div>
+                <div class="desc-list" data-bind="html:approvedListingBulletedCopy"></div>
+              </div>
+              <div class="plp-item__footer">
+                <!-- ko if: hasValidPrice() -->
+                <!-- ko if: discountedPrice > 0 -->
+                <div class="product-price">
+                  <span class="sale align-middle text-red f-26" data-bind="currency: discountedPrice, symbol: '$'"></span>
+                  <span class="align-middle text-black font-italic font-weight-light text-decoration-line-through f-16" data-bind="currency: msrpPrice(), symbol: '$'"></span>
                 </div>
-                <!-- Thumbnails -->
+                <!-- /ko -->
+                <!-- ko if: discountedPrice == 0 -->
+                <!-- ko if: listingPrice() == 0 -->
+                <div class="product-price">
+                  <span data-bind="currency: msrpPrice(), symbol: '$'"></span>
+                  <span class="list-aftertext">MSRP</span>
+                </div>
+                <!-- /ko -->
+                <!-- ko if: listingPrice() > 0 -->
+                <div class="product-price">
+                  <span data-bind="currency: listingPrice(), symbol: '$'"></span>
+                  <span class="list-aftertext">LIST</span>
+                </div>
+                <!-- /ko -->
+                <!-- /ko -->
+                <!-- /ko -->
+                <!-- ko if: availableToSell() -->
+                <div class="product-buy-btn"><a data-bind="attr: { href: url}" class="text-black">Buy Now</a></div>
+                <!-- /ko -->
+                <!--ko if:virtualModel.buyNow().length>0-->
+                <div class="buynow-commerce-connector">
+                  <a href="#"
+                    class="button small upper cart-btn find-retailer cc-fi-button"
+                    data-bind="attr: {'data-ean': eanUpcScsCode}, css: {disabled: window.empty(eanUpcScsCode())}, enabled: !window.empty(eanUpcScsCode()), analytics: {category: 'Buy Product', action: catalogItemId, optLabel: displayName()}"
+                    href="#"
+                    rel="">
+                    Buy Now
+                  </a>
+                </div>
+                <!-- /ko -->
               </div>
             </div>
-            <!-- Slides -->
+            <!-- /ko -->
           </div>
-        </div>
-      </section>
+          
+          <!-- Bottom Paginations -->
+          <div class="pagination btm">
+            <ul class="pagination pagination-circle flex-wrap">
+              <li class="page-item" data-bind="if: ShowPrevious">
+                <a href="#" class="page-link" data-bind="click: changePage.bind($data, CurrentPosition - ResultsPerPage, true)">
+                  <span>Prev</span>
+                </a>
+              </li>
+              <!-- ko foreach: Pages -->
+              <li>
+                <a href="#" class="page-link" data-bind="css: { active: IsCurrent }, click: $parent.changePage.bind($data, Position, true), text: PageNumber"></a>
+              </li>
+              <!-- /ko -->
+              <li class="page-item" data-bind="if: ShowNext">
+                <a href="#" class="page-link" data-bind="click: changePage.bind($data, CurrentPosition + ResultsPerPage, true)">
+                  <span>Next</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- Bottom Paginations -->          
+          <!-- /ko --> <!-- if: HasResults() -->
 
-      <!-- Scroll Hijack Section-->
-      <div id="pinContainer">
-        <div id="slideContainer">
-          <section class="band panel aqm-small-banner-img mb-1 every-day-section overflow-hidden">
-            <img src="img/megacat-aqm/aqm-small-banner-img-1.jpg" class="img-fluid w-100" />
-            <div class="banner-text-bottom-aqm">
-              <div class="container top30">
-                <div class="row">
-                  <div class="col-8 col-md-12">
-                    <div class="aqm-small-banner-text">Every Day…<br />We Take 20,000 Breaths</div>
-                  </div>
-                </div>
-              </div>
+          <!-- ko if: !HasResults() -->
+          <section id="plp-no-results" style="display: none;">
+            <div tabindex="0" class="pdp-empty-section">
+              <h3 class="bp-info-text">No results found.</h3>
+              <div class="bp-details-text">We can't find any items matching your criteria. Try fewer, different, or more general keywords.</div>
             </div>
           </section>
+          <!-- /ko -->
 
-          <section class="band panel aqm-small-banner-img mb-1 object-img-position breathing-section overflow-hidden">
-            <img src="img/megacat-aqm/aqm-small-banner-img-2.jpg" class="img-fluid w-100" />
-            <div class="banner-text-bottom-aqm">
-              <div class="container top30">
-                <div class="row">
-                  <div class="col-7 offset-5 col-md-5 offset-md-7">
-                    <div class="aqm-small-banner-text breath-text">90% of Our Breathing Occurs Indoors</div>
-                  </div>
+          <!-- Placeholder section -->
+          <div class="loading-section plp-inner-wrapper placeholder-glow position-relative">
+            <div class="plp-item fds-tan-bg">
+              <div class="plp-item__title-section">
+                <span class="product-name placeholder placeholder-sm col-4"></span>
+                <div class="product-category placeholder col-12"></div>
+              </div>
+              <div class="plp-item__options placeholder mh-175"></div>
+              <div class="plp-item__desc">
+                <div class="desc-snippet">
+                  <span class="placeholder placeholder-sm col-12"></span>
+                  <span class="placeholder placeholder-sm col-12"></span>
+                  <span class="placeholder placeholder-sm col-5"></span>
                 </div>
+                <ul class="desc-list">
+                  <li><span class="placeholder placeholder-sm col-12"></span></li>
+                  <li><span class="placeholder placeholder-sm col-12"></span></li>
+                  <li><span class="placeholder placeholder-sm col-12"></span></li>
+                </ul>
+              </div>
+              <div class="plp-item__footer">
+                <div class="product-price placeholder placeholder-lg col-6"></div>
+                <div class="product-buy-btn placeholder col-4"></div>
               </div>
             </div>
-          </section>
-          <section class="band panel aqm-small-banner-img mb-1 object-position-right-mobile aqm-small-img-banner overflow-hidden covid-banner">
-            <img src="img/megacat-aqm/aqm-small-banner-img-3.jpg" class="img-fluid w-100" />
-            <div class="banner-text-bottom-aqm">
-              <div class="container">
-                <div class="row">
-                  <div class="col-8 col-md-7">
-                    <div class="aqm-small-banner-text text-white covid-text">We’re 1,000 Times More Likely to Get COVID from the Air We Breathe Than From Surfaces We Touch</div>
-                  </div>
+            <div class="plp-item fds-tan-bg">
+              <div class="plp-item__title-section">
+                <span class="product-name placeholder placeholder-sm col-4"></span>
+                <div class="product-category placeholder col-12"></div>
+              </div>
+              <div class="plp-item__options placeholder mh-175"></div>
+              <div class="plp-item__desc">
+                <div class="desc-snippet">
+                  <span class="placeholder placeholder-sm col-12"></span>
+                  <span class="placeholder placeholder-sm col-12"></span>
+                  <span class="placeholder placeholder-sm col-5"></span>
                 </div>
+                <ul class="desc-list">
+                  <li><span class="placeholder placeholder-sm col-12"></span></li>
+                  <li><span class="placeholder placeholder-sm col-12"></span></li>
+                  <li><span class="placeholder placeholder-sm col-12"></span></li>
+                </ul>
+              </div>
+              <div class="plp-item__footer">
+                <div class="product-price placeholder placeholder-lg col-6"></div>
+                <div class="product-buy-btn placeholder col-4"></div>
               </div>
             </div>
-          </section>
-
-          <section class="band panel aqm-small-banner-img mb-1 object-top-left overflow-hidden last-lady-section">
-            <img src="img/megacat-aqm/aqm-small-banner-img-4.jpg" class="img-fluid w-100" />
-            <div class="banner-text-bottom-aqm">
-              <div class="container">
-                <div class="row">
-                  <div class="col-12 col-md-7 offset-md-5 last-lady-section-text">
-                    <div class="aqm-small-banner-text text-white">Fellowes has Developed Breakthrough Air Purification Innovation that is Scientifically Proven to Remove COVID, SARS, H1N1 and Other Harmful Viruses*</div>
-                    <div class="position-relative mt-3">
-                      <a href="#" class="link-underlined text-white left-underline">Learn More</a>
-                    </div>
-                  </div>
+            <div class="plp-item fds-tan-bg">
+              <div class="plp-item__title-section">
+                <span class="product-name placeholder placeholder-sm col-4"></span>
+                <div class="product-category placeholder col-12"></div>
+              </div>
+              <div class="plp-item__options placeholder mh-175"></div>
+              <div class="plp-item__desc">
+                <div class="desc-snippet">
+                  <span class="placeholder placeholder-sm col-12"></span>
+                  <span class="placeholder placeholder-sm col-12"></span>
+                  <span class="placeholder placeholder-sm col-5"></span>
                 </div>
+                <ul class="desc-list">
+                  <li><span class="placeholder placeholder-sm col-12"></span></li>
+                  <li><span class="placeholder placeholder-sm col-12"></span></li>
+                  <li><span class="placeholder placeholder-sm col-12"></span></li>
+                </ul>
+              </div>
+              <div class="plp-item__footer">
+                <div class="product-price placeholder placeholder-lg col-6"></div>
+                <div class="product-buy-btn placeholder col-4"></div>
               </div>
             </div>
-          </section>
-        </div>
-      </div>
-
-      <!-- Effective & Efficient Section -->
-      <section class="text-img-columns py-5 fds-tan-bg effective-section">
-        <div class="container py-2 py-lg-5">
-          <div class="row align-items-center">
-            <div class="col-12 col-lg-5 text-column text-black mb-4 m-lg-0 text-lg-start text-center">
-              <div class="column-discription-title mb-3">Effective & Efficient</div>
-              <div class="text-column__desc">Hospital-Grade Filtration, featuring our 3-in-1 filter with a prefilter, carbon and H13 True HEPA filtration is 99.95% effective in capturing molecules as small as 0.1 microns including viruses, allergens and germs</div>
-            </div>
-            <div class="col-12 col-lg-6 offset-lg-1 image-column position-relative">
-              <div class="ratio ratio-16x9">
-                <video playsinline="" autoplay="" muted="" loop="">
-                  <source src="img/megacat-aqm/closing-family-animation.mp4" type="video/mp4" />
-                </video>
+            <div class="plp-item fds-tan-bg">
+              <div class="plp-item__title-section">
+                <span class="product-name placeholder placeholder-sm col-4"></span>
+                <div class="product-category placeholder col-12"></div>
+              </div>
+              <div class="plp-item__options placeholder mh-175"></div>
+              <div class="plp-item__desc">
+                <div class="desc-snippet">
+                  <span class="placeholder placeholder-sm col-12"></span>
+                  <span class="placeholder placeholder-sm col-12"></span>
+                  <span class="placeholder placeholder-sm col-5"></span>
+                </div>
+                <ul class="desc-list">
+                  <li><span class="placeholder placeholder-sm col-12"></span></li>
+                  <li><span class="placeholder placeholder-sm col-12"></span></li>
+                  <li><span class="placeholder placeholder-sm col-12"></span></li>
+                </ul>
+              </div>
+              <div class="plp-item__footer">
+                <div class="product-price placeholder placeholder-lg col-6"></div>
+                <div class="product-buy-btn placeholder col-4"></div>
               </div>
             </div>
-            <div class="col-12 text-center mt-md-5">
-              <div class="position-relative mt-5">
-                <a href="#" class="link-underlined text-black center-underline big-link">Learn More by Contacting an Air Expert Today</a>
+            <div class="plp-item fds-tan-bg">
+              <div class="plp-item__title-section">
+                <span class="product-name placeholder placeholder-sm col-4"></span>
+                <div class="product-category placeholder col-12"></div>
+              </div>
+              <div class="plp-item__options placeholder mh-175"></div>
+              <div class="plp-item__desc">
+                <div class="desc-snippet">
+                  <span class="placeholder placeholder-sm col-12"></span>
+                  <span class="placeholder placeholder-sm col-12"></span>
+                  <span class="placeholder placeholder-sm col-5"></span>
+                </div>
+                <ul class="desc-list">
+                  <li><span class="placeholder placeholder-sm col-12"></span></li>
+                  <li><span class="placeholder placeholder-sm col-12"></span></li>
+                  <li><span class="placeholder placeholder-sm col-12"></span></li>
+                </ul>
+              </div>
+              <div class="plp-item__footer">
+                <div class="product-price placeholder placeholder-lg col-6"></div>
+                <div class="product-buy-btn placeholder col-4"></div>
+              </div>
+            </div>
+            <div class="plp-item fds-tan-bg">
+              <div class="plp-item__title-section">
+                <span class="product-name placeholder placeholder-sm col-4"></span>
+                <div class="product-category placeholder col-12"></div>
+              </div>
+              <div class="plp-item__options placeholder mh-175"></div>
+              <div class="plp-item__desc">
+                <div class="desc-snippet">
+                  <span class="placeholder placeholder-sm col-12"></span>
+                  <span class="placeholder placeholder-sm col-12"></span>
+                  <span class="placeholder placeholder-sm col-5"></span>
+                </div>
+                <ul class="desc-list">
+                  <li><span class="placeholder placeholder-sm col-12"></span></li>
+                  <li><span class="placeholder placeholder-sm col-12"></span></li>
+                  <li><span class="placeholder placeholder-sm col-12"></span></li>
+                </ul>
+              </div>
+              <div class="plp-item__footer">
+                <div class="product-price placeholder placeholder-lg col-6"></div>
+                <div class="product-buy-btn placeholder col-4"></div>
+              </div>
+            </div>
+            <div class="loading-spinner">
+              <div class="spinner-border text-dark" role="status">
+                <span class="visually-hidden">Loading...</span>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+          <!-- Placeholder section -->
 
-      <!-- Global Leader Section -->
-      <section class="py-5 text-center overflow-hidden global-leader-section">
-        <div class="container py-md-5">
-          <div class="global-leader-section-title text-black">A Global Leader In Localized Indoor Air Quality Solutions</div>
-          <div class="row pt-5 gx-md-5">
-            <div class="col-md-6 col-lg-3 col-12 mb-lg-0 mb-4 text-black">
-              <div class="mb-4">
-                <img src="img/megacat-aqm/aqm-global-1.svg" />
-              </div>
-              <div class="fw-500 global-leader-sub-title mb-3">We Know Air Purification</div>
-              <div>With over 15 years dedicated to breakthrough innovation, scientific testing, and unparalleled customer experience, Fellowes has become the leader in commercial IAQ.</div>
-            </div>
-            <div class="col-md-6 col-lg-3 col-12 mb-lg-0 mb-4 text-black">
-              <div class="mb-4">
-                <img src="img/megacat-aqm/aqm-global-2.svg" />
-              </div>
-              <div class="fw-500 global-leader-sub-title mb-3">Quality, Performance, And World-Class Customer Service</div>
-              <div>Fellowes is a private, family-owned manufacturing business. Established in 1917, now in our 4th generation of leadership.</div>
-            </div>
-            <div class="col-md-6 col-lg-3 col-12 mb-md-0 mb-4 text-black">
-              <div class="mb-4">
-                <img src="img/megacat-aqm/aqm-global-3.svg" />
-              </div>
-              <div class="fw-500 global-leader-sub-title mb-3">Designed And Engineered In The U.S.</div>
-              <div>Designed and engineered in our Itasca, IL headquarters, Fellowes proudly provides proprietary IAQ solutions across the globe.</div>
-            </div>
-            <div class="col-md-6 col-lg-3 col-12 text-black">
-              <div class="mb-4">
-                <img src="img/megacat-aqm/aqm-global-4.svg" />
-              </div>
-              <div class="fw-500 global-leader-sub-title mb-3">Complimentary Space Planning</div>
-              <div>Every project matters. Customized space planning, pricing, and services are available through our IAQ experts.</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Recognized for Innovation Section -->
-      <section class="innovation-section py-5 fds-tan-bg"> 
-        <div class="container">
-          <div class="row pt-3 pt-md-4 px-4">
-            <div class="col-12 text-center">
-              <h2 class="mb-2">Recognized for Innovation in Indoor Air Quality</h2>
-              <p class="innovation-desc font-weight-medium">Our Air Quality Management solutions have been honored by leading industry organizations for their innovation, performance, and impact on healthier indoor environments.</p>
-            </div>
-          </div>
-          <div class="row py-3 py-md-4 px-2 px-md-4">
-            <div class="awards-four-wrapper">
-              <div class="award-item">
-                <img src="./img/megacat-aqm/Awards/2021.png" alt="North American Office Products Award Winner Facilities, Breakroom, Safety & Infection Control Fellowes Air Purification 2021" class="award-item-img">
-                <div class="award-item-desc">North American Office Products Award Winner Facilities, Breakroom, Safety & Infection Control Fellowes Air Purification 2021</div>
-              </div>
-              <div class="award-item">
-                <img src="./img/megacat-aqm/Awards/2022.png" alt="North American Office Products Award Winner AeraMax® Pro AM4 FLEX 2022" class="award-item-img">
-                <div class="award-item-desc">North American Office Products Award Winner AeraMax® Pro AM4 FLEX 2022</div>
-              </div>
-              <div class="award-item">
-                <img src="./img/megacat-aqm/Awards/2023-1.png" alt="Innovation of the Year 2023 Fellowes Array® Networked Air Purifiers & Monitoring 2023" class="award-item-img">
-                <div class="award-item-desc">Innovation of the Year 2023<br>Fellowes Array® Networked Air Purifiers & Monitoring 2023</div>
-              </div>
-              <div class="award-item">
-                <img src="./img/megacat-aqm/Awards/2023-2.png" alt="Best Product - Facilities, Breakroom, Safety & Infection Control 2023 Fellowes Array® Networked Air Purifiers & Monitoring 2023" class="award-item-img">
-                <div class="award-item-desc">Best Product - Facilities, Breakroom, Safety & Infection Control 2023 Fellowes Array® Networked Air Purifiers & Monitoring 2023</div>
-              </div>
-            </div>
-            <div class="awards-five-wrapper">
-              <div class="award-item">
-                <img src="./img/megacat-aqm/Awards/Good-Design.png" alt="Good Design Award - in the Industrial Category Fellowes Array® 2023 AeraMax® Pro AM3 PC Air Purifier with PureView™ Technology 2018" class="award-item-img">
-                <div class="award-item-desc">Good Design Award - in the Industrial Category Fellowes Array® 2023</div>
-                <div class="award-item-desc">AeraMax® Pro AM3 PC Air Purifier with PureView™ Technology 2018</div>
-              </div>
-              <div class="award-item">
-                <img src="./img/megacat-aqm/Awards/EID-Excellence-in-Design-Award.png" alt="EID Excellence in Design Award Silver AeraMax® Pro AM3 PC Air Purifier with PureView Technology 2018" class="award-item-img">
-                <div class="award-item-desc">EID Excellence in Design Award<br>Silver AeraMax® Pro AM3 PC Air Purifier with PureView Technology 2018</div>
-              </div>
-              <div class="award-item">
-                <img src="./img/megacat-aqm/Awards/ADEX_Platinum_logo-13_SMALL.png" alt="ADEX Award - Platinum AeraMax® Pro AM3 PC Air Purifier 2019 AeraMax® Pro AM2 Air Purifier 2017" class="award-item-img">
-                <div class="award-item-desc">ADEX Award - Platinum AeraMax® Pro AM3 PC Air Purifier 2019</div>
-                <div class="award-item-desc">AeraMax® Pro AM2 Air Purifier 2017</div>
-              </div>
-              <div class="award-item order-last-mobile">
-                <img src="./img/megacat-aqm/Awards/Nightingale.png" alt="Nightingale Award - Silver Fellowes Array® 2023" class="award-item-img wide-award-item-img">
-                <div class="award-item-desc">Nightingale Award - Silver<br>Fellowes Array® 2023</div>
-              </div>
-              <div class="award-item">
-                <img src="./img/megacat-aqm/Awards/EOPA17.png" alt="Product Design of the Year AeraMax® Pro AM2 2017" class="award-item-img">
-                <div class="award-item-desc">Product Design of the Year<br>AeraMax® Pro AM2 2017</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Let Us Help You Section -->
-      <section class="band position-relative healthyair-section text-black px-md-4">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-md-9 mx-auto text-center">
-              <h2 class="mb-md-4 mb-3">Let Us Help You Customize A Plan To Improve Indoor Air Quality For Any Type Of Space</h2>
-              <p class="bigptext">Contact a Rep Today</p>
-              <div class="title-yellow-line"></div>
-            </div>
-          </div>
-          <div class="row iconrow-top-spacing">
-            <div class="col-12 position-relative">
-              <div class="text-center">
-                <img src="img/megacat-aqm/room-layout.png" class="img-fluid w-lg-50" alt="Complete Your Plan" />
-              </div>
-              <div class="room-phases d-flex d-xl-block align-items-center justify-content-center mt-xl-0 mt-5">
-                <div class="mb-xl-4">
-                  <div class="zone-1 zone-font">Zone I</div>
-                </div>
-                <div class="mb-xl-4">
-                  <div class="zone-2 zone-font">Zone II</div>
-                </div>
-                <div>
-                  <div class="zone-3 zone-font">Zone III</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Blue Text Section -->
-      <section class="band section-spacing bluesection py-md-5">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-lg-10 offset-lg-1 text-center text-white">
-              <h2 class="mb-0 font-weight-300 py-5">Every Indoor Space Needs Healthy Air</h2>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Safe Air Stories Section -->
-      <section>
-        <div class="container-fluid p-0 safeairstoriestabbox">
-          <div class="row gx-0">
-            <div class="col-xl-3 light-blue-box tab-box text-black">
-              <h2 class="font-weight-300 mb-3">Safe Air Stories</h2>
-              <p class="bigptext">Learn more about how Fellowes is partnering with organizations to bring safe air to their occupants.</p>
-              <!-- Tab navs -->
-              <div class="position-relative">
-                <div class="tab-dropdown d-xl-none">Arenas and Stadiums</div>
-                <i class="fa-solid fa-chevron-down"></i>
-              </div>
-
-              <div class="nav flex-column nav-pills text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <a class="nav-link active tabboxlink" id="v-pills-home-tab" data-mdb-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Arenas and Stadiums</a>
-                <a class="nav-link tabboxlink" id="v-pills-profile-tab" data-mdb-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Assisted Living</a>
-                <a class="nav-link tabboxlink" id="v-pills-messages-tab" data-mdb-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Corporate</a>
-                <a class="nav-link tabboxlink" id="v-pills-dental-labs-tab" data-mdb-toggle="pill" href="#v-pills-dental-labs" role="tab" aria-controls="v-pills-dental-labs" aria-selected="false">Dental Labs</a>
-                <a class="nav-link tabboxlink" id="v-pills-higher-education-tab" data-mdb-toggle="pill" href="#v-pills-higher-education" role="tab" aria-controls="v-pills-higher-education" aria-selected="false">Education</a>
-                <a class="nav-link tabboxlink" id="v-pills-healthcare-tab" data-mdb-toggle="pill" href="#v-pills-healthcare" role="tab" aria-controls="v-pills-healthcare" aria-selected="false">Healthcare</a>
-                <a class="nav-link tabboxlink" id="v-pills-hospitality-tab" data-mdb-toggle="pill" href="#v-pills-hospitality" role="tab" aria-controls="v-pills-hospitality" aria-selected="false">Hospitality</a>
-                <a class="nav-link tabboxlink" id="v-pills-retail-tab" data-mdb-toggle="pill" href="#v-pills-retail" role="tab" aria-controls="v-pills-retail" aria-selected="false">Retail</a>
-              </div>
-              <!-- Tab navs -->
-            </div>
-
-            <div class="col-xl-9" style="background: var(--fds-tan)">
-              <!-- Tab content -->
-              <div class="tab-content" id="v-pills-tabContent">
-                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                  <div>
-                    <div class="tab-img">
-                      <img src="img/megacat-aqm/case-study-imgs/arenas-stadiums.jpg" class="img-fluid w-100" alt="Arenas and Stadiums" style="object-position: left" />
-                    </div>
-                    <div class="tab-logo-box">
-                      <div class="logo-sontent-section">
-                        <div class="tab-content-title text-black d-none d-md-block">ARENAS AND STADIUMS</div>
-                        <div class="tab-logo-box">
-                          <div class="logo-sontent-section">
-                            <div class="d-flex logos-gray justify-content-center flex-wrap">
-                              <div>
-                                <a href="aeramax-arenas-stadiums.html"> <img src="img/megacat-aqm/logos/color/Arenas1_Cubs.png" class="img-fluid w-100" /></a>
-                              </div>
-                              <div>
-                                <a href="aeramax-arenas-stadiums.html"><img src="img/megacat-aqm/logos/color/Arenas2_Amalie-Arena.png" class="img-fluid w-100" /></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                  <div>
-                    <div class="tab-img">
-                      <img src="img/megacat-aqm/case-study-imgs/assisted-living.jpg" class="img-fluid w-100" alt="Assisted Living" style="object-position: right" />
-                    </div>
-                    <div class="tab-logo-box">
-                      <div class="logo-sontent-section">
-                        <div class="tab-content-title d-none d-md-block text-black">Assisted Living</div>
-                        <div class="tab-logo-box">
-                          <div class="logo-sontent-section">
-                            <div class="d-flex logos-gray justify-content-center flex-wrap">
-                              <div>
-                                <a href="aeramax-assisted-living.html"><img src="img/megacat-aqm/logos/color/AssistedLiving1_LifeSpire.png" class="img-fluid" /></a>
-                              </div>
-                              <div>
-                                <a href="aeramax-assisted-living.html"><img src="img/megacat-aqm/logos/color/AssistedLiving2_Finley-Regional-Care.png" class="img-fluid" /></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-                  <div>
-                    <div class="tab-img">
-                      <img src="img/megacat-aqm/case-study-imgs/corporate.jpg" class="img-fluid w-100" alt="Corporate" />
-                    </div>
-                    <div class="tab-logo-box">
-                      <div class="logo-sontent-section">
-                        <div class="tab-content-title d-none d-md-block text-black">Corporate</div>
-                        <div class="tab-logo-box">
-                          <div class="logo-sontent-section">
-                            <div class="d-flex logos-gray justify-content-center flex-wrap">
-                              <div>
-                                <a href="aeramax-corporate.html"><img src="img/megacat-aqm/logos/color/Corporate1_RBI.png" class="img-fluid" /></a>
-                              </div>
-                              <div>
-                                <a href="aeramax-corporate.html"><img src="img/megacat-aqm/logos/color/Corporate2_Cummins.png" class="img-fluid" /></a>
-                              </div>
-                              <div>
-                                <a href="aeramax-corporate.html"><img src="img/megacat-aqm/logos/color/Corporate3_BP.png" class="img-fluid" /></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane fade" id="v-pills-dental-labs" role="tabpanel" aria-labelledby="v-pills-dental-labs-tab">
-                  <div>
-                    <div class="tab-img">
-                      <img src="img/megacat-aqm/case-study-imgs/dental-labs.jpg" class="img-fluid w-100" alt="Dental Labs" />
-                    </div>
-                    <div class="tab-logo-box">
-                      <div class="logo-sontent-section">
-                        <div class="tab-content-title d-none d-md-block text-black">Dental Labs</div>
-                        <div class="tab-logo-box">
-                          <div class="logo-sontent-section">
-                            <div class="d-flex logos-gray justify-content-center flex-wrap">
-                              <div>
-                                <a href="aeramax-dental.html"><img src="img/megacat-aqm/logos/color/Dental1_Tandartsen-Dentist-Office.png" class="img-fluid" /></a>
-                              </div>
-                              <div>
-                                <a href="aeramax-dental.html"><img src="img/megacat-aqm/logos/color/Dental2_Rockert-Dental-Studio.png" class="img-fluid" /></a>
-                              </div>
-                              <div>
-                                <a href="aeramax-dental.html"><img src="img/megacat-aqm/logos/color/Dental3_Keating-Dental-Arts.png" class="img-fluid" /></a>
-                              </div>
-                              <div>
-                                <a href="aeramax-dental.html"><img src="img/megacat-aqm/logos/color/Dental4_Technic-Dental-Lab.png" class="img-fluid" /></a>
-                              </div>
-                              <div>
-                                <a href="aeramax-dental.html"><img src="img/megacat-aqm/logos/color/Dental5_All About-You-Dental-Care.png" class="img-fluid" /></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane fade" id="v-pills-higher-education" role="tabpanel" aria-labelledby="v-pills-higher-education-tab">
-                  <div>
-                    <div class="tab-img">
-                      <img src="img/megacat-aqm/case-study-imgs/education.jpg" class="img-fluid w-100" alt="Education" style="object-position: right" />
-                    </div>
-                    <div class="tab-logo-box">
-                      <div class="logo-sontent-section">
-                        <div class="tab-content-title d-none d-md-block text-black">Education</div>
-                        <div class="tab-logo-box">
-                          <div class="logo-sontent-section">
-                            <div class="d-flex logos-gray justify-content-center flex-wrap">
-                              <div>
-                                <a href="aeramax-education.html"><img src="img/megacat-aqm/logos/color/Education1_Culver-Academies.png" class="img-fluid" /></a>
-                              </div>
-                              <div>
-                                <a href="aeramax-education.html"><img src="img/megacat-aqm/logos/color/Education2_Clarke-County-Schools.png" class="img-fluid" /></a>
-                              </div>
-                              <div>
-                                <a href="aeramax-education.html"><img src="img/megacat-aqm/logos/color/Education3_Hinsdale-Middle-School.png" class="img-fluid" /></a>
-                              </div>
-                              <div>
-                                <a href="aeramax-education.html"><img src="img/megacat-aqm/logos/color/Education4_Chicago-Christian-High-School.png" class="img-fluid" /></a>
-                              </div>
-                              <div>
-                                <a href="aeramax-education.html"><img src="img/megacat-aqm/logos/color/Education5_Centennial-College.png" class="img-fluid" /></a>
-                              </div>
-                              <div>
-                                <a href="aeramax-education.html"><img src="img/megacat-aqm/logos/color/Education6_YMCH-Childcare-Center.png" class="img-fluid" /></a>
-                              </div>
-                              <div>
-                                <a href="aeramax-education.html"><img src="img/megacat-aqm/logos/color/Education7_Babilou-Nursery.png" class="img-fluid" /></a>
-                              </div>
-                              <div>
-                                <a href="aeramax-education.html"><img src="img/megacat-aqm/logos/color/Education8_Homestead-Elementary.png" class="img-fluid" /></a>
-                              </div>
-                              <div>
-                                <a href="aeramax-education.html"><img src="img/megacat-aqm/logos/color/Education9_Tiny-Sprouts.png" class="img-fluid" /></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane fade" id="v-pills-healthcare" role="tabpanel" aria-labelledby="v-pills-healthcare-tab">
-                  <div>
-                    <div class="tab-img">
-                      <img src="img/megacat-aqm/case-study-imgs/healthcare.jpg" class="img-fluid w-100" alt="Healthcare" />
-                    </div>
-                    <div class="tab-logo-box">
-                      <div class="logo-sontent-section">
-                        <div class="tab-content-title d-none d-md-block text-black">Healthcare</div>
-                        <div class="tab-logo-box">
-                          <div class="logo-sontent-section">
-                            <div class="d-flex logos-gray justify-content-center flex-wrap">
-                              <div>
-                                <a href="aeramax-healthcare.html"><img src="img/megacat-aqm/logos/color/Healthcare1_Little-Star-ABA-Therapy.png" class="img-fluid" /></a>
-                              </div>
-                              <div>
-                                <a href="aeramax-healthcare.html"><img src="img/megacat-aqm/logos/color/Healthcare2_Beijig301-Hospital.png" class="img-fluid" /></a>
-                              </div>
-                              <div>
-                                <a href="aeramax-healthcare.html"><img src="img/megacat-aqm/logos/color/Healthcare3_Evergreen-Health-Services.png" class="img-fluid" /></a>
-                              </div>
-                              <div>
-                                <a href="aeramax-healthcare.html"><img src="img/megacat-aqm/logos/color/Healthcare4_Animal-Care-Clinic.png" class="img-fluid" /></a>
-                              </div>
-                              <div>
-                                <a href="aeramax-healthcare.html"><img src="img/megacat-aqm/logos/color/Healthcare5_Veterinary-Medical-Center-de-Roosberg.png" class="img-fluid" /></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane fade" id="v-pills-hospitality" role="tabpanel" aria-labelledby="v-pills-hospitality-tab">
-                  <div>
-                    <div class="tab-img">
-                      <img src="img/megacat-aqm/case-study-imgs/hospitality.jpg" class="img-fluid w-100" alt="Hospitality" />
-                    </div>
-                    <div class="tab-logo-box">
-                      <div class="logo-sontent-section">
-                        <div class="tab-content-title d-none d-md-block text-black">Hospitality</div>
-                        <div class="tab-logo-box">
-                          <div class="logo-sontent-section">
-                            <div class="d-flex logos-gray justify-content-center flex-wrap">
-                              <div>
-                                <a href="aeramax-hospitality.html"><img src="img/megacat-aqm/logos/color/Hospitality1_Blackberry-Market.png" class="img-fluid" /></a>
-                              </div>
-                              <div>
-                                <a href="aeramax-hospitality.html"><img src="img/megacat-aqm/logos/color/Hospitality2_Quaker-Steak-and-Lube.png" class="img-fluid" /></a>
-                              </div>
-                              <div>
-                                <a href="aeramax-hospitality.html"><img src="img/megacat-aqm/logos/color/Hospitality3_Legoland-Discover-Center.png" class="img-fluid" /></a>
-                              </div>
-                              <div>
-                                <a href="aeramax-hospitality.html"><img src="img/megacat-aqm/logos/color/Hospitality4_Village-Hotels.png" class="img-fluid" /></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane fade" id="v-pills-retail" role="tabpanel" aria-labelledby="v-pills-retail-tab">
-                  <div>
-                    <div class="tab-img">
-                      <img src="img/megacat-aqm/case-study-imgs/retail.jpg" class="img-fluid w-100" alt="Retail" />
-                    </div>
-                    <div class="tab-logo-box">
-                      <div class="logo-sontent-section">
-                        <div class="tab-content-title d-none d-md-block text-black">Retail</div>
-                        <div class="tab-logo-box">
-                          <div class="logo-sontent-section">
-                            <div class="d-flex logos-gray justify-content-center flex-wrap">
-                              <div>
-                                <a href="aeramax-retail.html"><img src="img/megacat-aqm/logos/color/Retail1_Alamo-Drafthouse-Cinema.png" class="img-fluid" /></a>
-                              </div>
-                              <div>
-                                <a href="aeramax-retail.html"><img src="img/megacat-aqm/logos/color/Retail2_Museum-of-Science-and-Industry.png" class="img-fluid" /></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Tab content -->
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Connected Section -->
-      <section class="connected-section py-5">
-        <div class="container">
-          <div class="row pt-3 pt-md-4 px-md-4">
-            <div class="col-12 text-center">
-              <h2 class="mb-2">Connected to the Industry, Committed to Progress</h2>
-              <p class="innovation-desc font-weight-medium">We're proud to collaborate with respected organizations across the built environment, HVAC, and facilities industries to advance the science and standards of indoor air quality.</p>
-            </div>
-          </div>
-          <div class="row py-3 py-md-4 px-2 px-md-4">
-            <div class="association-wrapper">
-              <img src="./img/megacat-aqm/Associations/ASHRAE.jpg" alt="ASHRAE Logo" class="association-img">
-              <img src="./img/megacat-aqm/Associations/ISSA.jpg" alt="ISSA Logo" class="association-img">
-              <img src="./img/megacat-aqm/Associations/ACCA.jpg" alt="ACCA Logo" class="association-img">
-              <img src="./img/megacat-aqm/Associations/RESET.jpg" alt="Reset Logo" class="association-img">
-              <img src="./img/megacat-aqm/Associations/OMINA.jpg" alt="OMINA Logo" class="association-img">
-              <img src="./img/megacat-aqm/Associations/PHCC.jpg" alt="PHCC Logo" class="association-img">
-              <img src="./img/megacat-aqm/Associations/AEC.jpg" alt="AEC Logo" class="association-img">
-              <img src="./img/megacat-aqm/Associations/USGBC.jpg" alt="USGBC Logo" class="association-img">
-              <img src="./img/megacat-aqm/Associations/AEE.jpg" alt="AEE Logo" class="association-img">
-              <img src="./img/megacat-aqm/Associations/ASHE.jpg" alt="ASHE Logo" class="association-img">
-              <img src="./img/megacat-aqm/Associations/AIA.jpg" alt="AIA Logo" class="association-img">
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Form Section -->
-      <section class="py-5 text-center">
-        <div class="container py-md-5">
-          <div class="row">
-            <div class="col-md-10 col-lg-8 col-xl-7 col-12 mx-auto">
-              <div class="array-landing-leader-title global-leader-section-title text-black mb-4">Our Air Quality Experts Can Help- Let's Start A Plan For Your Space.</div>
-              <div class="form-text-bottom text-black">Our team of experts will work with you to create a tailored plan based on your space and individual needs. We'll work with you to decide what units are best for you and how many you'll need. To get started, simply fill out the form and our air experts will reach out to set up time to understand and address your concerns.</div>
-
-              <div class="p-3 p-md-4 mt-4 mt-md-0">
-                <form>
-                  <div class="form-group">
-                    <div class="form-outline">
-                      <input type="text" id="FirstName" class="form-control form-control-lg" />
-                      <label class="form-label" for="FirstName">First Name</label>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="form-outline">
-                      <input type="text" id="LastName" class="form-control form-control-lg" />
-                      <label class="form-label" for="LastName">Last Name</label>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="form-outline">
-                      <input type="email" id="Email" class="form-control form-control-lg" />
-                      <label class="form-label" for="Email">Email</label>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="form-outline">
-                      <input type="text" id="CompanyName" class="form-control form-control-lg" />
-                      <label class="form-label" for="CompanyName">Company Name</label>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <select class="select form-control-lg" data-mdb-placeholder="Your Industry">
-                      <option value="" hidden></option>
-                      <option value="Arenas and Stadiums">Arenas and Stadiums</option>
-                      <option value="Assisted Living">Assisted Living</option>
-                      <option value="Fortune 500">Fortune 500</option>
-                      <option value="Dental Labs">Dental Labs</option>
-                      <option value="Higher Education">Higher Education</option>
-                      <option value="Healthcare">Healthcare</option>
-                      <option value="Hospitality">Hospitality</option>
-                      <option value="Retail">Retail</option>
-                    </select>
-                  </div>
-                  <button type="submit" class="btn btn-primary text-black fw-600 mt-4">SUBMIT</button>
-                </form>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -2940,6 +2617,15 @@
     </main>
 
     <!-- Global Footer Start -->
+
+    <!-- Universal CTA Begins -->
+
+    <section class="d-flex flex-column justify-content-center align-items-center px-4 py-5 text-white text-center fds-cta-grey">
+      <div class="py-md-4">
+        <h2 class="cta-header">To Learn More About Fellowes Products and Services, Contact Us and A Fellowes representative will be in touch with you</h2>
+        <a href="#" class="link-underlined text-center text-white d-block mt-3 mt-lg-4 position-relative">Let's Get to Work</a>
+      </div>
+    </section>
 
     <!-- Last Section Begins -->
     <section class="last-section mh-600 position-relative d-flex justify-content-center align-content-center flex-wrap" style="padding-inline: 2.25rem">
@@ -3101,21 +2787,109 @@
 
     <!-- Global Footer End -->
 
-    <!-- MDB ESSENTIAL -->
-    <script type="text/javascript" src="js/mdb-js/mdb.min.js"></script>
-    <!-- MDB PLUGINS -->
-    <script type="text/javascript" src="js/mdb-js/plugins/js/all.min.js"></script>
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <!-- Custom scripts -->
-    <script type="text/javascript" src="./js/core.js"></script>
-    <script type="text/javascript" src="./js/desktop.js"></script>
-    <script type="text/javascript" src="./js/mobile.js"></script>
-    <script type="text/javascript" src="js/gsap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
-    <script type="text/javascript" src="js/animation.gsap.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
-    <script type="text/javascript" src="js/megacat-aqm.js"></script>
-    <script type="text/javascript" src="js/megacat-aqm-scrollmagic.js"></script>
   </body>
+
+  <script>
+    $(function () {
+      window.fellowesSearch.bindMeToFacet(document.getElementById("filter-section"));
+
+      window.fellowesSearch.bindMeToSearch(document.getElementById("product-listing-section"), FellowesSolrConfig.ContextType.CATALOG);
+
+      // For Data Model - Refer to https://staging.fellowes.com/_layouts/15/_Common/Responsive/Scripts/content.js
+      //window.fellowesSearch.bindMeToSearch(document.getElementById("content-listing-section"), FellowesSolrConfig.ContextType.CONTENT);
+
+      Fellowes.PostBox.subscribe(
+        function (model) {
+          if (model.TotalCount() <= 0) $("#plp-no-results").css("display", "block");
+
+          if (model.TotalCount() > 0) $("#filter-section").css("display", "block");
+
+          $("#primary-content").attr("data-loading", false);
+        },
+        this, Fellowes.PostBoxMessages.Search.TriggerSearchComplete
+      );
+    });
+
+    $(window).on("load", function () {
+      var searchParam = trim(getHashstring("q", getQuerystring("search")));
+      if (!empty(searchParam)) {
+        var searchRequest = new FellowesSearchRequest({ query: searchParam });
+        Fellowes.PostBox.notifySubscribers(searchRequest, Fellowes.PostBoxMessages.Search.TriggerSearch);
+      }
+    });
+  </script>
+
+  <!-- Scripts for Model -->
+  <script src="https://staging.fellowes.com/us/en/_layouts/15/_Application/Fellowes/Responsive/Scripts/R01/Navigation/nav-menu__US__EN.STAGING.FELLOWES.COM.js?v=20250603-045605" type="text/javascript"></script>
+  <script src="https://staging.fellowes.com/us/en/_layouts/15/_Application/Fellowes/Responsive/Scripts/R01/appsettings.js.axd?v=20250620-113547&d=fellowes.com&s=us&c=en-US" type="text/javascript"></script>
+
+  <script type="text/javascript" src="https://cdn.fellowes.com/assets/repositories/themes/scripts/mdb-js/mdb.min.js"></script>
+  <script type="text/javascript" src="https://cdn.fellowes.com/assets/repositories/themes/scripts/mdb-js/plugins/js/all.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.js"></script>
+  <script type="text/javascript" src="https://cdn.fellowes.com/assets/repositories/themes/scripts/noty.js"></script>
+  <script type="text/javascript" src="https://cdn.fellowes.com/assets/repositories/themes/scripts/knockout-3.2.0.js"></script>
+  <script type="text/javascript" src="https://cdn.fellowes.com/assets/repositories/themes/scripts/knockout.validation.js"></script>
+  <script type="text/javascript" src="https://cdn.fellowes.com/assets/repositories/themes/scripts/knockout.extended.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
+  <script type="text/javascript" src="https://staging.fellowes.com/_layouts/15/_Application/Fellowes/Responsive/Scripts/R01/fellowes.js?8bbadcf90b11a9db75504685f6b44140"></script>
+  <script type="text/javascript" src="https://staging.fellowes.com/_layouts/15/_Common/Responsive/Scripts/util.js?87b995661d2ee2965f368d4efbfa4c68"></script>
+  <script type="text/javascript" src="https://staging.fellowes.com/_layouts/15/_Common/Responsive/Scripts/jquery-scripts.js?cdd8fce578fb978fa90b21ed5af2c6ee"></script>
+  <script type="text/javascript" src="./js/core.js"></script>
+  <script type="text/javascript" src="./js/desktop.js"></script>
+  <script type="text/javascript" src="./js/mobile.js"></script>
+
+  <script type="text/javascript" src="https://staging.fellowes.com/_layouts/15/_Common/Responsive/Scripts/nav-menu-extended.js?c4b5512dace97023930b119bb11bd890"></script>
+
+  <script src="https://staging.fellowes.com/us/en/_layouts/15/_Common/Responsive/Scripts/localization.js.axd?v=20250625-060843&d=fellowes.com&s=us&c=en-US" type="text/javascript"></script>
+  <script src="https://staging.fellowes.com/us/en/_layouts/15/_Common/Responsive/Scripts/property.js.axd?v=20250620-113914&d=fellowes.com&s=us&c=en-US" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    fellowesCore.isAuthenticated = false;
+    fellowesCore.isVisitor = false;
+
+    fellowesCore.cultureCode = "en-US";
+    fellowesCore.countryCode = "US";
+    fellowesCore.countryDisplay = "United States";
+    fellowesCore.country = { Locale: "en", CountryCode: "US", DisplayName: "United States", Site: "US", Url: "/us/en", Culture: "en", SupportedCultures: ["en-US"], HasProvinces: true };
+    fellowesCore.queryHash = {};
+    fellowesCore.rootCategory = getQuerystring("cat", "").toUpperCase();
+    fellowesCore.parentCategory = getQuerystring("tercat", getQuerystring("subcat", "N/A")).toUpperCase();
+    fellowesCore.currentCategory = getQuerystring("quadcat", getQuerystring("tercat", getQuerystring("subcat", getQuerystring("cat", "N/A")))).toUpperCase();
+    fellowesCore.currentProduct = getQuerystring("prod", getQuerystring("bvproductid", "N/A"));
+    fellowesCore.currentItem = !fellowesCore.currentProduct || fellowesCore.currentProduct == "N/A" ? "N/A" : fellowesCore.currentProduct.indexOf("-") >= 0 ? fellowesCore.currentProduct.split("-")[1] : "N/A";
+    fellowesCore.currentNodeKey = "__US__EN__CATALOG__CONTRACT-INTERIORS";
+    fellowesCore.site = "us";
+    fellowesCore.variation = "en";
+    fellowesCore.storefrontContext = "fellowes.b2c";
+    fellowesCore.isDisplayMode = true;
+    fellowesCore.isPublic = true;
+    fellowesCore.countries = [{ CountryCode: "US", DisplayName: "United States of America", Culture: "en", SupportedCultures: [], HasProvinces: true }];
+
+    fellowesCore.resetSession();
+
+    var consumerProxyUrl = "";
+  </script>
+
+  <!-- Intellisense -->
+  <script type="text/javascript" src="https://cdn.fellowes.com/assets/repositories/themes/scripts/jquery-typeahead.js"></script>
+  <script type="text/javascript" src="https://cdn.fellowes.com/assets/repositories/themes/scripts/jquery-jqcloud.js"></script>
+  <script type="text/javascript" src="https://staging.fellowes.com/_layouts/15/_Common/Responsive/Scripts/solr.js?ac42588c5ac22e613493386c77756575"></script>
+  <script type="text/javascript" src="https://staging.fellowes.com/_layouts/15/_Common/Responsive/Scripts/content.js?d2df350ee35442aafab332d1b40da9c6"></script>
+  <script type="text/javascript" src="https://staging.fellowes.com/_layouts/15/_Common/Responsive/Scripts/asset.js?fbb306bf9533544e78d808f39f71a7e3"></script>
+  <script type="text/javascript" src="https://staging.fellowes.com/_layouts/15/_Common/Responsive/Scripts/product.js?0581b5b0eb86a986700f5544412d931d"></script>
+  <script type="text/javascript" src="https://staging.fellowes.com/_layouts/15/_Common/Responsive/Scripts/intellisense.js?c2a374a4a0ae769fa6b0e7de6069f79a"></script>
+
+  <!-- Search Results -->
+  <script type="text/javascript" src="https://staging.fellowes.com/_layouts/15/_Common/Responsive/Scripts/catalog.js?b8eaf17eb9e65b99caa30c7a169acbe0"></script>
+  <script type="text/javascript" src="https://staging.fellowes.com/_layouts/15/_Common/Responsive/Scripts/virtual.js?f0a467f3013223b9fb8e542810bb79e4"></script>
+  <script type="text/javascript" src="https://staging.fellowes.com/_layouts/15/_Common/Responsive/Scripts/product-details.js?215725ca20292c0fa9e6e10090743b6a"></script>
+  <script type="text/javascript" src="https://staging.fellowes.com/_layouts/15/_Common/Responsive/Scripts/category.js?e524763485a1d3a5abf0b11349226a43"></script>
+  <script type="text/javascript" src="https://staging.fellowes.com/_layouts/15/_Common/Responsive/Scripts/relationship.js?c8d251f528ec6fc6faa98cf78410a599"></script>
+  <script type="text/javascript" src="https://staging.fellowes.com/_layouts/15/_Common/Responsive/Scripts/facet.js?d1a097754cb901b451e497c37388a2ec"></script>
+  <script type="text/javascript" src="https://staging.fellowes.com/_layouts/15/_Common/Responsive/Scripts/search.js?96d3786e93f018f50472644a0d0f97dd"></script>
+
+  <!-- Custom Code -->
+  <script type="text/javascript" src="./js/search-results-ui.js"></script>
 </html>

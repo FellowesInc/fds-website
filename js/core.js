@@ -30,12 +30,12 @@ $(window).on('load', function () {
       if (mediaQuery1200.matches) {
         opennavbar[0].classList.toggle('opensearch');
       }
-      $(window).scroll(function () {
-        if ($(searchtab[s]).hasClass('searchshow')) {
-          $(searchtab[s]).removeClass('searchshow');
-          $(searchtabdiv[0]).removeClass('searchdivshow');
-        }
-      });
+      // $(window).scroll(function () {
+      //   if ($(searchtab[s]).hasClass('searchshow')) {
+      //     $(searchtab[s]).removeClass('searchshow');
+      //     $(searchtabdiv[0]).removeClass('searchdivshow');
+      //   }
+      // });
     });
   }
 
