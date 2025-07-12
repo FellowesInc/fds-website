@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>Search Results - Catalog Template</title>
+  <title>Search Results - Content Template</title>
   <!-- MDB icon -->
   <link rel="icon" href="./img/Favicon.ico" type="image/x-icon" />
   <!-- Font Awesome -->
@@ -2289,7 +2289,7 @@
               <li class="search-results-nav-item nav-item" role="presentation">
                 <button
                   data-mdb-tab-init
-                  class="search-nav-link nav-link active"
+                  class="search-nav-link nav-link"
                   id="catalog-results"
                   data-mdb-target="#catalog-results-tab"
                   data-mdb-toggle="tab"
@@ -2304,7 +2304,7 @@
               <li class="search-results-nav-item nav-item" role="presentation">
                 <button
                   data-mdb-tab-init
-                  class="search-nav-link nav-link"
+                  class="search-nav-link nav-link active"
                   id="content-results"
                   data-mdb-target="#content-results-tab"
                   data-mdb-toggle="tab"
@@ -2334,125 +2334,25 @@
             </ul>
           </div>
         </div>
-        <div class="container">
+        <div class="container mw-1000">
           <div class="tab-content" id="searchContent">
-            <div
-              class="tab-pane fade show active"
-              id="catalog-results-tab"
-              role="tabpanel"
-              aria-labelledby="catalog-results"
-            >
+            <div class="tab-pane fade" id="catalog-results-tab" role="tabpanel" aria-labelledby="catalog-results">
+            
+            </div>
+            <div class="tab-pane fade show active" id="content-results-tab" role="tabpanel" aria-labelledby="content-results">
               <section class="plp-section plp-vertical d-flex container px-0">
-                <div id="filter-section" class="filter-section" style="display: none;">
-                  <div class="d-flex justify-content-between align-content-center flex-wrap">
-                    <div class="filter-section__block filter-section__title pt-lg-0 mt-lg-0">Refine Your Search</div>
-                    <div class="" data-bind="if: filters().length > 0">
-                      <div class="filter-section__title">Your Selections</div>
-                      <div class="filters" data-bind="foreach: filters">
-                        <div class="form-check">
-                          <div>
-                            <input type="checkbox" class="form-check-input rounded-0" data-bind="value: id, attr: { id: id, 'class': 'css-filterbox' }, click: $root.filterRemoved, checked: isChecked, enable: isEnabled" />
-                            <label class="form-check-label" data-bind="attr: { 'for': id, 'class': 'css-label' }"></label>
-                            <label class="form-check-label" data-bind="text: parentTitle + ':  '"></label>
-                            <label class="form-check-label" data-bind="text: facetText"></label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!--Clear Filter Button-->
-                    <!--ko if: filters().length > 0-->
-                    <div>
-                      <button href="#" class="filter-section__BTN filter-clear-btn fds-tan-bg btn btn-rounded text-black shadow-0" type="reset" data-bind="click: clearFilters">Clear All</button>
-                    </div>
-                    <!-- /ko-->
-                    <div class="filter-section__filter-wrapper" style="width: 100%;" data-bind="foreach: facets">
-                      <div class="filter-section__block" data-bind="attr: { id: id }">
-                        <div class="filter-header">
-                          <div data-bind="text: displayName"></div>
-                          <div class="filter-subhead__icons d-lg-none">
-                            <i class="filter-subhead__open fa-solid fa-chevron-right"></i>
-                            <i class="filter-subhead__close fa-solid fa-chevron-down"></i>
-                          </div>
-                        </div>
-                        <div class="filters" data-bind="foreach: facetItems">
-                          <div class="form-check">
-                            <input class="form-check-input rounded-0" type="checkbox" data-bind="value: id, attr: { id: id }, click: $root.filterClicked, checked: isChecked, enable: isEnabled, condition: isChecked()" />
-                            <label class="form-check-label" data-bind="attr: { 'for': id }, text: facetText + ' (' + facetCount() + ')'"></label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div id="product-listing-section" class="product-listing-section">
+                <div id="content-listing-section" class="product-listing-section">
                   <!-- Product Lising Container -->
                   <!-- ko if: HasResults() -->
-                  <div id="plp-inner-wrapper" class="results-section plp-inner-wrapper" data-bind="css: 'container_' + fellowesCore.currentCategory">
+                  <div id="plp-inner-wrapper" class="page-results-section results-section plp-inner-wrapper" data-bind="css: 'container_' + fellowesCore.currentCategory">
                     <!-- ko foreach: Nodes  -->
-                    <div class="plp-item fds-tan-bg" data-bind="attr: { 'data-id': catalogItemId }, fadeVisible: show()">                        
-                      <img class="heroshot d-none d-lg-block" data-bind="src: heroShot().productZoomUrl, attr: { 'alt': heroShot().description, title: heroShot().description }"/>
-                      <div class="catalog-data-item-detail">
-                        <div class="row justify-content-start">
-                          <div class="detail-content-upper-wrapper">
-                            <img class="heroshot d-lg-none" data-bind="src: heroShot().productZoomUrl, attr: { 'alt': heroShot().description, title: heroShot().description }"/>
-                            <div class="detail-content-text-wrapper">
-                              <div class="product-crc fw-700 mb-2 d-none d-lg-block" data-bind="text: consumerReferenceCode"></div>
-                              <h3 class="catalog-data-item-detail-title text-black" class='product-name ' data-bind="html: displayName, attr: { title: displayName }"></h3>
-                              <div class="catalog-data-item-detail-description text-black" data-bind="html: shortDescription"></div>
-                              <div class="reviews-wrapper">
-                                <img class="catalog-data-item-detail-review" data-bind="src:reviewsImagePath()" alt="ratings" style="vertical-align: bottom; width: inherit;"/>
-                                <a class="catalog-data-item-reviews-link" data-bind="attr: { href: reviewsUrl(), title: 'Reviews - ' + displayName() }">See Reviews</a>
-                              </div>
-                              <div class="desc-list d-none d-lg-block" data-bind="html:approvedListingBulletedCopy"></div>
-                              <div class="plp-item__footer d-none d-lg-block">
-                                <!-- ko if: hasValidPrice() -->
-                                <!-- ko if: discountedPrice > 0 -->
-                                <div class="product-price">
-                                  <span class="sale align-middle text-red f-26" data-bind="currency: discountedPrice, symbol: '$'"></span>
-                                  <span class="align-middle text-black font-italic font-weight-light text-decoration-line-through f-16" data-bind="currency: msrpPrice(), symbol: '$'"></span>
-                                </div>
-                                <!-- /ko -->
-                                <!-- ko if: discountedPrice == 0 -->
-                                <!-- ko if: listingPrice() == 0 -->
-                                <div class="product-price">
-                                  <span data-bind="currency: msrpPrice(), symbol: '$'"></span>
-                                  <span class="list-aftertext">MSRP</span>
-                                </div>
-                                <!-- /ko -->
-                                <!-- ko if: listingPrice() > 0 -->
-                                <div class="product-price">
-                                  <span data-bind="currency: listingPrice(), symbol: '$'"></span>
-                                  <span class="list-aftertext">LIST</span>
-                                </div>
-                                <!-- /ko -->
-                                <!-- /ko -->
-                                <!-- /ko -->
-                                <!-- ko if: availableToSell() -->
-                                <div class="product-buy-btn"><a data-bind="attr: { href: url}" class="text-black">Buy Now</a></div>
-                                <!-- /ko -->
-                                <!--ko if:virtualModel.buyNow().length>0-->
-                                <div class="buynow-commerce-connector">
-                                  <a href="#"
-                                  class="button small upper cart-btn find-retailer cc-fi-button"
-                                  data-bind="attr: {'data-ean': eanUpcScsCode}, css: {disabled: window.empty(eanUpcScsCode())}, enabled: !window.empty(eanUpcScsCode()), analytics: {category: 'Buy Product', action: catalogItemId, optLabel: displayName()}"
-                                  href="#"
-                                  rel="">
-                                  Buy Now
-                                  </a>
-                                </div>
-                                <!-- /ko -->
-                              </div>
-                            </div>
+                      <a class="content-data-item" href='#' data-bind="attr: { href: url }">
+                          <img class="heroshot" data-bind="src: image, attr: { 'alt': description, title: title }" />
+                          <div class="content-data-item-detail">
+                              <h3 class="catalog-data-item-detail-title text-black" data-bind="html: title"></h3>
+                              <div class="catalog-data-item-detail-description text-black" data-bind="html: description"></div>
                           </div>
-                        </div>
-                        <div class="detail-links-wrapper">
-                          <a class="catalog-data-item-detail-link" href='#' data-bind="attr: { href: url, title: 'Visit Product Page' }">Visit Product Page</a>
-                          <a class="catalog-data-item-detail-link" href='#' data-bind="attr: { href: registerUrl(), title: 'Register - ' + displayName() }">Register</a>
-                          <a class="catalog-data-item-detail-link" href='#' data-bind="attr: { href: downloadsUrl(), title: 'Downloads - ' + displayName() }">Downloads</a>
-                        </div>
-                      </div>                            
-                    </div>                        
+                      </a>
                     <!-- /ko -->
                   </div>
                   
@@ -2476,122 +2376,39 @@
 
                   <!-- Placeholder section -->
                   <div class="loading-section plp-inner-wrapper placeholder-glow position-relative">
-                    <div class="plp-item fds-tan-bg">                        
-                      <div class="heroshot d-none d-lg-block placeholder mh-125"></div>
-                      <div class="catalog-data-item-detail">
-                        <div class="row justify-content-start">
-                          <div class="detail-content-upper-wrapper">
-                            <div class="heroshot d-lg-none placeholder mh-125"></div>
-                            <div class="detail-content-text-wrapper">
-                              <div class="product-crc fw-700 mb-2 d-none d-lg-block placeholder col-1"></div>
-                              <h3 class="catalog-data-item-detail-title placeholder placeholder-lg col-6"></h3>
-                              <div class="placeholder placeholder-sm col-8"></div>                              
-                              <div class="reviews-wrapper placeholder placeholder-sm col-2"></div>
-                              <ul class="desc-list">
-                                <li><span class="placeholder placeholder-sm col-7"></span></li>
-                                <li><span class="placeholder placeholder-sm col-7"></span></li>
-                                <li><span class="placeholder placeholder-sm col-7"></span></li>
-                              </ul>
-                              <div class="plp-item__footer d-none d-lg-block">
-                                <div class="product-price placeholder placeholder-lg col-2"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="detail-links-wrapper">
-                          <div class="placeholder placeholder-lg col-1 rounded-pill"></div>
-                          <div class="placeholder placeholder-lg col-1 rounded-pill"></div>
-                          <div class="placeholder placeholder-lg col-1 rounded-pill"></div>
-                        </div>
-                      </div>                            
+                    <div class="content-data-item">
+                      <div class="heroshot placeholder mh-60"></div>
+                      <div class="content-data-item-detail">
+                        <h3 class="catalog-data-item-detail-title placeholder placeholder-lg col-3"></h3>
+                        <div class="catalog-data-item-detail-description placeholder placeholder-sm col-12"></div>
+                        <div class="catalog-data-item-detail-description placeholder placeholder-sm col-8"></div>
+                      </div>
                     </div>
-                    <div class="plp-item fds-tan-bg">                        
-                      <div class="heroshot d-none d-lg-block placeholder mh-125"></div>
-                      <div class="catalog-data-item-detail">
-                        <div class="row justify-content-start">
-                          <div class="detail-content-upper-wrapper">
-                            <div class="heroshot d-lg-none placeholder mh-125"></div>
-                            <div class="detail-content-text-wrapper">
-                              <div class="product-crc fw-700 mb-2 d-none d-lg-block placeholder col-1"></div>
-                              <h3 class="catalog-data-item-detail-title placeholder placeholder-lg col-6"></h3>
-                              <div class="placeholder placeholder-sm col-8"></div>                              
-                              <div class="reviews-wrapper placeholder placeholder-sm col-2"></div>
-                              <ul class="desc-list">
-                                <li><span class="placeholder placeholder-sm col-7"></span></li>
-                                <li><span class="placeholder placeholder-sm col-7"></span></li>
-                                <li><span class="placeholder placeholder-sm col-7"></span></li>
-                              </ul>
-                              <div class="plp-item__footer d-none d-lg-block">
-                                <div class="product-price placeholder placeholder-lg col-2"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="detail-links-wrapper">
-                          <div class="placeholder placeholder-lg col-1 rounded-pill"></div>
-                          <div class="placeholder placeholder-lg col-1 rounded-pill"></div>
-                          <div class="placeholder placeholder-lg col-1 rounded-pill"></div>
-                        </div>
-                      </div>                            
+                    <div class="content-data-item">
+                      <div class="heroshot placeholder mh-60"></div>
+                      <div class="content-data-item-detail">
+                        <h3 class="catalog-data-item-detail-title placeholder placeholder-lg col-3"></h3>
+                        <div class="catalog-data-item-detail-description placeholder placeholder-sm col-12"></div>
+                        <div class="catalog-data-item-detail-description placeholder placeholder-sm col-8"></div>
+                      </div>
                     </div>
-                    <div class="plp-item fds-tan-bg">                        
-                      <div class="heroshot d-none d-lg-block placeholder mh-125"></div>
-                      <div class="catalog-data-item-detail">
-                        <div class="row justify-content-start">
-                          <div class="detail-content-upper-wrapper">
-                            <div class="heroshot d-lg-none placeholder mh-125"></div>
-                            <div class="detail-content-text-wrapper">
-                              <div class="product-crc fw-700 mb-2 d-none d-lg-block placeholder col-1"></div>
-                              <h3 class="catalog-data-item-detail-title placeholder placeholder-lg col-6"></h3>
-                              <div class="placeholder placeholder-sm col-8"></div>                              
-                              <div class="reviews-wrapper placeholder placeholder-sm col-2"></div>
-                              <ul class="desc-list">
-                                <li><span class="placeholder placeholder-sm col-7"></span></li>
-                                <li><span class="placeholder placeholder-sm col-7"></span></li>
-                                <li><span class="placeholder placeholder-sm col-7"></span></li>
-                              </ul>
-                              <div class="plp-item__footer d-none d-lg-block">
-                                <div class="product-price placeholder placeholder-lg col-2"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="detail-links-wrapper">
-                          <div class="placeholder placeholder-lg col-1 rounded-pill"></div>
-                          <div class="placeholder placeholder-lg col-1 rounded-pill"></div>
-                          <div class="placeholder placeholder-lg col-1 rounded-pill"></div>
-                        </div>
-                      </div>                            
+                    <div class="content-data-item">
+                      <div class="heroshot placeholder mh-60"></div>
+                      <div class="content-data-item-detail">
+                        <h3 class="catalog-data-item-detail-title placeholder placeholder-lg col-3"></h3>
+                        <div class="catalog-data-item-detail-description placeholder placeholder-sm col-12"></div>
+                        <div class="catalog-data-item-detail-description placeholder placeholder-sm col-8"></div>
+                      </div>
                     </div>
-                    <div class="plp-item fds-tan-bg">                        
-                      <div class="heroshot d-none d-lg-block placeholder mh-125"></div>
-                      <div class="catalog-data-item-detail">
-                        <div class="row justify-content-start">
-                          <div class="detail-content-upper-wrapper">
-                            <div class="heroshot d-lg-none placeholder mh-125"></div>
-                            <div class="detail-content-text-wrapper">
-                              <div class="product-crc fw-700 mb-2 d-none d-lg-block placeholder col-1"></div>
-                              <h3 class="catalog-data-item-detail-title placeholder placeholder-lg col-6"></h3>
-                              <div class="placeholder placeholder-sm col-8"></div>                              
-                              <div class="reviews-wrapper placeholder placeholder-sm col-2"></div>
-                              <ul class="desc-list">
-                                <li><span class="placeholder placeholder-sm col-7"></span></li>
-                                <li><span class="placeholder placeholder-sm col-7"></span></li>
-                                <li><span class="placeholder placeholder-sm col-7"></span></li>
-                              </ul>
-                              <div class="plp-item__footer d-none d-lg-block">
-                                <div class="product-price placeholder placeholder-lg col-2"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="detail-links-wrapper">
-                          <div class="placeholder placeholder-lg col-1 rounded-pill"></div>
-                          <div class="placeholder placeholder-lg col-1 rounded-pill"></div>
-                          <div class="placeholder placeholder-lg col-1 rounded-pill"></div>
-                        </div>
-                      </div>                            
+                    <div class="content-data-item">
+                      <div class="heroshot placeholder mh-60"></div>
+                      <div class="content-data-item-detail">
+                        <h3 class="catalog-data-item-detail-title placeholder placeholder-lg col-3"></h3>
+                        <div class="catalog-data-item-detail-description placeholder placeholder-sm col-12"></div>
+                        <div class="catalog-data-item-detail-description placeholder placeholder-sm col-8"></div>
+                      </div>
                     </div>
+
                     <div class="loading-spinner">
                       <div class="spinner-border text-dark" role="status">
                         <span class="visually-hidden">Loading...</span>
@@ -2602,9 +2419,6 @@
 
                 </div>
               </section>
-            </div>
-            <div class="tab-pane fade" id="content-results-tab" role="tabpanel" aria-labelledby="content-results">
-
             </div>
             <div class="tab-pane fade" id="resources-results-tab" role="tabpanel" aria-labelledby="resources-results">
 
@@ -2791,9 +2605,7 @@
 
   <script>
     $(function () {
-      window.fellowesSearch.bindMeToFacet(document.getElementById("filter-section"));
-
-      window.fellowesSearch.bindMeToSearch(document.getElementById("product-listing-section"), FellowesSolrConfig.ContextType.CATALOG);
+      window.fellowesSearch.bindMeToSearch(document.getElementById("content-listing-section"), FellowesSolrConfig.ContextType.CONTENT);
 
       // For Data Model - Refer to https://staging.fellowes.com/_layouts/15/_Common/Responsive/Scripts/content.js
       //window.fellowesSearch.bindMeToSearch(document.getElementById("content-listing-section"), FellowesSolrConfig.ContextType.CONTENT);
@@ -2801,8 +2613,6 @@
       Fellowes.PostBox.subscribe(
         function (model) {
           if (model.TotalCount() <= 0) $("#plp-no-results").css("display", "block");
-
-          if (model.TotalCount() > 0) $("#filter-section").css("display", "block");
 
           $("#primary-content").attr("data-loading", false);
         },

@@ -4,8 +4,11 @@
 }
 
 .intellisense-search-wrapper {
-  display: flex;
   border-bottom: 1px solid #efefef;
+}
+
+.inner-search-wrapper {
+  display: flex;
 }
 
 .intellisense-search-field {
@@ -97,12 +100,12 @@
 }
 
 .content-data-item {
-    display: grid;
-    grid-template-columns: 60px 1fr;
-    gap: 1rem;
-    align-items: center;
-    border-top: 1px solid #E5E5E5;
-    padding: .75rem;
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 1rem;
+  align-items: center;
+  border-top: 1px solid #E5E5E5;
+  padding: .75rem;
 }
 
 .content-data-item:last-child {
