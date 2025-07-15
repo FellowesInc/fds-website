@@ -55,6 +55,7 @@
     position: relative;
     padding-inline: 1rem;
     padding-bottom: 1.5rem;
+    padding-top: 1px;
 }
 
 .array-ceiling-text-section {
