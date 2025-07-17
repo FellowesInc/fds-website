@@ -2484,19 +2484,22 @@
         /*
         Site Header Intellisense Scripts
         */
+        var intellisenseEnabled = FellowesAppSettings.Core.IntellisenseEnabled &&
+            window.location.pathname.toLowerCase().indexOf(FellowesAppSettings.Core.SearchResultUrl.toLowerCase(), 0) < 0;
         $(function () {
             window.fellowesIntellisense = new FellowesIntellisense({
-                source: '#txtSearch',
-                trigger: '#btnSearchTrigger',
-                destination: 'div#intellisense-container',
-                clear: '#btnSearchClear',
-                action: 'https://git.fellowes.com/fds-website/search-results.html'
+                sourceSelector: '#txtSearch',
+                triggerSelector: '#btnSearchTrigger',
+                action: FellowesAppSettings.Core.SearchResultUrl,
+                destinationSelector: 'div#intellisense-container',
+                clearSelector: '#btnSearchClear',
+                action: 'https://git.fellowes.com/fds-website/search-results.html',
+                enabled: intellisenseEnabled
             });
 
             // Only allowed when Intellisense Enabled
             // Or when it is not on Search page already
-            if (FellowesAppSettings.Core.IntellisenseEnabled &&
-                window.location.pathname.toLowerCase().indexOf(FellowesAppSettings.Core.SearchResultUrl.toLowerCase(), 0) < 0)
+            if (intellisenseEnabled)
                 window.fellowesIntellisense.bindMe(document.getElementById("intellisense-container"));
             else
                 $("#intellisense-container").remove();
