@@ -2484,15 +2484,18 @@
         /*
         Site Header Intellisense Scripts
         */
+        // Use for Live Code
+        //var searchResultUrl = FellowesAppSettings.Core.SearchResultUrl.toLowerCase();
+        var searchResultUrl = 'https://git.fellowes.com/fds-website/search-results.html';
         var intellisenseEnabled = FellowesAppSettings.Core.IntellisenseEnabled &&
-            window.location.pathname.toLowerCase().indexOf(FellowesAppSettings.Core.SearchResultUrl.toLowerCase(), 0) < 0;
+            window.location.pathname.toLowerCase().indexOf(searchResultUrl, 0) < 0;
         $(function () {
             window.fellowesIntellisense = new FellowesIntellisense({
                 sourceSelector: '#txtSearch',
                 triggerSelector: '#btnSearchTrigger',
+                action: searchResultUrl,
                 destinationSelector: 'div#intellisense-container',
                 clearSelector: '#btnSearchClear',
-                action: 'https://git.fellowes.com/fds-website/search-results.html',
                 enabled: intellisenseEnabled
             });
 
