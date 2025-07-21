@@ -2483,13 +2483,14 @@
     <script>
         /*
         Site Header Intellisense Scripts
-        */
-        // Use for Live Code
-        //var searchResultUrl = FellowesAppSettings.Core.SearchResultUrl.toLowerCase();
-        var searchResultUrl = 'https://git.fellowes.com/fds-website/search-results.html';
-        var intellisenseEnabled = FellowesAppSettings.Core.IntellisenseEnabled &&
-            window.location.pathname.toLowerCase().indexOf(searchResultUrl, 0) < 0;
+        */        
         $(function () {
+            // Use for Live Code
+            //var searchResultUrl = FellowesAppSettings.Core.SearchResultUrl.toLowerCase();
+            var searchResultUrl = 'https://git.fellowes.com/fds-website/search-results.html';
+            var intellisenseEnabled = FellowesAppSettings.Core.IntellisenseEnabled &&
+                window.location.pathname.toLowerCase().indexOf(searchResultUrl, 0) < 0;
+
             window.fellowesIntellisense = new FellowesIntellisense({
                 sourceSelector: '#txtSearch',
                 triggerSelector: '#btnSearchTrigger',
@@ -2509,7 +2510,7 @@
     </script>
 
     <!-- Scripts for Model -->
-    <script src="https://staging.fellowes.com/us/en/_layouts/15/_Application/Fellowes/Responsive/Scripts/R01/appsettings.js.axd?v=20250620-113547&d=fellowes.com&s=us&c=en-US" type="text/javascript"></script>
+    <script src="https://staging.fellowes.com/us/en/_layouts/15/_Application/Fellowes/Responsive/Scripts/R01/appsettings.js.axd?d=fellowes.com&s=us&c=en-US" type="text/javascript"></script>
 
     <script type="text/javascript" src="https://cdn.fellowes.com/assets/repositories/themes/scripts/mdb-js/mdb.min.js"></script>
     <script type="text/javascript" src="https://cdn.fellowes.com/assets/repositories/themes/scripts/mdb-js/plugins/js/all.min.js"></script>
@@ -2528,7 +2529,7 @@
     <script type="text/javascript" src="./js/desktop.js"></script>
     <script type="text/javascript" src="./js/mobile.js"></script>
 
-    <script src="https://staging.fellowes.com/us/en/_layouts/15/_Common/Responsive/Scripts/property.js.axd?v=20250620-113914&d=fellowes.com&s=us&c=en-US" type="text/javascript"></script>
+    <script src="https://staging.fellowes.com/us/en/_layouts/15/_Common/Responsive/Scripts/property.js.axd?d=fellowes.com&s=us&c=en-US" type="text/javascript"></script>
 
     <script type="text/javascript">
         fellowesCore.isAuthenticated = false;
