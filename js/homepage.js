@@ -1,6 +1,7 @@
 // Custom Global Navication JS
 const el_autohide1 = document.querySelector('#main-navbar');
 const mediaQuerymax1200 = window.matchMedia('(max-width: 1199.98px)');
+const mediaQuerymin1200 = window.matchMedia('(min-width: 1200px)');
 // Homepage Logo Section JS
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -93,36 +94,6 @@ document.addEventListener('DOMContentLoaded', function () {
           'block';
       });
     }
-    document.querySelector('.multi-carousel').addEventListener('swipeleft', function (event) {
-      var imageclick1 = document.getElementsByClassName('slideimageclick');
-      var imageParent1 = imageclick1[1].parentNode;
-      var currentItem1 = imageParent1.parentNode.getAttribute('data-item');
-      var removeactive1 = document.getElementsByClassName('multi-carousel-item'); //divsToHide is an array
-      for (var re1 = 0; re1 < removeactive1.length; re1++) {
-        removeactive1[re1].classList.remove('active');
-      }
-      imageParent1.parentNode.classList.add('active');
-      var divsToHide1 = document.getElementsByClassName('logo-slide'); //divsToHide is an array
-      for (var i = 0; i < divsToHide1.length; i++) {
-        divsToHide1[i].style.display = 'none'; // depending on what you're doing
-      }
-      document.querySelector('[data-content-item="' + currentItem1 + '"]').style.display = 'block';
-    });
-    document.querySelector('.multi-carousel').addEventListener('swiperight', function (event) {
-      var imageclick1 = document.getElementsByClassName('slideimageclick');
-      var imageParent1 = imageclick1[0].parentNode;
-      var currentItem1 = imageParent1.parentNode.getAttribute('data-item');
-      var removeactive1 = document.getElementsByClassName('multi-carousel-item'); //divsToHide is an array
-      for (var re1 = 0; re1 < removeactive1.length; re1++) {
-        removeactive1[re1].classList.remove('active');
-      }
-      imageParent1.parentNode.classList.add('active');
-      var divsToHide1 = document.getElementsByClassName('logo-slide'); //divsToHide is an array
-      for (var i = 0; i < divsToHide1.length; i++) {
-        divsToHide1[i].style.display = 'none'; // depending on what you're doing
-      }
-      document.querySelector('[data-content-item="' + currentItem1 + '"]').style.display = 'block';
-    });
   }
 });
 
@@ -145,5 +116,22 @@ document.addEventListener('DOMContentLoaded', function () {
         navpills[0].classList.remove('showpills');
       });
     }
+  }
+  if (mediaQuerymin1200.matches) {
+    const pillEls = document.querySelectorAll('a[data-mdb-toggle="pill"]');
+
+    pillEls.forEach(tab => {
+      tab.addEventListener('shown.bs.tab', function (event) {
+        // Get the tab id (like "tab1")
+        const tabId = event.target.getAttribute("href").replace("#", "");
+
+        // Remove "active" from all images
+        document.querySelectorAll(".tab-img img").forEach(img => img.classList.remove("active"));
+
+        // Add "active" to the matching image
+        const activeImg = document.getElementById("img-" + tabId);
+        if (activeImg) activeImg.classList.add("active");
+      });
+    });
   }
 });

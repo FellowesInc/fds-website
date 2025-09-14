@@ -178,6 +178,10 @@ h3 {
   font-size: var(--fds-fs-825) !important;
 }
 
+.fs-55 {
+  font-size: 30px;
+}
+
 .unleash-txt {
   color: var(--fds-green);
   font-weight: 700;
@@ -190,6 +194,10 @@ h3 {
   }
   .fs-19-m16 {
     font-size: var(--fds-fs-500) !important;
+  }
+
+  .fs-55 {
+    font-size: 55px;
   }
 }
 
@@ -943,8 +951,17 @@ a.two-col-section__link::after {
 }
 
 .last-section {
-  padding-block: 4.375rem;
-  background-color: var(--fds-tan);
+  padding-block: 3.3rem;
+  background-color: var(--fds-black);
+}
+
+.last-section-title {
+  text-align: center;
+  color: #fff;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.1;
+  margin-bottom: 2.5rem;
 }
 
 .last-section-grid {
@@ -982,7 +999,12 @@ a.two-col-section__link::after {
   }
 
   .last-section {
-    padding-block: 0;
+    padding-block: 5rem;
+  }
+
+  .last-section-title {
+    font-size: 36px;
+    margin-bottom: 3rem;
   }
 }
 
@@ -1818,7 +1840,16 @@ fieldset:disabled .btn {
 /* Global Footer Styles */
 
 #main-footer {
-  border-top: 1px solid var(--fds-grey-200);
+  background-color: #000;
+}
+
+#main-footer .container-xl {
+  border-top: 1px solid #ffffff55;
+  padding-block: 2rem 1.5rem
+}
+
+#main-footer svg {
+    fill: var(--fds-white);
 }
 
 .footer-social-row a {
@@ -1830,6 +1861,7 @@ fieldset:disabled .btn {
 .footer-social-row i {
   width: 15px;
   height: 15px;
+  color: #fff;
 }
 
 .footer-menu-heading {
@@ -1841,11 +1873,18 @@ fieldset:disabled .btn {
   padding: 4px;
   font-size: var(--fds-fs-100);
   font-weight: 500;
+  background-color: transparent;
+  color: #b0b0b0;
 }
 
 .footer-fine-print {
   font-size: var(--fds-fs-100);
   font-weight: bold;
+  color: #cdd2d2;
+}
+
+#main-footer .text-dark {
+  color: #cdd3d2 !important;
 }
 
 @media (min-width: 992px) {
@@ -1853,16 +1892,18 @@ fieldset:disabled .btn {
     pointer-events: none;
     touch-action: none;
   }
+
+  #main-footer .container-xl {
+    padding-block: 3.625rem 1.5rem;
+  }
 }
 
 @media (max-width: 992px) {
   .footer-menus {
-    border-bottom: 1px solid var(--fds-grey-200);
     margin-bottom: 2.5rem;
   }
 
   .footer-menu-heading {
-    border-top: 1px solid var(--fds-grey-200);
     display: flex;
     align-items: center;
     padding: 1rem 0;

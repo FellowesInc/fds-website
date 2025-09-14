@@ -33,14 +33,10 @@
 
   #main-navbar {
     background-color: rgba(0, 0, 0, 0.3);
-    -webkit-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
   .navbar .navbar-brand svg {
     fill: var(--fds-white);
-    -webkit-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
   }
   #main-navbar.scrolled-up {
@@ -88,8 +84,6 @@
   .scrolled-up .questionWhite,
   #main-navbar.top-scrolled-up:hover .questionWhite,
   .scrolled-down .questionBlack {
-    -webkit-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     opacity: 0 !important;
     z-index: 1000;
@@ -98,8 +92,6 @@
   .scrolled-up .questionBlack,
   .top-scrolled-up .questionWhite,
   #main-navbar.top-scrolled-up:hover .questionBlack {
-    -webkit-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     opacity: 1 !important;
     z-index: 1000;
@@ -123,8 +115,6 @@
   }
   .navbar .stroke-svg svg {
     stroke: var(--fds-white);
-    -webkit-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
   }
   .navbar:hover .stroke-svg svg,
@@ -139,8 +129,6 @@
   }
   .navbar .right-nav svg {
     fill: var(--fds-white);
-    -webkit-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
   }
   #main-navbar:hover .right-nav svg,
@@ -198,14 +186,6 @@
   inset: 0;
 
   background: rgb(0, 0, 0);
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(33%, rgba(0, 0, 0, 0)),
-    to(rgba(0, 0, 0, 1))
-  );
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 1) 100%);
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
 
@@ -215,8 +195,6 @@
 #homepagebannerslider .carousel-indicators {
   position: relative;
   width: 100%;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   margin-left: 0;
   margin-right: 0;
@@ -382,8 +360,6 @@
 .video-txt-overlay {
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   width: 100%;
 }
@@ -422,8 +398,6 @@
 }
 
 #homepage-process-grid .multi-carousel-item {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
   flex: 1;
   max-width: 100%;
 }
@@ -465,8 +439,6 @@ h5.grid-title {
   position: absolute;
   scale: 2.5;
   bottom: 0;
-  -webkit-transform-origin: bottom center;
-  -ms-transform-origin: bottom center;
   transform-origin: bottom center;
 }
 
@@ -494,14 +466,6 @@ h5.grid-title {
   left: 0;
   bottom: 0;
   width: 100%;
-  background: transparent -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      from(#00000000),
-      to(#00000093)
-    ) 0% 0% no-repeat padding-box;
-  background: transparent -o-linear-gradient(top, #00000000 0%, #00000093 100%) 0% 0% no-repeat padding-box;
   background: transparent linear-gradient(180deg, #00000000 0%, #00000093 100%) 0% 0% no-repeat
     padding-box;
   height: 100px;
@@ -537,6 +501,7 @@ h5.grid-title {
 .carousel-control-prev:hover {
   opacity: 1;
 }
+
 .multi-carousel {
   position: relative;
 }
@@ -570,17 +535,11 @@ h5.grid-title {
 }
 
 #homepage-patent-slider .carousel-item {
-  -webkit-transition: -webkit-transform 2s ease-in-out;
-  transition: -webkit-transform 2s ease-in-out;
-  -o-transition: transform 2s ease-in-out;
   transition: transform 2s ease-in-out;
-  transition: transform 2s ease-in-out, -webkit-transform 2s ease-in-out;
 }
 
 #homepage-patent-slider .carousel-fade .active.carousel-item-start,
 #homepage-patent-slider .carousel-fade .active.carousel-item-end {
-  -webkit-transition: opacity 0s 2s;
-  -o-transition: opacity 0s 2s;
   transition: opacity 0s 2s;
 }
 
@@ -590,16 +549,21 @@ h5.grid-title {
 }
 
 .tab-box {
-  padding: 2rem 2rem 1rem 2rem;
-  background-color: var(--fds-tan);
+  background-color: var(--fds-black);
+  color: #fff;
 }
+
+.tab-box-innerwrapper {
+  padding: 2.5rem 2rem;
+}
+
 .safeairstoriestabbox .nav-pills .nav-link {
   background: none;
   display: block;
   border-radius: 0;
   font-size: var(--fds-fs-400);
   line-height: var(--fds-fs-725);
-  color: var(--fds-black);
+  color: var(--fds-white);
   text-transform: none;
   margin: 0;
   padding: 0.25rem 1.5rem;
@@ -611,7 +575,7 @@ h5.grid-title {
 }
 .safeairstoriestabbox .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.3);
   border-radius: 50px;
 }
 
@@ -621,22 +585,24 @@ h5.grid-title {
 }
 
 .tab-logo-box {
-  background: var(--fds-white);
   height: 100%;
-  padding: 1rem 0;
+  padding: 1.5rem;
 }
-.tab-logo-box img {
-  -webkit-filter: grayscale(1);
-  filter: grayscale(1);
+
+.logo-content-section {
+  max-width: 885px;
+  margin-inline: auto;
 }
-.tab-logo-box img:hover {
-  -webkit-filter: grayscale(0);
-  filter: grayscale(0);
+
+.tab-logo-box-header {
+  padding-block: 5.375rem;
+  color: #fff;
 }
+
 .tab-dropdown {
   margin: 0;
   padding: 10px 24px 10px 24px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.3);
   font-weight: 500;
   cursor: pointer;
   position: relative;
@@ -648,11 +614,7 @@ h5.grid-title {
   height: 100%;
   top: 0;
   bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   right: 20px;
   pointer-events: none;
@@ -662,6 +624,7 @@ h5.grid-title {
   position: relative;
   max-width: 400px;
   margin-inline: auto;
+  margin-top: 2rem;
 }
 
 .tab-logo-box .logos-gray div {
@@ -672,6 +635,14 @@ h5.grid-title {
   min-height: 225px;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+.tab-desktop-imgs .tab-img img {
+  display: none;
+}
+
+.tab-desktop-imgs .tab-img img.active {
+  display: block;
 }
 
 .tab-content-title {
@@ -690,13 +661,64 @@ h5.grid-title {
   padding-inline-start: 0;
   list-style-type: none;
   font-size: 10px;
-  -webkit-column-gap: 2rem;
   -moz-column-gap: 2rem;
   column-gap: 2rem;
 }
 
 .tab-content-items ul li {
   margin-bottom: 1rem;
+}
+
+.tabs-mobile-header h2 {
+  font-size: 24px;
+}
+
+.new-notworthy-grid {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.new-notworthy-card-img {
+  display: block;
+  width: 100%;
+  border-radius: .625rem;
+  margin-bottom: 1rem;
+}
+
+.new-notworthy-card {
+  color: #000;
+}
+
+.new-notworthy-card-title {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: .25rem;
+}
+
+.new-notworthy-card-desc {
+  font-size: 10px;
+}
+
+@media (min-width: 768px) {
+  .new-notworthy-grid {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 4rem;
+  }
+
+  .new-notworthy-card-img {
+    border-radius: 1.125rem;
+    margin-bottom: 2rem;
+  }
+
+  .new-notworthy-card-title {
+    font-size: 36px;
+    margin-bottom: .25rem;
+  }
+
+  .new-notworthy-card-desc {
+    font-size: 18px;
+}  
 }
 
 @media (min-width: 992px) {
@@ -716,6 +738,10 @@ h5.grid-title {
   }
   .logoslider .multi-carousel .multi-carousel-inner {
     overflow-y: inherit;
+  }
+  .tab-logo-box {
+    padding: 0rem 0rem 5.375rem 0rem;
+    min-height: 740px;
   }
 }
 @media (max-width: 767px) {
@@ -757,8 +783,6 @@ h5.grid-title {
 }
 
 #homepage-recent-stories .multi-carousel-item {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
   flex: 1;
   max-width: 100%;
   vertical-align: top;
@@ -792,8 +816,6 @@ h5.grid-title {
     position: absolute;
     bottom: 0;
     left: 50%;
-    -webkit-transform: translatex(-50%);
-    -ms-transform: translatex(-50%);
     transform: translatex(-50%);
   }
   .homepage-patent-slide-item h5 {
@@ -825,8 +847,6 @@ h5.grid-title {
     scale: 1;
     bottom: 0;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
   }
   .lets-work-section-title {
@@ -854,7 +874,7 @@ h5.grid-title {
     font-weight: 300;
     margin-bottom: 2rem;
   }
-  .tab-box {
+  .tab-box-innerwrapper {
     padding: 3rem 2rem;
   }
   .tab-logo-box .logos-gray div {
@@ -866,7 +886,6 @@ h5.grid-title {
   .tab-content-items ul {
     list-style-type: initial;
     font-size: 16px;
-    -webkit-column-gap: 3rem;
     -moz-column-gap: 3rem;
     column-gap: 3rem;
     -webkit-padding-start: 40px;
@@ -886,7 +905,7 @@ h5.grid-title {
     -o-object-fit: contain;
     object-fit: contain;
   }
-  .tab-box {
+  .tab-box-innerwrapper {
     padding: 3rem 2rem;
   }
 }
@@ -911,7 +930,6 @@ h5.grid-title {
   width: 100%;
   height: 100% !important;
   overflow: hidden;
-  -webkit-perspective: 1000;
   perspective: 1000;
   z-index: 1000;
   background-color: #000000;
@@ -939,8 +957,6 @@ h5.grid-title {
   position: absolute;
   top: 10%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   z-index: 10;
 }
