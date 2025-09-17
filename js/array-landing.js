@@ -28,4 +28,14 @@ $(document).ready(function () {
     }
   }
 
+  // On page load, check if a hash is in the URL
+  var hash = window.location.hash;
+  if (hash) {
+    var $tabTrigger = $('a[data-mdb-toggle="tab"][href="' + hash + '"]');
+    if ($tabTrigger.length) {
+      var tabInstance = new mdb.Tab($tabTrigger[0]);
+      tabInstance.show();
+    }
+  }
+
 });
