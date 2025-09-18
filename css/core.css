@@ -952,7 +952,7 @@ a.two-col-section__link::after {
 
 .last-section {
   padding-block: 3.3rem;
-  background-color: var(--fds-black);
+  background-color: var(--fds-tan);
 }
 
 .last-section-title {
@@ -1840,7 +1840,7 @@ fieldset:disabled .btn {
 /* Global Footer Styles */
 
 #main-footer {
-  background-color: #000;
+  /* background-color: #000; */
 }
 
 #main-footer .container-xl {
@@ -1849,7 +1849,7 @@ fieldset:disabled .btn {
 }
 
 #main-footer svg {
-    fill: var(--fds-white);
+    fill: var(--fds-black);
 }
 
 .footer-social-row a {
@@ -1861,7 +1861,7 @@ fieldset:disabled .btn {
 .footer-social-row i {
   width: 15px;
   height: 15px;
-  color: #fff;
+  color: #000;
 }
 
 .footer-menu-heading {
@@ -1874,17 +1874,20 @@ fieldset:disabled .btn {
   font-size: var(--fds-fs-100);
   font-weight: 500;
   background-color: transparent;
-  color: #b0b0b0;
+  /* color: #b0b0b0; */
+  color: #333;
 }
 
 .footer-fine-print {
   font-size: var(--fds-fs-100);
   font-weight: bold;
-  color: #cdd2d2;
+  /* color: #cdd2d2; */
+  color: #000;
 }
 
 #main-footer .text-dark {
-  color: #cdd3d2 !important;
+  /* color: #cdd3d2 !important; */
+  color: #000;
 }
 
 @media (min-width: 992px) {
