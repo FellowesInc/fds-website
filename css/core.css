@@ -244,6 +244,10 @@ a.hero-link {
   font-size: var(--fds-fs-800);
 }
 
+.ratio-32-15 {
+  aspect-ratio: 32 / 15;
+}
+
 @media (min-width: 768px) {
   h1,
   h2,

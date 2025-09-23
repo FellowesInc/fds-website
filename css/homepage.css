@@ -687,6 +687,12 @@ h5.grid-title {
 
 .new-notworthy-card {
   color: #000;
+  transition: all .3s ease-in-out;
+}
+
+.new-notworthy-card:hover,
+.new-notworthy-card:focus {
+  color: #6b6b6b;
 }
 
 .new-notworthy-card-title {
