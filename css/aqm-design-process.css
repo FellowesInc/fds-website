@@ -102,6 +102,10 @@
   transition: all .3s ease-in-out;
 }
 
+.custom-section-nav a::after {
+  display: none !important;
+}
+
 .custom-section-nav a.active {
   padding: 10px;
   background: #798393;
