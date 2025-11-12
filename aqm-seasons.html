@@ -23,7 +23,6 @@
     <link rel="stylesheet" href="./css/mobile.css" />
     <!-- Custom Styles -->
     <link rel="stylesheet" href="./css/aqm-seasons.css" />
-    <link rel="stylesheet" href="./css/array-form.css" />
   </head>
 
   <body style="position: relative">
@@ -2267,7 +2266,7 @@
     </div>
 
     <!-- Temporary Hero -->
-    <main id="primary-content" class="position-relative">
+    <main id="primary-content" class="position-relative overflow-x-hidden">
 
       <!-- Header Section -->
       <section class="array-header position-relative dark-img-overlay">
@@ -2290,11 +2289,269 @@
 
       <!-- What you need to know Section -->
       <section class="need-to-know-section py-5">
-        <div class="container py-3 py-md-5">
+        <div class="container py-md-5">
           <div class="row">
             <div class="col-12 text-center">
               <div class="aqm-section-subtitle">Indoor Air Quality Challenges and</div>
               <h2 class="aqm-section-title">What you Need to Know</h2>
+              <img src="./img/aqm-seasons/icon-group.svg" alt="A group of four icons, one for each season" class="icon-group">
+              <div class="aqm-section-text mw-975 mx-auto">
+                Indoor Air Quality (IAQ) is constantly changing with the seasons as environmental factors like humidity, allergens, and pollutants fluctuate. From winter's dry air to spring's pollen surge these shifts place extra demand on your HVAC system, requiring dynamic adjustments to maintain healthy air.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Season Tabs Section-->
+      <section class="season-tab-section">
+
+        <div class="season-tab-box">
+
+          <div class="tabs-mobile-header d-xl-none">
+            <h2 class="fw-300 text-center">
+              Explore How Air is Affected<br>by Each Season
+            </h2>
+            <!-- Tab navs -->
+            <div class="sas-tab-navs">
+              <div class="tab-dropdown">Winter</div>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div>
+
+          <!-- Tabs navs -->
+          <ul class="season-tabs nav nav-tabs nav-justified" id="seasons-tabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a data-mdb-toggle="tab" class="nav-link seasons-tab-link active" id="winter-tab" href="#winter-tabs" role="tab" aria-controls="winter-tabs" aria-selected="true" >
+                <img src="./img/aqm-seasons/icon-winter.svg" alt="decorative" class="seasons-tab-icon">
+                Winter
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a data-mdb-toggle="tab" class="nav-link seasons-tab-link" id="spring-tab" href="#spring-tabs" role="tab" aria-controls="spring-tabs" aria-selected="false" >
+                <img src="./img/aqm-seasons/icon-spring.svg" alt="decorative" class="seasons-tab-icon">
+                Spring
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a data-mdb-toggle="tab" class="nav-link seasons-tab-link" id="summer-tab" href="#summer-tabs" role="tab" aria-controls="summer-tabs" aria-selected="false">
+                <img src="./img/aqm-seasons/icon-summer.svg" alt="decorative" class="seasons-tab-icon">
+                Summer
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a data-mdb-toggle="tab" class="nav-link seasons-tab-link" id="fall-tab" href="#fall-tabs" role="tab" aria-controls="fall-tabs" aria-selected="false">
+                <img src="./img/aqm-seasons/icon-fall.svg" alt="decorative" class="seasons-tab-icon">
+                Fall
+              </a>
+            </li>
+          </ul>
+          <!-- Tabs navs -->
+        </div>
+
+        <!-- Tabs content -->
+        <div class="tab-content season-tab-content" id="seasons-tabs-content">
+          <div class="tab-pane fade show active" id="winter-tabs" role="tabpanel" aria-labelledby="winter-tab">
+            <div class="season-tab-content-wrapper">
+              <div class="season-tab-image-wrapper">
+                <div class="tab-icon-text-wrapper">
+                  <img src="./img/aqm-seasons/icon-white-winter.svg" alt="decorative" class="season-image-icon">
+                  <div class="season-img-text text-white">Winter</div>
+                </div>
+                <img src="./img/aqm-seasons/tab-img-winter.jpg" alt="Blurred out image of a winter landscape" class="season-content-image">
+              </div>
+              <div class="season-tab-content-inner">
+                <div class="season-tab-content-title">Closed Windows, Circulating Viruses</div>
+                <div class="season-tab-content-text">Cold weather pushes people indoors, and heating systems dry out the air, creating ideal conditions for respiratory infections like colds, flu, and COVID-19 to spread. Dry indoor air can irritate mucous membranes and reduce the body's natural defenses, while poor ventilation allows viruses and airborne pollutants like mold to circulate more easily.</div>
+                <div class="tab-content-icon-wrapper">
+                  <div class="icon-text-wrapper">
+                    <img src="./img/aqm-seasons/icon-winter-mold.svg" alt="An icon of mold" class="tab-content-icon">
+                    Mold
+                  </div>
+                  <div class="icon-text-wrapper">
+                    <img src="./img/aqm-seasons/icon-winter-viruses.svg" alt="An icon of a virus" class="tab-content-icon">
+                    Viruses
+                  </div>
+                </div>
+                <div class="season-tab-content-title">Maintaining Healthy Indoor Air During Winter</div>
+                <div class="season-tab-content-text">Humidifiers, HVAC maintenance, and regular air circulation help maintain moisture levels and reduce the spread of airborne illnesses in winter.</div>
+                <a href="#" class="season-tab-btn mt-5">Understand Winter IAQ Risks</a>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="spring-tabs" role="tabpanel" aria-labelledby="spring-tab">
+            <div class="season-tab-content-wrapper">
+              <div class="season-tab-image-wrapper">
+                <div class="tab-icon-text-wrapper">
+                  <img src="./img/aqm-seasons/icon-white-spring.svg" alt="decorative" class="season-image-icon">
+                  <div class="season-img-text text-white">Spring</div>
+                </div>
+                <img src="./img/aqm-seasons/tab-img-spring.jpg" alt="Blurred out image of a spring landscape" class="season-content-image">
+              </div>
+              <div class="season-tab-content-inner">
+                <div class="season-tab-content-title">Warmer Temperatures, More Particulates</div>
+                <div class="season-tab-content-text">As temperatures and humidity rise in spring, pollen, dust, and mold can easily enter indoor spaces through open windows, affecting air quality and triggering allergies. Seasonal cleaning and renovation activities may also release TVOCs, compounding the impact of both outdoor and indoor pollutants.</div>
+                <div class="tab-content-icon-wrapper">
+                  <div class="icon-text-wrapper">
+                    <img src="./img/aqm-seasons/icon-spring-allergens.svg" alt="An icon of pollen" class="tab-content-icon">
+                    Allergens
+                  </div>
+                  <div class="icon-text-wrapper">
+                    <img src="./img/aqm-seasons/icon-spring-factors.svg" alt="An icon of a cloud" class="tab-content-icon">
+                    Outside Factors
+                  </div>
+                </div>
+                <div class="season-tab-content-title">How to Combat Springtime Allergens Indoors</div>
+                <div class="season-tab-content-text">Regular cleaning, sealing gaps, and checking ventilation systems help keep allergens and pollutants from impacting indoor air during spring.</div>
+                <a href="#" class="season-tab-btn mt-5">Explore Spring IAQ Challenges</a>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="summer-tabs" role="tabpanel" aria-labelledby="summer-tab">
+            <div class="season-tab-content-wrapper">
+              <div class="season-tab-image-wrapper">
+                <div class="tab-icon-text-wrapper">
+                  <img src="./img/aqm-seasons/icon-white-summer.svg" alt="decorative" class="season-image-icon">
+                  <div class="season-img-text text-white">Summer</div>
+                </div>
+                <img src="./img/aqm-seasons/tab-img-summer.jpg" alt="Blurred out image of a summer landscape" class="season-content-image">
+              </div>
+              <div class="season-tab-content-inner">
+                <div class="season-tab-content-title">More Cooling, Less Circulation</div>
+                <div class="season-tab-content-text">Heat and humidity in summer can lead to elevated levels of dust, mold, and moisture indoors, which impact air quality and reduce system efficiency. Frequent use of air conditioning may dry out the air and limit ventilation, creating stagnant indoor conditions that affect occupant comfort and health.</div>
+                <div class="tab-content-icon-wrapper">
+                  <div class="icon-text-wrapper">
+                    <img src="./img/aqm-seasons/icon-spring-allergens.svg" alt="An icon of pollen" class="tab-content-icon">
+                    Allergens
+                  </div>
+                  <div class="icon-text-wrapper">
+                    <img src="./img/aqm-seasons/icon-summer-smoke.svg" alt="An icon of smoke" class="tab-content-icon">
+                    Smoke
+                  </div>
+                </div>
+                <div class="season-tab-content-title">Optimizing Air Quality During the Summer</div>
+                <div class="season-tab-content-text">Regularly clean ducts, monitor indoor humidity levels and check filters monthly to ensure effective cooling and maintain clean indoor air.</div>
+                <a href="#" class="season-tab-btn mt-5">Break Down Summer IAQ Concerns</a>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="fall-tabs" role="tabpanel" aria-labelledby="fall-tab">
+            <div class="season-tab-content-wrapper">
+              <div class="season-tab-image-wrapper">
+                <div class="tab-icon-text-wrapper">
+                  <img src="./img/aqm-seasons/icon-white-fall.svg" alt="decorative" class="season-image-icon">
+                  <div class="season-img-text text-white">Fall</div>
+                </div>
+                <img src="./img/aqm-seasons/tab-img-fall.jpg" alt="Blurred out image of a fakk landscape" class="season-content-image">
+              </div>
+              <div class="season-tab-content-inner">
+                <div class="season-tab-content-title">Moisture Builds, Indoor Impacts</div>
+                <div class="season-tab-content-text">As people spend more time indoors, moisture from decaying vegetation and pollen from fall plants can elevate mold and allergen levels inside. These seasonal changes can trigger respiratory sensitivities and worsen indoor air quality, especially in buildings with poor ventilation or water intrusion issues.</div>
+                <div class="tab-content-icon-wrapper">
+                  <div class="icon-text-wrapper">
+                    <img src="./img/aqm-seasons/icon-spring-allergens.svg" alt="An icon of pollen" class="tab-content-icon">
+                    Allergens
+                  </div>
+                  <div class="icon-text-wrapper">
+                    <img src="./img/aqm-seasons/icon-summer-smoke.svg" alt="An icon of smoke" class="tab-content-icon">
+                    Smoke
+                  </div>
+                  <div class="icon-text-wrapper">
+                    <img src="./img/aqm-seasons/icon-winter-mold.svg" alt="An icon of mold" class="tab-content-icon">
+                    Mold
+                  </div>
+                </div>
+                <div class="season-tab-content-title">Maintaining Healthy Indoor Air During Fall</div>
+                <div class="season-tab-content-text">Ensure proper ventilation, address leaks promptly, and clean air ducts and HVAC filters to reduce mold and allergens inside. </div>
+                <a href="#" class="season-tab-btn mt-5">See What Else Fall Brings to IAQ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Tabs content -->
+      </section>
+
+      <!-- Form Section -->
+      <section class="array-form-section">
+        <div class="container py-5">
+          <div class="row py-4 py-md-5">
+            <div class="col-12 col-md-10 col-lg-8 mx-auto px-4">
+              <h2 class="form-section-title">Discover the Health of Your Indoor Air Quality</h2>
+            </div>
+            <div class="col-12 col-md-10 col-lg-9 mx-auto px-4">
+              <div class="form-section-desc">
+                We are experts in industries like healthcare, education, and more, delivering customized air quality management that fits your unique needs. Schedule your complimentary IAQ assessment now to identify potential air quality issues and create a healthier environment for your building, no matter the season.
+              </div>
+            </div>
+            <div class="col-12 col-md-10 col-lg-8 col-xl-7 mx-auto px-4 pt-4 pt-md-5">
+              <div class="p-3 p-md-4 mt-4 mt-md-0">
+                  <div class="form-group">
+                    <div class="form-outline">
+                      <input type="text" id="FirstName" class="form-control form-control-lg" required />
+                      <label class="form-label" for="FirstName">First Name *</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-outline">
+                      <input type="text" id="LastName" class="form-control form-control-lg" required />
+                      <label class="form-label" for="LastName">Last Name *</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-outline">
+                      <input type="email" id="Email" class="form-control form-control-lg" required />
+                      <label class="form-label" for="Email">Email *</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-outline">
+                      <input type="text" id="State" class="form-control form-control-lg" required/>
+                      <label class="form-label" for="State">State *</label>
+                    </div>
+                  </div>
+                  <div class="note-array text-black text-start my-3">*Required fields</div>
+                  <button type="submit" class="array-form-button">SUBMIT</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blue Insights Section -->
+      <section class="insights-section bluesection py-5">
+        <div class="container py-md-5">
+          <div class="row pb-4">
+            <div class="col-12 text-center">
+              <div class="aqm-section-small-title text-white mb-3">Explore Our Seasonal Insights</div>
+              <div class="aqm-section-text text-white">
+                Stay informed about indoor Air Quality and HVAC trends as the seasons change.
+              </div>
+            </div>
+          </div>
+          <div class="row g-5 pt-2 pt-md-5 d-flex">
+            <div class="col-12 col-md-4 d-flex flex-column text-center text-md-start">
+              <img src="./img/aqm-seasons/insight-image.jpg" alt="Image of a long empty hallway" class="rounded-img">
+              <h3 class="aqm-small-heading text-white">The HVAC Ventilation Dilemma</h3>
+              <div class="aqm-section-small-text text-white mb-3">
+                What you need to consider to safeguard your indoor air quality as wildfires become more frequent. In today's world, ensuring clean and healthy indoor air quality has become more crucial than ever, especially with the increasing prevalence of wildfires....
+              </div>
+              <a href="https://fellowesblog.com/2024/06/13/solving-the-hvac-ventilation-dilemma-in-the-age-of-wildfire-smoke/" class="read-more-btn mt-auto mx-auto mx-md-0" target="_blank">Read More</a>
+            </div>
+            <div class="col-12 col-md-4 d-flex flex-column text-center text-md-start">
+              <img src="./img/aqm-seasons/insight-image.jpg" alt="Image of a long empty hallway" class="rounded-img">
+              <h3 class="aqm-small-heading text-white">Enhancing Indoor Air Quality with Fellowes Asthma and Allergy</h3>
+              <div class="aqm-section-small-text text-white mb-3">
+                In today's world, ensuring a healthy and safe indoor environment is more crucial than ever. Rising global temperatures and shifting climate patterns are intensifying air quality concerns, exacerbating respiratory conditions such as asthma and allergies. Improving...
+              </div>
+              <a href="https://fellowesblog.com/2024/09/12/enhancing-indoor-air-quality-with-fellowes-asthma-and-allergy-awareness/" class="read-more-btn mt-auto mx-auto mx-md-0" target="_blank">Read More</a>
+            </div>
+            <div class="col-12 col-md-4 d-flex flex-column text-center text-md-start">
+              <img src="./img/aqm-seasons/insight-image.jpg" alt="Image of a long empty hallway" class="rounded-img">
+              <h3 class="aqm-small-heading text-white">Back to Business: Prepping Indoor Spaces for Fall & Winter</h3>
+              <div class="aqm-section-small-text text-white mb-3">
+                As the days grow shorter and temperatures drop, the focus on indoor air quality (IAQ) becomes crucial for ensuring a safe and healthy work environment. For janitorial staff, building engineers, HVAC contractors and consultants, preparing indoor spaces for the fall and...
+              </div>
+              <a href="https://fellowesblog.com/2024/09/19/back-to-business-prepping-indoor-spaces-for-fall-winter/" class="read-more-btn mt-auto mx-auto mx-md-0" target="_blank">Read More</a>
             </div>
           </div>
         </div>
@@ -2477,5 +2734,6 @@
     <script type="text/javascript" src="./js/core.js"></script>
     <script type="text/javascript" src="./js/desktop.js"></script>
     <script type="text/javascript" src="./js/mobile.js"></script>
+    <script type="text/javascript" src="./js/aqm-seasons.js"></script>
   </body>
 </html>
