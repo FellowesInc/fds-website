@@ -104,6 +104,18 @@
   align-items: center;
 }
 
+.unified-solution-section.unified-solution-section-spring {
+  background-image: url(../img/aqm-seasons-spring/section-bg-img-mobile-unified.jpg);
+}
+
+.unified-solution-section.unified-solution-section-summer {
+  background-image: url(../img/aqm-seasons-summer/section-bg-img-mobile-unified.jpg);
+}
+
+.unified-solution-section.unified-solution-section-fall {
+  background-image: url(../img/aqm-seasons-fall/section-bg-img-mobile-unified.jpg);
+}
+
 .section-viewpoint-img {
   max-width: 565px;
   position: absolute;
@@ -286,6 +298,18 @@
     background-position: left center;
   }
 
+  .unified-solution-section.unified-solution-section-spring {
+    background-image: url(../img/aqm-seasons-spring/section-bg-img-unified.jpg);
+  }
+
+  .unified-solution-section.unified-solution-section-summer {
+    background-image: url(../img/aqm-seasons-summer/section-bg-img-unified.jpg);
+  }
+
+  .unified-solution-section.unified-solution-section-fall {
+    background-image: url(../img/aqm-seasons-fall/section-bg-img-unified.jpg);
+  }  
+
   .array-logo {
     max-width: 500px;
   }
@@ -315,6 +339,7 @@
     font-size: 34px;
     line-height: 125%;
     margin-block: 1rem;
+    max-width: 410px;
   }
 
   .scenario-card-text {
