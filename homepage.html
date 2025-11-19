@@ -2462,22 +2462,36 @@
       </section>
       <!-- Carousel wrapper -->
 
-      <!-- Innovations section -->
-      <section class="text-center d-flex flex-column justify-content-center align-items-center bg-black p-5">
-        <h2 class="text-white fs-55 fw-300 py-md-5 mb-0">
-          A Better Worklife
-        </h2>
-      </section>
-
       <!-- Video Section Begins -->
-      <section class="bg-black pb-4 pb-md-5" aria-label="section" >
-        <div class="container pb-md-5 px-4 px-md-0">
+      <section class="homepage-vid-section py-5" aria-label="section" >
+        <div class="container px-4 px-md-0 py-md-4">
           <div class="row">
             <div class="col-12">
-              <div class="video-overlay position-relative">
-                <video class="homepage-video ratio-32-15" width="100%" autoplay muted controls loop poster="./img/homepage-imgs/poster.jpg">
-                  <source src="./img/homepage-imgs/Banner-Video-V4.mp4" type="video/mp4" />
-                </video>
+              <h2 class="text-white fs-55 fw-300 mb-4" id="homepage-video-label">
+                A Better Worklife
+              </h2>
+              <div class="homepage-video-text text-white">
+                <p>Fellowes is reshaping the modern workplace to create beautiful, functional spaces where, wellness, productivity and design work tougher.</p>
+                <p>We help you create A Better WorkLife - because every workday is really a choice, and it matters what you decide to do with it.</p>
+              </div>
+
+              <!-- Button trigger modal -->
+              <button type="button" class="homepage-video-play-btn" data-mdb-toggle="modal" data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#homepage-video">
+                <img src="./img/homepage-imgs/play-btn.svg" alt="Play Button Icon" class="d-block w-100">
+              </button>
+
+              <!-- Modal -->
+              <div class="homepage-video-modal modal fade" id="homepage-video" tabindex="-1" aria-labelledby="homepage-video-label" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <button type="button" class="btn-close" data-mdb-ripple-init data-mdb-dismiss="modal" aria-label="Close"></button>
+                      <video class="homepage-video ratio-32-15" width="100%" controls loop poster="./img/homepage-imgs/poster.jpg">
+                        <source src="./img/homepage-imgs/Banner-Video-V4.mp4" type="video/mp4" />
+                      </video>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
