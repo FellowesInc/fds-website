@@ -330,7 +330,7 @@
   margin: 0 auto;
   display: block;
   width: 100%;
-  max-width: 85px;
+  max-width: 65px;
   background: transparent;
   border: none;
 }
@@ -341,15 +341,15 @@
   align-items: center;
   height: 100%;
   width: 90%;
-  max-width: 1920px !important;
+  max-width: 1200px !important;
   margin-inline: auto;
   margin-block: 0;
 }
 
 .homepage-video-modal .btn-close {
   box-sizing: content-box;
-  width: 1em;
-  height: 1em;
+  width: .75em;
+  height: .75em;
   padding: .25em;
   color: #fff;
   background: unset;
@@ -377,6 +377,15 @@
 @media (min-width: 768px) {
   .homepage-video-text {
     font-size: 26px;
+  }
+
+  .homepage-video-play-btn {
+    max-width: 85px;
+  }
+
+  .homepage-video-modal .btn-close {
+    width: 1em;
+    height: 1em;
   }
 
   .banner-title span {
