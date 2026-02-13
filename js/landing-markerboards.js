@@ -1,42 +1,62 @@
 $(window).on('load', function () {
 
   const $slider = $('.custom-slider');
-  let $slides = $slider.children('.custom-slide');
+  const $viewport = $slider.parent();
   const $prev = $('.prev-arrow');
   const $next = $('.next-arrow');
 
-  let isAnimating = false;
-  let slideCount = $slides.length;
+  let $originalSlides = $slider.children('.custom-slide');
+  const slideCount = $originalSlides.length;
 
-  // Clone first and last
-  const $firstClone = $slides.first().clone().addClass('clone');
-  const $lastClone = $slides.last().clone().addClass('clone');
+  const TRANSITION_SPEED = 400;
+  let isAnimating = false;
+
+  /* ------------------------------------
+     CLONE FIRST + LAST FOR TRUE INFINITE
+  ------------------------------------ */
+
+  const $firstClone = $originalSlides.first().clone(true).addClass('clone');
+  const $lastClone  = $originalSlides.last().clone(true).addClass('clone');
 
   $slider.prepend($lastClone);
   $slider.append($firstClone);
 
-  $slides = $slider.children('.custom-slide');
+  let $slides = $slider.children('.custom-slide');
 
-  let currentIndex = 1; // start on real first slide
+  // Start at real first slide (index 1 because of prepended clone)
+  let currentIndex = 1;
+
+  /* ------------------------------------
+     ARIA UPDATE
+  ------------------------------------ */
 
   function updateARIA() {
-    $slides.attr('aria-hidden', 'true').removeClass('active');
+    $slides
+      .attr('aria-hidden', 'true')
+      .removeClass('active');
+
     $slides.eq(currentIndex)
-           .attr('aria-hidden', 'false')
-           .addClass('active');
+      .attr('aria-hidden', 'false')
+      .addClass('active');
   }
+
+  /* ------------------------------------
+     CENTER ACTIVE SLIDE
+  ------------------------------------ */
 
   function centerSlide(animate = true) {
 
-    if (!animate) {
-      $slider.css('transition', 'none');
+    if (animate) {
+      $slider.css('transition', `transform ${TRANSITION_SPEED}ms ease`);
     } else {
-      $slider.css('transition', 'transform 0.4s ease');
+      $slider.css('transition', 'none');
     }
 
-    const sliderWidth = $slider.parent().outerWidth();
-    const slideLeft = $slides.eq(currentIndex)[0].offsetLeft;
-    const slideWidth = $slides.eq(currentIndex).outerWidth(true);
+    const sliderWidth = $viewport.outerWidth();
+    const $active = $slides.eq(currentIndex);
+
+    const slideLeft = $active[0].offsetLeft;
+    const slideWidth = $active.outerWidth(true);
 
     const offset = slideLeft - (sliderWidth / 2 - slideWidth / 2);
 
@@ -45,48 +65,56 @@ $(window).on('load', function () {
     updateARIA();
   }
 
-  function nextSlide() {
-    if (isAnimating) return;
-    isAnimating = true;
+  /* ------------------------------------
+     CORE NAVIGATION LOGIC
+  ------------------------------------ */
 
-    currentIndex++;
+  function goToSlide(index) {
+    if (isAnimating) return;
+
+    isAnimating = true;
+    currentIndex = index;
+
     centerSlide(true);
+
+    setTimeout(() => {
+
+      // Hit cloned last
+      if (currentIndex === slideCount + 1) {
+        currentIndex = 1;
+        centerSlide(false);
+      }
+
+      // Hit cloned first
+      if (currentIndex === 0) {
+        currentIndex = slideCount;
+        centerSlide(false);
+      }
+
+      isAnimating = false;
+
+    }, TRANSITION_SPEED);
+  }
+
+  function nextSlide() {
+    goToSlide(currentIndex + 1);
   }
 
   function prevSlide() {
-    if (isAnimating) return;
-    isAnimating = true;
-
-    currentIndex--;
-    centerSlide(true);
+    goToSlide(currentIndex - 1);
   }
 
-  $slider.on('transitionend', function () {
+  /* ------------------------------------
+     ARROW EVENTS
+  ------------------------------------ */
 
-    // If we hit clone at end
-    if ($slides.eq(currentIndex).hasClass('clone')) {
-
-      $slider.css('transition', 'none');
-
-      if (currentIndex === slideCount + 1) {
-        currentIndex = 1;
-      }
-
-      if (currentIndex === 0) {
-        currentIndex = slideCount;
-      }
-
-      centerSlide(false);
-    }
-
-    isAnimating = false;
-  });
-
-  // Arrows
   $next.on('click', nextSlide);
   $prev.on('click', prevSlide);
 
-  // Keyboard accessibility
+  /* ------------------------------------
+     KEYBOARD ACCESSIBILITY
+  ------------------------------------ */
+
   $next.add($prev).on('keydown', function (e) {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
@@ -94,37 +122,56 @@ $(window).on('load', function () {
     }
   });
 
-  // Swipe support
+  /* ------------------------------------
+     MOBILE SWIPE (NO FREEZE VERSION)
+  ------------------------------------ */
+
   let startX = 0;
-  let dragging = false;
+  let currentX = 0;
+  let isSwiping = false;
 
   $slider.on('touchstart', function (e) {
+    if (isAnimating) return;
+
     startX = e.originalEvent.touches[0].clientX;
-    dragging = true;
+    isSwiping = true;
   });
 
   $slider.on('touchmove', function (e) {
-    if (!dragging) return;
-
-    const currentX = e.originalEvent.touches[0].clientX;
-    const diff = startX - currentX;
-
-    if (Math.abs(diff) > 60) {
-      dragging = false;
-      diff > 0 ? nextSlide() : prevSlide();
-    }
+    if (!isSwiping) return;
+    currentX = e.originalEvent.touches[0].clientX;
   });
 
   $slider.on('touchend', function () {
-    dragging = false;
+    if (!isSwiping) return;
+
+    const diff = startX - currentX;
+
+    if (Math.abs(diff) > 60) {
+      if (diff > 0) {
+        nextSlide();
+      } else {
+        prevSlide();
+      }
+    }
+
+    isSwiping = false;
+    startX = 0;
+    currentX = 0;
   });
 
-  // Recenter on resize
+  /* ------------------------------------
+     RESIZE SAFETY
+  ------------------------------------ */
+
   $(window).on('resize', function () {
     centerSlide(false);
   });
 
-  // Initial position
+  /* ------------------------------------
+     INITIAL POSITIONING
+  ------------------------------------ */
+
   centerSlide(false);
 
 });
