@@ -1,0 +1,29 @@
+.table-sprite {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 600 / 440;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Static fallback image */
+.table-static {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+}
+
+/* Desktop only */
+@media (min-width: 992px) {
+  .table-sprite {
+    background-repeat: no-repeat;
+    background-size: 1300% 100%;
+    background-position: 0 0;
+  }
+
+  .table-static {
+    display: none;
+  }
+}
