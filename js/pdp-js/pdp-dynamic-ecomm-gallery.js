@@ -1,33 +1,33 @@
 const heroShot = {
-  thumbUrl: 'https://fellowes.cbcwebhosting.com/img/pdp-imgs/gallery-thumb-main.png',
-  slideUrl: 'https://fellowes.cbcwebhosting.com/img/pdp-imgs/gallery-slide-main.png',
+  thumbUrl: './img/pdp-imgs/gallery-thumb-main.png',
+  slideUrl: './img/pdp-imgs/gallery-slide-main.png',
   heroAlt: 'Image of a Shredder',
 };
 
 const additionalImages = [
   {
-    thumbUrl: 'https://fellowes.cbcwebhosting.com/img/pdp-imgs/gallery-thumb-turned.png',
-    slideUrl: 'https://fellowes.cbcwebhosting.com/img/pdp-imgs/gallery-slide-turned.png',
+    thumbUrl: './img/pdp-imgs/gallery-thumb-turned.png',
+    slideUrl: './img/pdp-imgs/gallery-slide-turned.png',
     heroAlt: 'Image of a Shredder',
   },
   {
-    thumbUrl: 'https://fellowes.cbcwebhosting.com/img/pdp-imgs/gallery-thumb-demo.png',
-    slideUrl: 'https://fellowes.cbcwebhosting.com/img/pdp-imgs/gallery-slide-demo.png',
+    thumbUrl: './img/pdp-imgs/gallery-thumb-demo.png',
+    slideUrl: './img/pdp-imgs/gallery-slide-demo.png',
     heroAlt: 'Image of a Shredder',
   },
   {
-    thumbUrl: 'https://fellowes.cbcwebhosting.com/img/pdp-imgs/gallery-thumb-shredder-top.png',
-    slideUrl: 'https://fellowes.cbcwebhosting.com/img/pdp-imgs/gallery-slide-shredder-top.png',
+    thumbUrl: './img/pdp-imgs/gallery-thumb-shredder-top.png',
+    slideUrl: './img/pdp-imgs/gallery-slide-shredder-top.png',
     heroAlt: 'Image of a Shredder',
   },
   {
-    thumbUrl: 'https://fellowes.cbcwebhosting.com/img/pdp-imgs/gallery-thumb-lx-cutting.png',
-    slideUrl: 'https://fellowes.cbcwebhosting.com/img/pdp-imgs/gallery-slide-lx-cutting.png',
+    thumbUrl: './img/pdp-imgs/gallery-thumb-lx-cutting.png',
+    slideUrl: './img/pdp-imgs/gallery-slide-lx-cutting.png',
     heroAlt: 'Image of a Shredder',
   },
   {
-    thumbUrl: 'https://fellowes.cbcwebhosting.com/img/pdp-imgs/gallery-thumb-hand.png',
-    slideUrl: 'https://fellowes.cbcwebhosting.com/img/pdp-imgs/gallery-slide-hand.png',
+    thumbUrl: './img/pdp-imgs/gallery-thumb-hand.png',
+    slideUrl: './img/pdp-imgs/gallery-slide-hand.png',
     heroAlt: 'Image of a Shredder',
   },
 ];
