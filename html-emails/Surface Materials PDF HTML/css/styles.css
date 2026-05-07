@@ -1,0 +1,133 @@
+/* CSS Reset */
+
+/* 1. Box sizing rules */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margins */
+* {
+  margin: 0;
+}
+
+/* 3. Allow percentage-based heights in the application */
+html, body {
+  height: 100%;
+}
+
+/* 4. Improve media defaults and responsive images */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 5. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 6. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 7. Accessibility: list-style: none on elements with list-role */
+ul[role='list'], ol[role='list'] {
+  list-style: none;
+}
+
+/* 8. Optional: Smooth scrolling and text wrapping */
+html {
+  color-scheme: light dark; /* Built-in dark mode support */
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+/* Font Styles */
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  color: #000;
+  background-color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5; /* Improve readability */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* PDF Layout Styles */
+.pdf-wrapper {
+  width: 100%;
+  max-width: 612px;
+  aspect-ratio: 1 / 1.294;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fellowes-logo {
+  width: 130px;
+  margin-bottom: 1rem;
+}
+
+.identifying-info-block {
+  font-size: 14px;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.material-name {
+  font-size: 27px;
+  font-style: normal;
+}
+
+.material-data-item {
+  font-size: 9px;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 10px;
+  /* align-items: center; */
+  border-bottom: .5px solid #b5b5b5;
+  padding: .4rem 0;
+  line-height: 1;
+}
+
+.material-data-item.has-img {
+  padding: .5px 0;
+}
+
+.material-data-item.has-img .data-key {
+  align-self: center;
+}
+
+.material-data-item:last-of-type {
+  border-bottom: none;
+}
+
+.data-key {
+  font-weight: 700;
+}
+
+.supplier-logo {
+  height: 20px;
+}
+
+.small-footer-text {
+  max-width: 250px;
+  font-size: 10px;
+  font-weight: 700px;
+  font-style: italic;
+  line-height: 1.4;
+}
