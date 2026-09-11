@@ -1,4 +1,4 @@
-.header-banner img {
+.plp-twocol .header-banner img {
   height: 600px;
   -o-object-fit: cover;
   object-fit: cover;
@@ -6,7 +6,7 @@
   object-position: center;
 }
 
-.header-banner-text {
+.plp-twocol .header-banner-text {
   position: absolute;
   bottom: 2rem;
   left: 50%;
@@ -17,106 +17,106 @@
   color: #fff;
 }
 
-.banner-text__subtitle {
+.plp-twocol .banner-text__subtitle {
     font-size: 14px;
     font-weight: 400;
     line-height: 1.4;
 }
 
-.plp-two-columns .plp-inner-wrapper {
+.plp-twocol .plp-two-columns .plp-inner-wrapper {
   display: grid;
   gap: 1rem;
 }
 
-.ci-prod-name {
+.plp-twocol .ci-prod-name {
   text-transform: unset;
   margin-bottom: .5rem;
   color: #000;
 }
 
-.ci-prod-category {
+.plp-twocol .ci-prod-category {
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
 }
 
-.plp-inner-wrapper {
+.plp-twocol .plp-inner-wrapper {
   padding-inline: unset;
 }
 
-.plp-ci-item {
+.plp-twocol .plp-ci-item {
   -webkit-border-after: unset;
   border-block-end: unset;
   padding: 2.5rem 2rem;
 }
 
-.plp-ci-item__prod-image img,
-.plp-ci-item__prod-image .placeholder-img {
+.plp-twocol .plp-ci-item__prod-image img,
+.plp-twocol .plp-ci-item__prod-image .placeholder-img {
   aspect-ratio: 16 / 10;
   -o-object-fit: contain;
      object-fit: contain;
 }
 
-.ci-item-desc-snippet {
+.plp-twocol .ci-item-desc-snippet {
   line-height: 40px;
 }
 
-.model-num-txt {
+.plp-twocol .model-num-txt {
   line-height: 10px;
 }
 
-.plp-ci-item__model-num {
+.plp-twocol .plp-ci-item__model-num {
   font-weight: 500;
 }
 
-.options__color-selector {
+.plp-twocol .options__color-selector {
   -webkit-margin-after: 1rem;
   margin-block-end: 1rem;
   display: flex;
   gap: .4rem;
 }
 
-.options__color-selector .form-check {
+.plp-twocol .options__color-selector .form-check {
   padding-left: 0;
   margin-bottom: 0;
 }
 
-.bg-white-silver {
+.plp-twocol .bg-white-silver {
   background: #FFF;
   background: linear-gradient(180deg,rgba(255, 255, 255, 1) 50%, rgba(188, 188, 188, 1) 50%);
 }
 
-.bg-black-silver {
+.plp-twocol .bg-black-silver {
   background: #000;
   background: linear-gradient(180deg,rgba(0, 0, 0, 1) 50%, rgba(188, 188, 188, 1) 50%);
 }
 
-.bg-darkgreen-lightgreen {
+.plp-twocol .bg-darkgreen-lightgreen {
   background: #6B6B6B;
   background: linear-gradient(180deg, rgba(107, 107, 107, 1) 50%, rgba(173, 175, 153, 1) 50%);
 }
 
-.bg-darkteal-white {
+.plp-twocol .bg-darkteal-white {
   background: #3B4858;
   background: linear-gradient(180deg, rgba(59, 72, 88, 1) 50%, rgba(255, 255, 255, 1) 50%);
 }
 
-.plp-ci-item__price {
+.plp-twocol .plp-ci-item__price {
   -webkit-margin-after: unset;
   margin-block-end: unset;
 }
 
-.ci-prod-price {
+.plp-twocol .ci-prod-price {
   font-weight: 500;
 }
 
-span.ci-prod-list-aftertext {
+.plp-twocol span.ci-prod-list-aftertext {
   font-size: 14px;
   line-height: 20px;
   font-weight: 300;
 }
 
-.plp-ci-item__footer {
+.plp-twocol .plp-ci-item__footer {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -130,7 +130,7 @@ span.ci-prod-list-aftertext {
   color: #000;
 }
 
-.plp-ci-item__link::after {
+.plp-twocol .plp-ci-item__link::after {
     content: '';
     display: block;
     position: absolute;
@@ -144,7 +144,7 @@ span.ci-prod-list-aftertext {
     transition: all .3s ease-in-out;
 }
 
-.plp-ci-item__link::before {
+.plp-twocol .plp-ci-item__link::before {
     content: '';
     display: block;
     position: absolute;
@@ -158,19 +158,19 @@ span.ci-prod-list-aftertext {
     transition: all .3s ease-in-out;
 }
 
-.plp-ci-item__link:hover,
-.plp-ci-item__link:focus {
+.plp-twocol .plp-ci-item__link:hover,
+.plp-twocol .plp-ci-item__link:focus {
   color: #000;
 }
 
-.plp-ci-item__link:hover::after,
-.plp-ci-item__link:focus-visible::after,
-.plp-ci-item__link:hover::before,
-.plp-ci-item__link:focus-visible::before {
+.plp-twocol .plp-ci-item__link:hover::after,
+.plp-twocol .plp-ci-item__link:focus-visible::after,
+.plp-twocol .plp-ci-item__link:hover::before,
+.plp-twocol .plp-ci-item__link:focus-visible::before {
   width: 100%;
 }
 
-.plp-section-header {
+.plp-twocol .plp-section-header {
   height: 100px;
   display: flex;
   justify-content: center;
@@ -181,14 +181,14 @@ span.ci-prod-list-aftertext {
   color: #000;
 }
 
-.plp-section {
+.plp-twocol .plp-section {
   -webkit-padding-before: 2.875rem;
   padding-block-start: 2.875rem;
   -webkit-padding-after: 4rem;
   padding-block-end: 4rem;
 }
 
-.accordion-button::after {
+.plp-twocol .accordion-button::after {
   background: none !important;
   background-image: none !important;
   content: "−";
@@ -199,40 +199,40 @@ span.ci-prod-list-aftertext {
   transform: none !important;
 }
 
-.accordion-button.collapsed::after {
+.plp-twocol .accordion-button.collapsed::after {
   background: none !important;
   background-image: none !important;
   content: "+";
   transform: none !important;
 }
 
-.accordion-flush .accordion-button:not(.collapsed) {
+.plp-twocol .accordion-flush .accordion-button:not(.collapsed) {
     box-shadow: unset;
 }
 
-.accordion-button:not(.collapsed) {
+.plp-twocol .accordion-button:not(.collapsed) {
   color: #000;
 }
 
-.accordion-body {
+.plp-twocol .accordion-body {
     padding: 0 var(--mdb-accordion-body-padding-x) var(--mdb-accordion-body-padding-y);
 }
 
-.accordion-button {
+.plp-twocol .accordion-button {
     font-size: 16px;
     font-weight: 500;
 }
 
-.accordion-body {
+.plp-twocol .accordion-body {
     font-size: 14px;
     font-weight: 300;
 }
 
-.accordion-flush .accordion-item:last-child {
+.plp-twocol .accordion-flush .accordion-item:last-child {
       border-bottom: var(--mdb-accordion-flush-border-bottom);
 }
 
-.related-product-item {
+.plp-twocol .related-product-item {
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -241,18 +241,18 @@ span.ci-prod-list-aftertext {
     color: #000;
 }
 
-.related-product-item__image img {
+.plp-twocol .related-product-item__image img {
     max-width: 315px;
     width: 100%;
     margin-bottom: 1rem;
 }
 
-.related-product-item__name {
+.plp-twocol .related-product-item__name {
     font-size: 20px;
     font-weight: 500;
 }
 
-.related-product-item__link {
+.plp-twocol .related-product-item__link {
   font-size: 12px;
   font-weight: 500;
   color: #000;
@@ -267,50 +267,50 @@ span.ci-prod-list-aftertext {
 }
 
 @media (min-width: 768px) {
-  .header-banner img {
+  .plp-twocol .header-banner img {
     height: 700px;
   }
 
-  .header-banner-text {
+  .plp-twocol .header-banner-text {
     bottom: 3rem;
     padding-inline: 3rem;
   }
 
-  .banner-text__subtitle {
+  .plp-twocol .banner-text__subtitle {
     font-size: 18px;
     max-width: 700px;
   }
 
-  .plp-two-columns .plp-inner-wrapper {
+  .plp-twocol .plp-two-columns .plp-inner-wrapper {
     grid-template-columns: 1fr 1fr;
   }
 
-  .plp-section-header {
+  .plp-twocol .plp-section-header {
     height: 150px;
     font-size: 30px;
   }
 
-  .accordion-button {
+  .plp-twocol .accordion-button {
     font-size: 20px;
   }
 
-  .accordion-body {
+  .plp-twocol .accordion-body {
     font-size: 16px;
   }
 }
 
 @media (max-width: 991.9px) {
-    .plp-section {
+    .plp-twocol .plp-section {
         gap: 3rem;
     }
 
-    .related-product-item {
+    .plp-twocol .related-product-item {
       padding-bottom: 2rem;
       margin-bottom: 1rem;
       border-bottom: 2px solid rgb(245, 245, 245);
     }
 
-    .related-product-item:last-child {
+    .plp-twocol .related-product-item:last-child {
       padding-bottom: 2rem;
       margin-bottom: unset;
       border-bottom: unset;
@@ -318,25 +318,25 @@ span.ci-prod-list-aftertext {
 }
 
 @media (min-width: 992px) {
-  .related-products-row {
+  .plp-twocol .related-products-row {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .related-product-item {
+  .plp-twocol .related-product-item {
     padding: 1rem 2rem;
     border-right: 2px solid rgb(245, 245, 245);
   }
 
-  .related-product-item:last-child {
+  .plp-twocol .related-product-item:last-child {
     border-right: unset;
   }
 
-  .related-product-item__name {
+  .plp-twocol .related-product-item__name {
     font-size: 30px;
   }
 
-  .related-product-item__link {
+  .plp-twocol .related-product-item__link {
     font-size: 15px;
     padding: .5rem 2rem;
   }
