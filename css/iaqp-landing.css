@@ -1,0 +1,456 @@
+:root {
+  --iaqp-blue: #25324C;
+  --iaqp-grey: #E9EAED;
+}
+
+.mb-10rem {
+  margin-bottom: 8rem;
+}
+
+.mb-5-5 {
+  margin-bottom: 4rem;
+}
+
+.mw-950 {
+  max-width: 950px;
+  margin-inline: auto;
+}
+
+.mw-880 {
+  max-width: 880px;
+  margin-inline: auto;
+}
+
+.mw-740 {
+  max-width: 740px;
+  margin-inline: auto;
+}
+
+.mw-275 {
+  max-width: 275px;
+  margin-inline: auto;
+}
+
+.bg-iaqp-blue {
+  background-color: var(--iaqp-blue);
+}
+
+.bg-iaqp-grey {
+  background-color: var(--iaqp-grey);
+}
+
+.iaqp-hero-logo {
+  display: block;
+  width: 100%;
+  max-width: 946px;
+  margin-inline: auto;
+  margin-bottom: 4rem;
+}
+
+.hero-page-title {
+  font-size: 26px;
+  font-weight: 200;
+  margin-bottom: 2rem;
+}
+
+.hero-page-subtitle {
+  font-size: 18px;
+  font-weight: 200;
+  max-width: 865px;
+  margin-inline: auto;
+}
+
+.section-heading-img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.section-header-text-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1200px;
+}
+
+.section-header-text-wrapper h2 {
+  font-size: 30px;
+  font-weight: 200;
+  text-wrap: pretty;
+}
+
+.section-big-text {
+  font-size: 20px;
+}
+
+.recess-xray-img {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  margin-inline: auto;
+  margin-bottom: 4rem;
+}
+
+.icon-blurb-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 5rem;
+  margin-top: 5rem;;
+}
+
+.icon-blurb {
+  flex: 0 0 100%;
+  text-align: center;
+}
+
+.icon-blurb__img {
+  display: block;
+  width: 100%;
+  max-width: 111px;
+  margin-inline: auto;
+  margin-bottom: 1.5rem;
+}
+
+.icon-blurb__title {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.icon-blurb__desc {
+  font-size: 14.5px;
+  max-width: 285px;
+  margin-inline: auto;
+  text-wrap: balance;
+}
+
+.icon-blurb__footer {
+  font-size: 9px;
+  margin-top: 1.5rem;
+}
+
+.section-text {
+  font-size: 18px;
+  font-weight: 200;
+  text-wrap: pretty;
+}
+
+.ashrae-logo {
+  display: block;
+  width: 100%;
+  max-width: 145px;
+  margin-bottom: 4rem;
+  margin-inline: auto;
+}
+
+.classroom-img {
+  display: block;
+  width: 100%;
+  max-width: 275px;
+  margin-inline: auto;
+  margin-bottom: 3rem;
+}
+
+.section-secondary-heading {
+  font-size: 26px;
+  font-weight: 200;
+  text-wrap: balance;
+  margin-bottom: 0px;
+}
+
+.solution-products-wrapper {
+  display: grid;
+  gap: 4rem;
+}
+
+.product-card-img {
+  display: block;
+  width: 100%;
+  max-width: 235px;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+}
+
+.product-card-lg-img {
+  display: block;
+  width: 100%;
+  max-width: 315px;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+}
+
+.product-card-content {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.product-card-content-lg {
+  max-width: 315px;
+  margin-inline: auto;
+}
+
+.product-card-title {
+  font-size: 24px;
+  font-weight: 200;
+  margin-bottom: .25rem;
+  text-wrap: pretty;
+}
+
+.product-card-title-lg {
+  font-size: 26px;
+  margin-bottom: 2rem;
+}
+
+.product-card-subtitle {
+  font-size: 18px;
+  font-weight: 200;
+  color: #778496;
+}
+
+.product-card-desc {
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.product-card-btn {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #fff;
+  padding: .5rem 1.5rem;
+  border-radius: 5000px;
+  font-size: 12px;
+  color: #25324C;
+  font-weight: 500;
+  line-height: 1;
+  margin-inline: auto;
+  transition: all .3s ease-in-out;
+}
+
+.product-card-btn:hover,
+.product-card-btn:focus-visible {
+  color: #25324C;
+  background-color: #c8d3e8;
+}
+
+.spacer-bar {
+  display: block;
+  width: 220px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, .2);
+  margin-inline: auto;
+  margin-block: 6rem;
+}
+
+.hvakr-section-wrapper {
+  background-color: rgba(255, 255, 255, .1);
+  padding: 9rem 1.5rem 4rem;
+  position: relative;
+  max-width: 1070px;
+  margin-inline: auto;
+}
+
+.hvakr-laptop {
+  display: block;
+  width: 100%;
+  max-width: 290px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hvakr-title {
+  font-size: 26px;
+  font-weight: 200;
+  margin-bottom: 2rem;
+  text-wrap: balance;
+}
+
+.hvakr-section-text {
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.powered-by-txt {
+  font-size: 19px;
+  font-weight: 200;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  margin-block: 3rem;
+}
+
+.hvaker-logo {
+  display: inline-block;
+  width: 100%;
+  max-width: 122px;
+}
+
+@media (min-width: 768px) {
+    .icon-blurb {
+        flex: 0 0 50%;
+    }
+}
+
+@media (min-width: 992px) {
+  .break-on-lg {
+    display: block;
+  }
+  
+  .iaqp-hero-logo {
+    margin-bottom: 5rem;
+  }
+
+  .hero-page-title {
+    font-size: 60px;
+    margin-bottom: 3rem;
+  }
+
+  .hero-page-subtitle {
+    font-size: 21px;
+  }
+
+  .section-heading-img {
+    height: 400px;
+  }
+
+  .section-header-text-wrapper h2 {
+    font-size: 60px;
+  }
+
+  .section-text {
+    font-size: 21px;
+  }
+
+  .section-big-text {
+    font-size: 26px;
+  }
+
+  .recess-xray-img {
+    margin-bottom: 5rem;
+  }
+
+  .icon-blurb {
+    flex: 0 0 33.333333%;
+  }
+
+  .icon-blurb__title {
+    font-size: 20px;
+  }
+
+  .icon-blurb__desc {
+    font-size: 18px;
+    max-width: 335px;
+  }
+  
+  .icon-blurb__footer {
+    font-size: 10px;
+  }
+
+  .ashrae-logo {
+    max-width: 265px;
+    margin-bottom: 0;
+  }
+
+  .classroom-img {
+    max-width: 764px;
+    margin-bottom: 4rem;
+  }
+
+  .section-secondary-heading {
+    font-size: 44px;
+    max-width: unset;
+  }
+
+  .solution-products-wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0rem;
+    padding-top: 2rem;
+  }
+
+  .product-card-img {
+    max-width: 320px;
+    margin-bottom: 3rem;
+  }
+
+  .product-card-lg-img {
+    max-width: 800px;
+    margin-bottom: 4rem;
+  }
+
+  .product-card-content-lg {
+    max-width: 950px;
+    margin-bottom: 3rem;
+  }
+
+  .product-card-title,
+  .product-card-title-lg {
+    font-size: 32px;
+  }
+
+  .product-card-title-lg {
+    margin-bottom: 3rem;
+  }
+
+  .product-card-subtitle {
+    font-size: 25px;
+  }
+
+  .product-card-desc {
+    font-size: 21px;
+  }
+
+  .product-card-btn {
+    font-size: 18px;
+    padding: .75rem 2rem;
+  }
+
+  .spacer-bar {
+    width: 435px;
+    margin-block: 10rem;
+  }
+
+  .mb-10rem {
+    margin-bottom: 22rem;
+  }
+
+  .hvakr-section-wrapper {
+    padding-top: 18rem;
+    padding-bottom: 6rem;
+  }
+
+  .hvakr-laptop {
+    max-width: 840px;
+  }
+
+  .hvakr-title {
+    font-size: 36px;
+    margin-bottom: 3rem;
+  }
+
+  .hvakr-section-text {
+    font-size: 21px;
+  }
+
+  .powered-by-txt {
+    font-size: 30px;
+    gap: 1rem;
+    margin-block: 3rem 4rem;
+  }
+
+  .hvaker-logo {
+    max-width: 195px;
+  }
+}
