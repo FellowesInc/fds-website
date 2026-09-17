@@ -1,0 +1,27 @@
+.mw-880 {
+  max-width: 880px;
+  margin-inline: auto;
+}
+
+.iaqp-form-title {
+  font-size: 26px;
+  font-weight: 200;
+  margin-bottom: 2rem;
+  text-wrap: balance;
+}
+
+.iaqp-form-section-text {
+  font-size: 16px;
+  font-weight: 200;
+}
+
+@media (min-width: 992px) {
+    .iaqp-form-title {
+      font-size: 36px;
+      margin-bottom: 3rem;
+    }
+
+    .iaqp-form-section-text {
+      font-size: 21px;
+    }
+}
