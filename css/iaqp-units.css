@@ -1,0 +1,292 @@
+:root {
+  --iaqp-blue: #25324C;
+  --iaqp-grey: #E9EAED;
+}
+
+.mw-830 {
+  max-width: 830px;
+  margin-inline: auto;
+}
+
+.bg-iaqp-blue {
+  background-color: var(--iaqp-blue);
+}
+
+.bg-iaqp-grey {
+  background-color: var(--iaqp-grey);
+}
+
+.header-bg-img {
+  height: 500px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.hero-text-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+}
+
+.hero-page-title {
+  font-size: 34px;
+  font-weight: 200;
+}
+
+.product-section {
+  background: var(--iaqp-blue);
+  padding: 170px 0 40px;
+}
+
+.product-section:last-of-type {
+  padding-bottom: 0px;
+}
+
+.product-showcase {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, .1);
+  text-align: center;
+}
+
+/* Top Product Image */
+
+.product-showcase-top {
+  display: flex;
+  justify-content: center;
+  height: 150px;
+}
+
+.product-showcase-main-img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    align-self: flex-start;
+    transform: translateY(-50%);
+    -o-object-fit: contain;
+       object-fit: contain;
+}
+
+
+/* Product Content */
+
+.product-showcase-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 3rem;
+}
+
+.product-showcase-title {
+  font-size: 26px;
+  font-weight: 200;
+  text-wrap: balance;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.product-showcase-btn {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #fff;
+  padding: .75rem 1.75rem;
+  border-radius: 5000px;
+  font-size: 14px;
+  color: #25324C;
+  font-weight: 500;
+  line-height: 1;
+  margin-inline: auto;
+  transition: all .3s ease-in-out;
+}
+
+.product-showcase-btn:hover,
+.product-showcase-btn:focus-visible {
+  color: #25324C;
+  background-color: #c8d3e8;
+}
+
+.product-showcase-secondary-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.ar1-secondary-img {
+  max-width: 220px;
+}
+
+.ar2-secondary-img {
+  max-width: 250px;
+}
+
+.ac2-secondary-img {
+  max-width: 280px;
+}
+
+.iaqp-applications-section {
+  padding-block: 3rem 4rem;
+}
+
+.units-section-title {
+  font-size: 26px;
+  font-weight: 200;
+  margin-bottom: 1.5rem;
+}
+
+.units-section-text {
+  font-size: 15px;
+  font-weight: 200;
+}
+
+.units-section-subtitle {
+  font-size: 22px;
+  font-weight: 200;
+}
+
+.icon-grid {
+  display: grid;
+  gap: 1.5rem;
+  padding-block: 3rem 4rem;
+}
+
+.icon-card-img {
+  display: block;
+  width: 100%;
+  max-width: 160px;
+  margin-inline: auto;
+  margin-bottom: 1.5rem;
+}
+
+.icon-card-text {
+  font-size: 18px;
+  font-weight: 200;
+  max-width: 250px;
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .product-section {
+    padding: 260px 0 40px;
+  }
+
+  .product-showcase-top {
+    height: 220px;
+  }
+
+  .product-showcase-main-img {
+    height: 350px;
+  }
+
+  .ar1-secondary-img {
+    max-width: 300px;
+  }
+
+  .ar2-secondary-img {
+    max-width: 350px;
+  }
+
+  .ac2-secondary-img {
+    max-width: 400px;
+  }
+
+  .icon-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 600px;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 991.9px) {
+  .break-on-mobile {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  .header-bg-img {
+    height: 600px;
+  }
+
+  .hero-page-title {
+    font-size: 60px;
+  }
+
+  .units-section-wrapper {
+    padding-top: 18rem;
+    padding-bottom: 6rem;
+  }
+
+  .product-section {
+    padding: 340px 0 60px;
+  }
+
+  .product-showcase {
+    max-width: 1070px;
+    padding: 0 30px 60px;
+  }
+
+  .product-showcase-top {
+    height: 320px;
+  }
+
+  .product-showcase-main-img {
+    height: 500px;
+  }
+
+  .product-showcase-content {
+    row-gap: 4rem;
+  }
+
+  .product-showcase-title {
+    font-size: 36px;
+  }
+
+  .product-showcase-btn {
+    font-size: 18px;
+    padding: .75rem 2rem;
+  }
+
+  .ar1-secondary-img {
+    max-width: 430px;
+  }
+
+  .ar2-secondary-img {
+    max-width: 490px;
+  }
+
+  .ac2-secondary-img {
+    max-width: 670px;
+  }
+
+  .iaqp-applications-section {
+    padding-block: 5rem 7rem;
+  }
+
+  .icon-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    max-width: 950px;
+  }
+
+  .units-section-title {
+    font-size: 60px;
+    margin-bottom: 2rem;
+  }
+
+  .units-section-text {
+    font-size: 21px;
+  }
+
+  .units-section-subtitle {
+    font-size: 36px;
+    margin-bottom: 2rem;
+  }
+}
