@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="155.511" height="44.996" viewBox="0 0 155.511 44.996">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.998;
+      }
+    </style>
+  </defs>
+  <g id="montor-arm-privacy-screen" class="cls-1" transform="translate(-783.357 -1555.004)">
+    <path id="Path_2074" data-name="Path 2074" d="M6658.15-3104.414l-1.621-1.172,28.856-39.91h123.322v2h-122.3Z" transform="translate(-5869.84 4700.5)"/>
+    <circle id="Ellipse_50" data-name="Ellipse 50" cx="4.5" cy="4.5" r="4.5" transform="translate(783.357 1591)"/>
+    <path id="Ellipse_50_-_Outline" data-name="Ellipse 50 - Outline" d="M4.5,1A3.5,3.5,0,1,0,8,4.5,3.5,3.5,0,0,0,4.5,1m0-1A4.5,4.5,0,1,1,0,4.5,4.5,4.5,0,0,1,4.5,0Z" transform="translate(783.357 1591)"/>
+  </g>
+</svg>

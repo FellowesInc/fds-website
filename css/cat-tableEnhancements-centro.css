@@ -1,0 +1,705 @@
+
+.main-header .header-bg-img {
+  height: 600px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.vertical-centered {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.mid-section-text {
+  font-size: 26px;
+  line-height: 1.4;
+  position: relative;
+  z-index: 10;
+}
+
+.mid-banner-section {
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.range-of-color-section {
+  background-image: url(../img/cat-tableEnhancements-centro/banner-range-mobile.jpg);
+}
+
+.recycled-section {
+  background-image: url(../img/cat-tableEnhancements-centro/banner-recycled-mobile.jpg);
+}
+
+.range-of-color-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.range-of-color-section .mid-section-text {
+  max-width: 285px;
+  margin-inline: auto;
+}
+
+.recycled-logo-img {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+}
+
+.section-title {
+  text-wrap: balance;
+  font-weight: 400;
+}
+
+.section-desc {
+  text-wrap: pretty;
+}
+
+/* ==========================================
+   CENTRO COLOR STORY - MOBILE FIRST
+========================================== */
+
+.centro-color-group {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto auto auto auto;
+  width: 100%;
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+/* Product image */
+
+.centro-color-display {
+  grid-column: 1;
+  grid-row: 3;
+  min-width: 0;
+  align-self: start;
+}
+
+.centro-color-picture,
+.centro-active-image {
+  display: block;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.centro-active-image {
+  height: auto;
+}
+
+/* Information wrapper */
+
+.centro-color-info {
+  display: contents;
+}
+
+/* Heading */
+
+.centro-color-info h3 {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 5px;
+}
+
+/* Description */
+
+.centro-color-info p {
+  grid-column: 1;
+  grid-row: 2;
+  font-size: 14px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 15px;
+}
+
+/* Swatch grid */
+
+.centro-color-swatches {
+  grid-column: 1;
+  grid-row: 4;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+  margin: 15px auto 0;
+  padding: 0;
+  align-content: start;
+}
+
+/* Individual swatch */
+
+.centro-swatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  min-width: 0;
+}
+
+/* Swatch image */
+
+.centro-swatch img {
+  display: block;
+  width: 100%;
+  max-width: 94px;
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+/* Swatch name */
+
+.centro-swatch span {
+  font-size: 10px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Hover, focus and selected states */
+
+.centro-swatch:is(:hover, :focus-visible) img,
+.centro-swatch.is-selected img {
+  border-color: #fff;
+  outline: 1px solid #243554;
+}
+
+/* Keyboard focus indicator */
+
+.centro-swatch:focus-visible {
+  outline: 2px solid #243554;
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* 1/4" PET mobile swatches */
+
+.color-story-b .centro-color-swatches {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  justify-content: start;
+  max-width: 400px;
+}
+
+/* ==========================================
+   CENTRO COLLECTIONS CAROUSEL
+========================================== */
+
+.collections-section {
+  background-color: #283A5A;
+}
+
+.collections-wrapper {
+  width: 100%;
+  margin-top: 40px;
+  overflow: hidden;
+}
+
+/* Slider */
+
+#centro-collections-slider {
+  width: 100%;
+}
+
+#centro-collections-slider .splide__track {
+  overflow: hidden;
+}
+
+#centro-collections-slider .splide__slide {
+  min-width: 0;
+  width: calc((100% - 20px - 20px) / 1.25);
+}
+
+/* Product link */
+
+.collection-product {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+}
+
+.collection-product:hover,
+.collection-product:focus-visible {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Circular product image */
+
+.collection-product-image {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  margin-inline: auto;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+/* Default and hover images */
+
+.collection-product-image img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.collection-img-default {
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.collection-img-hover {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+/* Hover image transition */
+
+@media (hover: hover) {
+  .collection-product:hover .collection-img-hover {
+    opacity: 1;
+  }
+}
+
+/* Keyboard focus transition */
+
+.collection-product:focus-visible .collection-img-hover {
+  opacity: 1;
+}
+
+/* Product title */
+
+.collection-product-title {
+  display: block;
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Keyboard accessibility */
+
+.collection-product:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 5px;
+  border-radius: 4px;
+}
+
+/* Pagination below the product images and titles */
+
+#centro-collections-slider {
+  padding-bottom: 42px;
+}
+
+#centro-collections-slider .splide__pagination {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 12px;
+  gap: 8px;
+}
+
+#centro-collections-slider .splide__pagination__page {
+  width: 8px;
+  height: 8px;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  transform: none;
+  transition: background-color 0.2s ease;
+}
+
+#centro-collections-slider .splide__pagination__page.is-active {
+  background: #fff;
+  transform: none;
+}
+
+#centro-collections-slider .splide__pagination__page:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+/* ==========================================
+   TABLET - 768px+
+========================================== */
+
+@media (min-width: 768px) {
+
+  .main-header .header-bg-img {
+    height: 700px;
+  }
+
+  .range-of-color-section .mid-section-text {
+    max-width: 500px;
+    margin-inline: auto 0;
+  }
+
+  .mid-section-text {
+    font-size: 34px;
+  }
+
+  .range-of-color-section {
+    background-image: url(../img/cat-tableEnhancements-centro/banner-range-desktop.jpg);
+  }
+
+  .recycled-section {
+    background-image: url(../img/cat-tableEnhancements-centro/banner-recycled-desktop.jpg);
+  }
+
+  .section-desc {
+    font-size: 18px;
+  }
+
+  /* Tablet color story layout */
+
+  .centro-color-group {
+    grid-template-columns: 25% minmax(0, 75%);
+    grid-template-rows: auto auto auto;
+    container-type: inline-size;
+  }
+
+  .centro-color-info h3 {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    margin-bottom: 5px;
+  }
+
+  .centro-color-info p {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin: 0 0 15px;
+  }
+
+  .centro-color-display {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: start;
+  }
+
+  .centro-color-swatches {
+    grid-column: 1;
+    grid-row: 3;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 5px;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding-right: 5px;
+    align-content: start;
+  }
+
+  /*
+   * Scale the 1/2" PET swatches on tablet.
+   * Color names retain their 10px font size.
+   */
+
+  .color-story-a .centro-swatch img {
+    width: min(100%, 9.5cqw);
+    max-width: none;
+  }
+
+  /* 1/4" PET tablet swatches */
+
+  .color-story-b .centro-color-swatches {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: start;
+    max-width: none;
+  }
+
+  .color-story-b .centro-swatch img {
+    width: min(100%, 9.5cqw);
+    max-width: none;
+  }
+
+  #centro-collections-slider .splide__slide {
+    width: calc((100% - 30px - 50px) / 2.25);
+  }
+
+  .collection-product-title {
+    font-size: 15px;
+  }
+
+}
+
+/* ==========================================
+   DESKTOP - 992px+
+========================================== */
+
+@media (min-width: 992px) {
+
+  /* Main image positioning */
+
+  .full-line-items,
+  .full-line-hover-images img {
+    position: absolute;
+    inset: 0;
+  }
+
+  /* Product label hover/focus areas */
+
+  .prod-line-item {
+    position: absolute;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    cursor: pointer;
+    z-index: 2;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  /* Privacy / Modesty Screen */
+
+  .priv-mod-screen {
+    top: 57%;
+    left: 17%;
+    width: 14%;
+    height: 5%;
+  }
+
+  /* Monitor Arm Privacy Screen */
+
+  .monitor-arm-screen {
+    top: 11.5%;
+    left: 16%;
+    width: 14%;
+    height: 5%;
+  }
+
+  /* MP Ped Topper */
+
+  .mp-ped-screen {
+    width: 13%;
+    height: 4%;
+    top: 76.4%;
+    left: 20.5%;
+  }
+
+  /* Railway Privacy Screen */
+
+  .railway-privacy-screen {
+    width: 13%;
+    height: 5%;
+    top: 7.6%;
+    right: 12%;
+  }
+
+  /* Horizontal Cable Manager */
+
+  .horizontal-cable-manager {
+    width: 13%;
+    height: 5%;
+    top: 52.5%;
+    right: 9%;
+  }
+
+  /* Vertical Cable Manager */
+
+  .vertical-cable-manager {
+    width: 13%;
+    height: 5%;
+    top: 78.5%;
+    right: 21%;
+  }
+
+  /* Hover image container */
+
+  .full-line-hover-images {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* Default hover image state */
+
+  .full-line-hover-images img {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  /* Privacy / Modesty Screen */
+
+  .full-line-items:has(
+    .prod-line-item[data-controls="pms"]:is(:hover, :focus-visible)
+  ) .full-line-hover-images img[data-prod="pms"],
+
+  /* Monitor Arm Privacy Screen */
+
+  .full-line-items:has(
+    .prod-line-item[data-controls="maps"]:is(:hover, :focus-visible)
+  ) .full-line-hover-images img[data-prod="maps"],
+
+  /* MP Ped Topper */
+
+  .full-line-items:has(
+    .prod-line-item[data-controls="mp-ped"]:is(:hover, :focus-visible)
+  ) .full-line-hover-images img[data-prod="mp-ped"],
+
+  /* Railway Privacy Screen */
+
+  .full-line-items:has(
+    .prod-line-item[data-controls="railway"]:is(:hover, :focus-visible)
+  ) .full-line-hover-images img[data-prod="railway"],
+
+  /* Horizontal Cable Manager */
+
+  .full-line-items:has(
+    .prod-line-item[data-controls="hcm"]:is(:hover, :focus-visible)
+  ) .full-line-hover-images img[data-prod="hcm"],
+
+  /* Vertical Cable Manager */
+
+  .full-line-items:has(
+    .prod-line-item[data-controls="vcm"]:is(:hover, :focus-visible)
+  ) .full-line-hover-images img[data-prod="vcm"] {
+    opacity: 1;
+  }
+
+  /* Visible keyboard focus indicator */
+
+  .prod-line-item:focus-visible {
+    outline: 2px solid #172B4D;
+    outline-offset: 3px;
+  }
+
+  /* ==========================================
+     CENTRO COLOR STORY - DESKTOP
+  ========================================== */
+
+  .centro-color-group {
+    display: block;
+    background-color: #e9e9e9;
+    container-type: normal;
+  }
+
+  .centro-color-display {
+    display: block;
+    width: 100%;
+  }
+
+  /* Position information over image */
+
+  .centro-color-info {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 10%;
+    left: 6%;
+    width: 40%;
+    text-align: left;
+  }
+
+  /* Heading */
+
+  .centro-color-info h3 {
+    font-size: 18px;
+    line-height: 1.4;
+    text-align: left;
+    margin-bottom: 6px;
+  }
+
+  /* Description */
+
+  .centro-color-info p {
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: left;
+    margin: 0 0 25px;
+  }
+
+  /* Desktop swatch grid */
+
+  .centro-color-swatches {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+    max-width: 400px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Desktop swatch names */
+
+  .centro-swatch span {
+    font-size: 9px;
+  }
+
+  /* 1/4" PET desktop swatches */
+
+  .color-story-b .centro-color-swatches {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    justify-content: start;
+    max-width: 400px;
+  }
+
+  .collections-wrapper {
+    max-width: none;
+    margin: 45px 0 0;
+  }
+
+  #centro-collections-slider .splide__slide {
+    width: calc((100% - 4vw - 150px) / 3.25);
+  }
+
+  .collection-product-title {
+    font-size: 16px;
+  }
+
+}
+
+/* Reduced motion accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .collection-img-hover,
+  .collection-img-default,
+  #centro-collections-slider .splide__pagination__page {
+    transition: none;
+  }
+}

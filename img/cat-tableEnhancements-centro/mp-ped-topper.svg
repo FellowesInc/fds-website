@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="209.714" height="219.258" viewBox="0 0 209.714 219.258">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.995;
+      }
+    </style>
+  </defs>
+  <g id="mp-ped-topper" class="cls-1">
+    <path id="Path_2074" data-name="Path 2074" d="M6862.553-2929.74H6748.5l-.26-.605L6656.42-3144.1l1.838-.79,91.563,213.152h112.732Z" transform="translate(-6652.839 3148.997)"/>
+    <circle id="Ellipse_50" data-name="Ellipse 50" cx="4.5" cy="4.5" r="4.5"/>
+    <path id="Ellipse_50_-_Outline" data-name="Ellipse 50 - Outline" d="M4.5,1A3.5,3.5,0,1,0,8,4.5,3.5,3.5,0,0,0,4.5,1m0-1A4.5,4.5,0,1,1,0,4.5,4.5,4.5,0,0,1,4.5,0Z"/>
+  </g>
+</svg>
