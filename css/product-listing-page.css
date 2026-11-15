@@ -47,6 +47,10 @@
 .plp-twocol .plp-ci-item {
   -webkit-border-after: unset;
   border-block-end: unset;
+  padding: unset;
+}
+
+.plp-twocol .plp-ci-item__inner-wrapper {
   padding: 2.5rem 2rem;
 }
 
@@ -128,6 +132,23 @@
   line-height: 20px;
   font-weight: 300;
   color: #000;
+}
+
+.plp-ci-item__buy-now {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  height: 45px;
+  background: #e1e0df;
+  color: #000;
+  transition: all .3s ease-in-out;
+}
+
+a.plp-ci-item__buy-now:hover,
+a.plp-ci-item__buy-now:focus-visible {
+  background: var(--fds-yellow);
+  color: #000
 }
 
 .plp-twocol .plp-ci-item__link::after {

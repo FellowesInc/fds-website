@@ -2373,103 +2373,125 @@
 
             <div class="plp-ci-item fds-tan-bg">
 
-              <div class="plp-ci-item__title-section">
-                <div class="ci-prod-name" data-bind="text: name"></div>
-                <div class="ci-prod-category" data-bind="text: category"></div>
-              </div>
-
-              <div class="plp-ci-item__prod-image">
-                <img
-                  class="d-block w-100"
-                  data-bind="attr: {
-                    src: image,
-                    alt: imageAlt
-                  }"
-                />
-              </div>
-
-              <div class="plp-ci-item__description">
-                <div
-                  class="ci-item-desc-snippet"
-                  data-bind="text: description">
+              <div class="plp-ci-item__inner-wrapper">
+                <div class="plp-ci-item__title-section">
+                  <div class="ci-prod-name" data-bind="text: name"></div>
+                  <div class="ci-prod-category" data-bind="text: category"></div>
                 </div>
 
-                <ul
-                  class="ci-item-desc-list"
-                  data-bind="foreach: features">
-                  <li data-bind="text: $data"></li>
-                </ul>
-              </div>
-
-              <div class="plp-ci-item__model">
-                <div class="model-num-txt">Item No.</div>
-                <div
-                  class="plp-ci-item__model-num"
-                  data-bind="text: itemNumber">
+                <div class="plp-ci-item__prod-image">
+                  <img
+                    class="d-block w-100"
+                    data-bind="attr: {
+                      src: image,
+                      alt: imageAlt
+                    }"
+                  />
                 </div>
-              </div>
 
-              <div class="plp-ci-item__colors">
+                <div class="plp-ci-item__description">
+                  <div
+                    class="ci-item-desc-snippet"
+                    data-bind="text: description">
+                  </div>
 
-                <div
-                  class="options__color-selector"
-                  data-bind="foreach: colors">
+                  <ul
+                    class="ci-item-desc-list"
+                    data-bind="foreach: features">
+                    <li data-bind="text: $data"></li>
+                  </ul>
+                </div>
 
-                  <div class="form-check">
-                    <input
-                      class="btn-check"
-                      type="radio"
-                      data-bind="
-                        attr: {
-                          name: 'colorRadio-' + $parent.itemNumber,
-                          id: 'colorRadio-' + $parent.itemNumber + '-' + value
-                        },
-                        value: value,
-                        checked: $parent.selectedColor
-                      "
-                    />
+                <div class="plp-ci-item__model">
+                  <div class="model-num-txt">Item No.</div>
+                  <div
+                    class="plp-ci-item__model-num"
+                    data-bind="text: itemNumber">
+                  </div>
+                </div>
 
-                    <label
-                      class="clr-picker-label btn rounded-circle shadow-0"
-                      data-bind="
-                        attr: {
-                          for: 'colorRadio-' + $parent.itemNumber + '-' + value
-                        }
-                      ">
+                <div class="plp-ci-item__colors">
 
-                      <div
-                        class="clr-picker-circle rounded-circle"
+                  <div
+                    class="options__color-selector"
+                    data-bind="foreach: colors">
+
+                    <div class="form-check">
+                      <input
+                        class="btn-check"
+                        type="radio"
                         data-bind="
-                          css: cssClass
-                        ">
-                      </div>
+                          attr: {
+                            name: 'colorRadio-' + $parent.itemNumber,
+                            id: 'colorRadio-' + $parent.itemNumber + '-' + value
+                          },
+                          value: value,
+                          checked: $parent.selectedColor
+                        "
+                      />
 
-                    </label>
+                      <label
+                        class="clr-picker-label btn rounded-circle shadow-0"
+                        data-bind="
+                          attr: {
+                            for: 'colorRadio-' + $parent.itemNumber + '-' + value
+                          }
+                        ">
+
+                        <div
+                          class="clr-picker-circle rounded-circle"
+                          data-bind="
+                            css: cssClass
+                          ">
+                        </div>
+
+                      </label>
+                    </div>
+
+                  </div>
+
+                  <div class="plp-ci-item__color-indicator">
+                    Color:
+                    <span data-bind="text: selectedColorName"></span>
                   </div>
 
                 </div>
 
-                <div class="plp-ci-item__color-indicator">
-                  Color:
-                  <span data-bind="text: selectedColorName"></span>
-                </div>
+                <div class="plp-ci-item__footer">
 
+                  <div class="plp-ci-item__price">
+                    <div class="ci-prod-price">
+                      <span data-bind="text: price"></span>
+                      <span class="ci-prod-list-aftertext">MSRP</span>
+                    </div>
+                  </div>
+
+                  <a
+                    class="plp-ci-item__link"
+                    data-bind="attr: { href: productUrl }">
+                    View Product
+                  </a>
+
+                </div>
               </div>
 
-              <div class="plp-ci-item__footer">
+              <div class="plp-ci-item__buy-now-wrapper">
 
-                <div class="plp-ci-item__price">
-                  <div class="ci-prod-price">
-                    <span data-bind="text: price"></span>
-                    <span class="ci-prod-list-aftertext">MSRP</span>
-                  </div>
-                </div>
-
+                <!-- Ecommerce Enabled -->
                 <a
-                  class="plp-ci-item__link"
-                  data-bind="attr: { href: productUrl }">
-                  View Product
+                  class="plp-ci-item__buy-now ecomm-enabled"
+                  data-bind="
+                    visible: ecommerceEnabled,
+                    attr: { href: buyNowUrl }
+                  ">
+                  <img src="./img/product-listing-page/icon-cart.svg" alt="cart icon" class="cart-icon"> Add to Cart
                 </a>
+
+                <!-- Ecommerce Disabled -->
+                <div
+                  class="plp-ci-item__buy-now ecomm-disabled"
+                  data-bind="visible: !ecommerceEnabled">
+                </div>
 
               </div>
 

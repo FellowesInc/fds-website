@@ -1,3 +1,4 @@
+
 function Product(data) {
   var self = this;
 
@@ -11,6 +12,10 @@ function Product(data) {
   self.colors = data.colors;
   self.price = data.price;
   self.productUrl = data.productUrl;
+
+  // Ecommerce settings
+  self.ecommerceEnabled = data.ecommerceEnabled === true;
+  self.buyNowUrl = data.buyNowUrl || '#';
 
   // Default to the first color
   self.selectedColor = ko.observable(data.colors[0].value);
@@ -70,7 +75,11 @@ function ProductListingViewModel() {
         }
       ],
       price: '$59.99',
-      productUrl: '#'
+      productUrl: '#',
+
+      // Ecommerce enabled
+      ecommerceEnabled: true,
+      buyNowUrl: '/shop/5247201'
     },
 
     {
@@ -109,7 +118,11 @@ function ProductListingViewModel() {
         }
       ],
       price: '$59.99',
-      productUrl: '#'
+      productUrl: '#',
+
+      // Ecommerce disabled
+      ecommerceEnabled: false,
+      buyNowUrl: '/shop/5247202'
     },
 
     {
@@ -148,7 +161,11 @@ function ProductListingViewModel() {
         }
       ],
       price: '$59.99',
-      productUrl: '#'
+      productUrl: '#',
+
+      // Ecommerce disabled
+      ecommerceEnabled: false,
+      buyNowUrl: '/shop/5247203'
     },
 
     {
@@ -187,7 +204,11 @@ function ProductListingViewModel() {
         }
       ],
       price: '$59.99',
-      productUrl: '#'
+      productUrl: '#',
+
+      // Ecommerce disabled
+      ecommerceEnabled: true,
+      buyNowUrl: '/shop/5247204'
     }
   ];
 
@@ -199,6 +220,7 @@ function ProductListingViewModel() {
   );
 
 
+  // FAQ Data
   var faqData = [
     {
       question: 'FAQ Title #1',
@@ -222,6 +244,7 @@ function ProductListingViewModel() {
   self.faqs = ko.observableArray(faqData);
 
 
+  // Related Products
   var relatedProductData = [
     {
       name: 'Saturn™ 95',
@@ -254,4 +277,5 @@ function ProductListingViewModel() {
 }
 
 
+// Initialize Knockout
 ko.applyBindings(new ProductListingViewModel());
