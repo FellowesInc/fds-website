@@ -22,6 +22,9 @@
     <link rel="stylesheet" href="./css/desktop.css" />
     <link rel="stylesheet" href="./css/mobile.css" />
     <!-- Custom Styles -->
+    <link rel="stylesheet" href="./css/subcategory.css" />
+    <link rel="stylesheet" href="./css/subcategory-CI-checkbox.css" />
+    <link rel="stylesheet" href="./css/product-listing-page.css" />
     <link rel="stylesheet" href="./css/shredder-ecomm.css" />
   </head>
 
@@ -2265,7 +2268,7 @@
       </div>
     </div>
 
-    <main id="primary-content" class="plp-twocol position-relative" data-loading="false">
+    <main id="primary-content" class="position-relative" data-loading="false">
       <!-- Start your project here-->
 
       <!-- Hero Section -->
@@ -2300,280 +2303,276 @@
         </div>
       </section>
 
-      <!-- Product Listing Section -->
-      <section class="plp-section plp-two-columns d-flex justify-content-center container mb-4 mb-lg-5">
-        <div class="product-listing-section">
+      <div class="plp-twocol">
+        <!-- Product Listing Section -->
+        <section class="plp-section plp-two-columns d-flex justify-content-center container mb-4 mb-lg-5">
+          <div class="product-listing-section">
 
-          <div class="results-section-counter filter-section__header">
-            <div class="results-section__title">RESULTS (<span id="results-count" data-bind="text: filteredProducts().length"></span>)</div>
-          </div>
+            <div class="results-section-counter filter-section__header">
+              <div class="results-section__title">RESULTS (<span id="results-count" data-bind="text: filteredProducts().length"></span>)</div>
+            </div>
 
-          <!-- Product Listing Container -->
-          <div class="results-section plp-inner-wrapper" data-bind="foreach: filteredProducts">
+            <!-- Product Listing Container -->
+            <div class="results-section plp-inner-wrapper" data-bind="foreach: filteredProducts">
 
-            <div class="plp-ci-item fds-tan-bg">
+              <div class="plp-ci-item fds-tan-bg">
 
-              <div class="plp-ci-item__inner-wrapper">
-                <div class="plp-ci-item__title-section">
-                  <div class="ci-prod-name" data-bind="text: name"></div>
-                  <div class="ci-prod-category" data-bind="text: category"></div>
-                </div>
-
-                <div class="plp-ci-item__prod-image">
-                  <img
-                    class="d-block w-100"
-                    data-bind="attr: {
-                      src: image,
-                      alt: imageAlt
-                    }"
-                  />
-                </div>
-
-                <div class="plp-ci-item__description">
-                  <div
-                    class="ci-item-desc-snippet"
-                    data-bind="text: description">
+                <div class="plp-ci-item__inner-wrapper">
+                  <div class="plp-ci-item__title-section">
+                    <div class="ci-prod-name" data-bind="text: name"></div>
+                    <div class="ci-prod-category" data-bind="text: category"></div>
                   </div>
 
-                  <ul
-                    class="ci-item-desc-list"
-                    data-bind="foreach: features">
-                    <li data-bind="text: $data"></li>
-                  </ul>
-                </div>
-
-                <div class="plp-ci-item__model">
-                  <div class="model-num-txt">Item No.</div>
-                  <div
-                    class="plp-ci-item__model-num"
-                    data-bind="text: itemNumber">
+                  <div class="plp-ci-item__prod-image">
+                    <img
+                      class="d-block w-100"
+                      data-bind="attr: {
+                        src: image,
+                        alt: imageAlt
+                      }"
+                    />
                   </div>
-                </div>
 
-                <div class="plp-ci-item__colors">
+                  <div class="plp-ci-item__description">
+                    <div
+                      class="ci-item-desc-snippet"
+                      data-bind="text: description">
+                    </div>
 
-                  <div
-                    class="options__color-selector"
-                    data-bind="foreach: colors">
+                    <ul
+                      class="ci-item-desc-list"
+                      data-bind="foreach: features">
+                      <li data-bind="text: $data"></li>
+                    </ul>
+                  </div>
 
-                    <div class="form-check">
-                      <input
-                        class="btn-check"
-                        type="radio"
-                        data-bind="
-                          attr: {
-                            name: 'colorRadio-' + $parent.itemNumber,
-                            id: 'colorRadio-' + $parent.itemNumber + '-' + value
-                          },
-                          value: value,
-                          checked: $parent.selectedColor
-                        "
-                      />
+                  <div class="plp-ci-item__model">
+                    <div class="model-num-txt">Item No.</div>
+                    <div
+                      class="plp-ci-item__model-num"
+                      data-bind="text: itemNumber">
+                    </div>
+                  </div>
 
-                      <label
-                        class="clr-picker-label btn rounded-circle shadow-0"
-                        data-bind="
-                          attr: {
-                            for: 'colorRadio-' + $parent.itemNumber + '-' + value
-                          }
-                        ">
+                  <div class="plp-ci-item__colors">
 
-                        <div
-                          class="clr-picker-circle rounded-circle"
+                    <div
+                      class="options__color-selector"
+                      data-bind="foreach: colors">
+
+                      <div class="form-check">
+                        <input
+                          class="btn-check"
+                          type="radio"
                           data-bind="
-                            css: cssClass
-                          ">
-                        </div>
+                            attr: {
+                              name: 'colorRadio-' + $parent.itemNumber,
+                              id: 'colorRadio-' + $parent.itemNumber + '-' + value
+                            },
+                            value: value,
+                            checked: $parent.selectedColor
+                          "
+                        />
 
-                      </label>
+                        <label
+                          class="clr-picker-label btn rounded-circle shadow-0"
+                          data-bind="
+                            attr: {
+                              for: 'colorRadio-' + $parent.itemNumber + '-' + value
+                            }
+                          ">
+
+                          <div
+                            class="clr-picker-circle rounded-circle"
+                            data-bind="
+                              css: cssClass
+                            ">
+                          </div>
+
+                        </label>
+                      </div>
+
+                    </div>
+
+                    <div class="plp-ci-item__color-indicator">
+                      Color:
+                      <span data-bind="text: selectedColorName"></span>
                     </div>
 
                   </div>
 
-                  <div class="plp-ci-item__color-indicator">
-                    Color:
-                    <span data-bind="text: selectedColorName"></span>
-                  </div>
+                  <div class="plp-ci-item__footer">
 
+                    <div class="plp-ci-item__price">
+                      <div class="ci-prod-price">
+                        <span data-bind="text: price"></span>
+                        <span class="ci-prod-list-aftertext">MSRP</span>
+                      </div>
+                    </div>
+
+                    <a
+                      class="plp-ci-item__link"
+                      data-bind="attr: { href: productUrl }">
+                      View Product
+                    </a>
+
+                  </div>
                 </div>
 
-                <div class="plp-ci-item__footer">
+                <div class="plp-ci-item__buy-now-wrapper">
 
-                  <div class="plp-ci-item__price">
-                    <div class="ci-prod-price">
-                      <span data-bind="text: price"></span>
-                      <span class="ci-prod-list-aftertext">MSRP</span>
-                    </div>
-                  </div>
-
+                  <!-- Ecommerce Enabled -->
                   <a
-                    class="plp-ci-item__link"
-                    data-bind="attr: { href: productUrl }">
-                    View Product
+                    class="plp-ci-item__buy-now ecomm-enabled"
+                    data-bind="
+                      visible: ecommerceEnabled,
+                      attr: { href: buyNowUrl }
+                    ">
+                    <img src="./img/product-listing-page/icon-cart.svg" alt="cart icon" class="cart-icon"> Add to Cart
                   </a>
 
                 </div>
+
               </div>
 
-              <div class="plp-ci-item__buy-now-wrapper">
+            </div>
 
-                <!-- Ecommerce Enabled -->
-                <a
-                  class="plp-ci-item__buy-now ecomm-enabled"
-                  data-bind="
-                    visible: ecommerceEnabled,
-                    attr: { href: buyNowUrl }
-                  ">
-                  <img src="./img/product-listing-page/icon-cart.svg" alt="cart icon" class="cart-icon"> Add to Cart
-                </a>
+            <!-- Data Loading Container -->
+            <div class="loading-section plp-inner-wrapper placeholder-glow position-relative">
 
-                <!-- Ecommerce Disabled -->
-                <div
-                  class="plp-ci-item__buy-now ecomm-disabled"
-                  data-bind="visible: !ecommerceEnabled">
+              <div class="plp-ci-item fds-tan-bg placeholder-wrapper">
+                <div class="plp-ci-item__title-section">
+                  <div class="ci-prod-name placeholder placeholder-lg col-4"></div>
+                  <div class="ci-prod-category placeholder col-12"></div>
                 </div>
-
+                <div class="plp-ci-item__prod-image">
+                  <div class="placeholder placeholder-img d-block mb-4"></div>
+                </div>
+                <div class="plp-ci-item__description">
+                  <div class="ci-item-desc-snippet placeholder placeholder-lg col-6"></div>
+                  <ul class="ci-item-desc-list">
+                    <li><span class="placeholder placeholder-sm col-12"></span></li>
+                    <li><span class="placeholder placeholder-sm col-12"></span></li>
+                    <li><span class="placeholder placeholder-sm col-12"></span></li>
+                    <li><span class="placeholder placeholder-sm col-12"></span></li>
+                  </ul>
+                </div>
+                <div class="plp-ci-item__model">
+                  <div class="model-num-txt placeholder placeholder-sm col-2"></div>
+                  <div class="plp-ci-item__model-num placeholder placeholder-lg col-3 d-block"></div>
+                </div>
+                <div class="plp-ci-item__colors">
+                  <div class="options__color-selector placeholder placeholder-lg col-6"></div>
+                  <div class="plp-ci-item__color-indicator placeholder col-4"></div>
+                </div>
+                <div class="plp-ci-item__footer">
+                  <div class="plp-ci-item__price placeholder placeholder-lg col-3"></div>
+                  <div class="plp-ci-item__price placeholder placeholder-lg col-3"></div>
+                </div>
               </div>
 
-            </div>
+              <div class="plp-ci-item fds-tan-bg placeholder-wrapper">
+                <div class="plp-ci-item__title-section">
+                  <div class="ci-prod-name placeholder placeholder-lg col-4"></div>
+                  <div class="ci-prod-category placeholder col-12"></div>
+                </div>
+                <div class="plp-ci-item__prod-image">
+                  <div class="placeholder placeholder-img d-block mb-4"></div>
+                </div>
+                <div class="plp-ci-item__description">
+                  <div class="ci-item-desc-snippet placeholder placeholder-lg col-6"></div>
+                  <ul class="ci-item-desc-list">
+                    <li><span class="placeholder placeholder-sm col-12"></span></li>
+                    <li><span class="placeholder placeholder-sm col-12"></span></li>
+                    <li><span class="placeholder placeholder-sm col-12"></span></li>
+                    <li><span class="placeholder placeholder-sm col-12"></span></li>
+                  </ul>
+                </div>
+                <div class="plp-ci-item__model">
+                  <div class="model-num-txt placeholder placeholder-sm col-2"></div>
+                  <div class="plp-ci-item__model-num placeholder placeholder-lg col-3 d-block"></div>
+                </div>
+                <div class="plp-ci-item__colors">
+                  <div class="options__color-selector placeholder placeholder-lg col-6"></div>
+                  <div class="plp-ci-item__color-indicator placeholder col-4"></div>
+                </div>
+                <div class="plp-ci-item__footer">
+                  <div class="plp-ci-item__price placeholder placeholder-lg col-3"></div>
+                  <div class="plp-ci-item__price placeholder placeholder-lg col-3"></div>
+                </div>
+              </div>
 
-          </div>
+              <div class="plp-ci-item fds-tan-bg placeholder-wrapper">
+                <div class="plp-ci-item__title-section">
+                  <div class="ci-prod-name placeholder placeholder-lg col-4"></div>
+                  <div class="ci-prod-category placeholder col-12"></div>
+                </div>
+                <div class="plp-ci-item__prod-image">
+                  <div class="placeholder placeholder-img d-block mb-4"></div>
+                </div>
+                <div class="plp-ci-item__description">
+                  <div class="ci-item-desc-snippet placeholder placeholder-lg col-6"></div>
+                  <ul class="ci-item-desc-list">
+                    <li><span class="placeholder placeholder-sm col-12"></span></li>
+                    <li><span class="placeholder placeholder-sm col-12"></span></li>
+                    <li><span class="placeholder placeholder-sm col-12"></span></li>
+                    <li><span class="placeholder placeholder-sm col-12"></span></li>
+                  </ul>
+                </div>
+                <div class="plp-ci-item__model">
+                  <div class="model-num-txt placeholder placeholder-sm col-2"></div>
+                  <div class="plp-ci-item__model-num placeholder placeholder-lg col-3 d-block"></div>
+                </div>
+                <div class="plp-ci-item__colors">
+                  <div class="options__color-selector placeholder placeholder-lg col-6"></div>
+                  <div class="plp-ci-item__color-indicator placeholder col-4"></div>
+                </div>
+                <div class="plp-ci-item__footer">
+                  <div class="plp-ci-item__price placeholder placeholder-lg col-3"></div>
+                  <div class="plp-ci-item__price placeholder placeholder-lg col-3"></div>
+                </div>
+              </div>
 
-          <!-- Data Loading Container -->
-          <div class="loading-section plp-inner-wrapper placeholder-glow position-relative">
+              <div class="plp-ci-item fds-tan-bg placeholder-wrapper">
+                <div class="plp-ci-item__title-section">
+                  <div class="ci-prod-name placeholder placeholder-lg col-4"></div>
+                  <div class="ci-prod-category placeholder col-12"></div>
+                </div>
+                <div class="plp-ci-item__prod-image">
+                  <div class="placeholder placeholder-img d-block mb-4"></div>
+                </div>
+                <div class="plp-ci-item__description">
+                  <div class="ci-item-desc-snippet placeholder placeholder-lg col-6"></div>
+                  <ul class="ci-item-desc-list">
+                    <li><span class="placeholder placeholder-sm col-12"></span></li>
+                    <li><span class="placeholder placeholder-sm col-12"></span></li>
+                    <li><span class="placeholder placeholder-sm col-12"></span></li>
+                    <li><span class="placeholder placeholder-sm col-12"></span></li>
+                  </ul>
+                </div>
+                <div class="plp-ci-item__model">
+                  <div class="model-num-txt placeholder placeholder-sm col-2"></div>
+                  <div class="plp-ci-item__model-num placeholder placeholder-lg col-3 d-block"></div>
+                </div>
+                <div class="plp-ci-item__colors">
+                  <div class="options__color-selector placeholder placeholder-lg col-6"></div>
+                  <div class="plp-ci-item__color-indicator placeholder col-4"></div>
+                </div>
+                <div class="plp-ci-item__footer">
+                  <div class="plp-ci-item__price placeholder placeholder-lg col-3"></div>
+                  <div class="plp-ci-item__price placeholder placeholder-lg col-3"></div>
+                </div>
+              </div>
 
-            <div class="plp-ci-item fds-tan-bg placeholder-wrapper">
-              <div class="plp-ci-item__title-section">
-                <div class="ci-prod-name placeholder placeholder-lg col-4"></div>
-                <div class="ci-prod-category placeholder col-12"></div>
-              </div>
-              <div class="plp-ci-item__prod-image">
-                <div class="placeholder placeholder-img d-block mb-4"></div>
-              </div>
-              <div class="plp-ci-item__description">
-                <div class="ci-item-desc-snippet placeholder placeholder-lg col-6"></div>
-                <ul class="ci-item-desc-list">
-                  <li><span class="placeholder placeholder-sm col-12"></span></li>
-                  <li><span class="placeholder placeholder-sm col-12"></span></li>
-                  <li><span class="placeholder placeholder-sm col-12"></span></li>
-                  <li><span class="placeholder placeholder-sm col-12"></span></li>
-                </ul>
-              </div>
-              <div class="plp-ci-item__model">
-                <div class="model-num-txt placeholder placeholder-sm col-2"></div>
-                <div class="plp-ci-item__model-num placeholder placeholder-lg col-3 d-block"></div>
-              </div>
-              <div class="plp-ci-item__colors">
-                <div class="options__color-selector placeholder placeholder-lg col-6"></div>
-                <div class="plp-ci-item__color-indicator placeholder col-4"></div>
-              </div>
-              <div class="plp-ci-item__footer">
-                <div class="plp-ci-item__price placeholder placeholder-lg col-3"></div>
-                <div class="plp-ci-item__price placeholder placeholder-lg col-3"></div>
-              </div>
-            </div>
-
-            <div class="plp-ci-item fds-tan-bg placeholder-wrapper">
-              <div class="plp-ci-item__title-section">
-                <div class="ci-prod-name placeholder placeholder-lg col-4"></div>
-                <div class="ci-prod-category placeholder col-12"></div>
-              </div>
-              <div class="plp-ci-item__prod-image">
-                <div class="placeholder placeholder-img d-block mb-4"></div>
-              </div>
-              <div class="plp-ci-item__description">
-                <div class="ci-item-desc-snippet placeholder placeholder-lg col-6"></div>
-                <ul class="ci-item-desc-list">
-                  <li><span class="placeholder placeholder-sm col-12"></span></li>
-                  <li><span class="placeholder placeholder-sm col-12"></span></li>
-                  <li><span class="placeholder placeholder-sm col-12"></span></li>
-                  <li><span class="placeholder placeholder-sm col-12"></span></li>
-                </ul>
-              </div>
-              <div class="plp-ci-item__model">
-                <div class="model-num-txt placeholder placeholder-sm col-2"></div>
-                <div class="plp-ci-item__model-num placeholder placeholder-lg col-3 d-block"></div>
-              </div>
-              <div class="plp-ci-item__colors">
-                <div class="options__color-selector placeholder placeholder-lg col-6"></div>
-                <div class="plp-ci-item__color-indicator placeholder col-4"></div>
-              </div>
-              <div class="plp-ci-item__footer">
-                <div class="plp-ci-item__price placeholder placeholder-lg col-3"></div>
-                <div class="plp-ci-item__price placeholder placeholder-lg col-3"></div>
-              </div>
-            </div>
-
-            <div class="plp-ci-item fds-tan-bg placeholder-wrapper">
-              <div class="plp-ci-item__title-section">
-                <div class="ci-prod-name placeholder placeholder-lg col-4"></div>
-                <div class="ci-prod-category placeholder col-12"></div>
-              </div>
-              <div class="plp-ci-item__prod-image">
-                <div class="placeholder placeholder-img d-block mb-4"></div>
-              </div>
-              <div class="plp-ci-item__description">
-                <div class="ci-item-desc-snippet placeholder placeholder-lg col-6"></div>
-                <ul class="ci-item-desc-list">
-                  <li><span class="placeholder placeholder-sm col-12"></span></li>
-                  <li><span class="placeholder placeholder-sm col-12"></span></li>
-                  <li><span class="placeholder placeholder-sm col-12"></span></li>
-                  <li><span class="placeholder placeholder-sm col-12"></span></li>
-                </ul>
-              </div>
-              <div class="plp-ci-item__model">
-                <div class="model-num-txt placeholder placeholder-sm col-2"></div>
-                <div class="plp-ci-item__model-num placeholder placeholder-lg col-3 d-block"></div>
-              </div>
-              <div class="plp-ci-item__colors">
-                <div class="options__color-selector placeholder placeholder-lg col-6"></div>
-                <div class="plp-ci-item__color-indicator placeholder col-4"></div>
-              </div>
-              <div class="plp-ci-item__footer">
-                <div class="plp-ci-item__price placeholder placeholder-lg col-3"></div>
-                <div class="plp-ci-item__price placeholder placeholder-lg col-3"></div>
-              </div>
-            </div>
-
-            <div class="plp-ci-item fds-tan-bg placeholder-wrapper">
-              <div class="plp-ci-item__title-section">
-                <div class="ci-prod-name placeholder placeholder-lg col-4"></div>
-                <div class="ci-prod-category placeholder col-12"></div>
-              </div>
-              <div class="plp-ci-item__prod-image">
-                <div class="placeholder placeholder-img d-block mb-4"></div>
-              </div>
-              <div class="plp-ci-item__description">
-                <div class="ci-item-desc-snippet placeholder placeholder-lg col-6"></div>
-                <ul class="ci-item-desc-list">
-                  <li><span class="placeholder placeholder-sm col-12"></span></li>
-                  <li><span class="placeholder placeholder-sm col-12"></span></li>
-                  <li><span class="placeholder placeholder-sm col-12"></span></li>
-                  <li><span class="placeholder placeholder-sm col-12"></span></li>
-                </ul>
-              </div>
-              <div class="plp-ci-item__model">
-                <div class="model-num-txt placeholder placeholder-sm col-2"></div>
-                <div class="plp-ci-item__model-num placeholder placeholder-lg col-3 d-block"></div>
-              </div>
-              <div class="plp-ci-item__colors">
-                <div class="options__color-selector placeholder placeholder-lg col-6"></div>
-                <div class="plp-ci-item__color-indicator placeholder col-4"></div>
-              </div>
-              <div class="plp-ci-item__footer">
-                <div class="plp-ci-item__price placeholder placeholder-lg col-3"></div>
-                <div class="plp-ci-item__price placeholder placeholder-lg col-3"></div>
-              </div>
-            </div>
-
-            <div class="loading-spinner">
-              <div class="spinner-border text-dark" role="status">
-                <span class="visually-hidden">Loading...</span>
+              <div class="loading-spinner">
+                <div class="spinner-border text-dark" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <!-- Demands the Best Section -->
       <section class="demands-the-best mb-2">

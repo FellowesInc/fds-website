@@ -23,6 +23,10 @@
     line-height: 1.4;
 }
 
+.plp-twocol .plp-two-columns .product-listing-section {
+    max-width: 950px;
+}
+
 .plp-twocol .plp-two-columns .plp-inner-wrapper {
   display: grid;
   gap: 1rem;
@@ -134,13 +138,17 @@
   color: #000;
 }
 
+.plp-ci-item__buy-now-wrapper {
+  height: 45px;
+  background: #e1e0df;
+}
+
 .plp-ci-item__buy-now {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: .5rem;
   height: 45px;
-  background: #e1e0df;
   color: #000;
   transition: all .3s ease-in-out;
 }
