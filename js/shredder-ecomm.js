@@ -14,9 +14,57 @@ function Product(data) {
   self.price = data.price;
   self.productUrl = data.productUrl;
 
-  // Ecommerce settings
+  // ==========================================
+  // ECOMMERCE SETTINGS
+  // ==========================================
+
   self.ecommerceEnabled = data.ecommerceEnabled === true;
   self.buyNowUrl = data.buyNowUrl || '#';
+
+
+
+  // ==========================================
+  // PRODUCT STAR RATINGS
+  // ==========================================
+
+  // Raw rating from Fellowes, limited to 0-5
+  self.reviewsRating = Math.max(
+    0,
+    Math.min(5, Number(data.reviewsRating) || 0)
+  );
+
+  // Truncate to one decimal place without rounding
+  self.ratingDisplay = (
+    Math.floor(self.reviewsRating * 10) / 10
+  ).toFixed(1);
+
+  // Get displayed rating as a number
+  var displayRating = parseFloat(self.ratingDisplay);
+
+  // Separate whole stars and decimal portion
+  var wholeStars = Math.floor(displayRating);
+  var decimal = Math.round((displayRating - wholeStars) * 10);
+
+  // Adjust partial star fill for better visibility
+  var visualDecimal = decimal;
+
+  if (decimal === 1 || decimal === 2) {
+    visualDecimal = 2.5;
+  } else if (decimal === 8 || decimal === 9) {
+    visualDecimal = 7.5;
+  }
+
+  // Calculate visual star rating
+  var visualRating = wholeStars + (visualDecimal / 10);
+
+  // Calculate percentage of stars to fill
+  self.ratingPercentage = (visualRating / 5) * 100;
+
+
+
+  // ==========================================
+  // PRODUCT COLOR SELECTOR
+  // ==========================================
 
   // Default to the first color
   self.selectedColor = ko.observable(
@@ -57,11 +105,6 @@ function ProductListingViewModel() {
       image: './img/shredder-ecomm/Type-Small-Office.jpg'
     },
     {
-      name: 'AutoFeed',
-      value: 'autofeed',
-      image: './img/shredder-ecomm/Type-AutoFeed.jpg'
-    },
-    {
       name: 'Commercial',
       value: 'commercial',
       image: './img/shredder-ecomm/Type-Commercial.jpg'
@@ -80,7 +123,6 @@ function ProductListingViewModel() {
   self.clearTypeFilter = function () {
     self.selectedShredderType(null);
   };
-
 
 
   // ==========================================
@@ -109,6 +151,9 @@ function ProductListingViewModel() {
 
       itemNumber: '5500101',
 
+      // Product rating
+      reviewsRating: 4.7500,
+
       colors: [
         {
           name: 'White/Silver',
@@ -133,7 +178,7 @@ function ProductListingViewModel() {
     // SMALL OFFICE SHREDDER
     {
       name: 'POWERSHRED® LX170',
-      category: 'Cross-Cut Shredder',
+      category: 'Small Office Shredder',
       shredderType: 'small-office',
 
       image: './img/shredder-ecomm/product-img.png',
@@ -149,6 +194,9 @@ function ProductListingViewModel() {
       ],
 
       itemNumber: '5500102',
+
+      // Product rating
+      reviewsRating: 3.9001,
 
       colors: [
         {
@@ -171,14 +219,14 @@ function ProductListingViewModel() {
     },
 
 
-    // AUTOFEED SHREDDER
+    // SMALL OFFICE SHREDDER 2
     {
       name: 'POWERSHRED® LX170',
-      category: 'AutoFeed Shredder',
-      shredderType: 'autofeed',
+      category: 'Small Office Shredder 2',
+      shredderType: 'small-office',
 
       image: './img/shredder-ecomm/product-img.png',
-      imageAlt: 'Powershred AutoFeed Shredder',
+      imageAlt: 'Powershred Small Office Shredder',
 
       description: 'Convenient automatic shredding',
 
@@ -190,6 +238,9 @@ function ProductListingViewModel() {
       ],
 
       itemNumber: '5500103',
+
+      // Product rating
+      reviewsRating: 3.6254,
 
       colors: [
         {
@@ -231,6 +282,9 @@ function ProductListingViewModel() {
       ],
 
       itemNumber: '5500104',
+
+      // Product rating
+      reviewsRating: 4.2500,
 
       colors: [
         {

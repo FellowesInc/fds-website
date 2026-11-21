@@ -2285,19 +2285,23 @@
       <section class="plp-browse-types pt-5 pb-4 pb-lg-5">
         <div class="container">
 
-          <div class="plp-browse-types__header d-flex align-items-center justify-content-between">
-            <h3 class="plp-browse-types__heading mb-0">Browse by Type</h3>
-            <button type="button" class="plp-browse-types__clear" data-bind="visible: selectedShredderType, click: clearTypeFilter">Clear Filter</button>
-          </div>
+          <div class="plp-browse-types__inner" data-bind="style: { '--category-count': Math.min(shredderTypes.length, 4) }">
 
-          <div class="plp-browse-types__grid" role="group" aria-label="Filter shredders by type" data-bind="foreach: shredderTypes">
-            <div class="plp-browse-types__item">
-              <input type="radio" class="btn-check" name="shredderType" data-bind="attr: { id: 'shredder-type-' + value, 'aria-label': name }, checked: $parent.selectedShredderType, checkedValue: value" />
-              <label class="plp-browse-types__label" data-bind="attr: { for: 'shredder-type-' + value }, css: { 'is-selected': $parent.selectedShredderType() === value, 'is-faded': $parent.selectedShredderType() !== null && $parent.selectedShredderType() !== value }">
-                <img class="plp-browse-types__image" data-bind="attr: { src: image, alt: '' }" />
-                <span class="plp-browse-types__name" data-bind="text: name"></span>
-              </label>
+            <div class="plp-browse-types__header d-flex align-items-center justify-content-between">
+              <h3 class="plp-browse-types__heading mb-0">Browse by Type</h3>
+              <button type="button" class="plp-browse-types__clear" data-bind="visible: selectedShredderType, click: clearTypeFilter">Clear Filter</button>
             </div>
+
+            <div class="plp-browse-types__flex" role="group" aria-label="Filter shredders by type" data-bind="foreach: shredderTypes">
+              <div class="plp-browse-types__item">
+                <input type="radio" class="btn-check" name="shredderType" data-bind="attr: { id: 'shredder-type-' + value, 'aria-label': name }, checked: $parent.selectedShredderType, checkedValue: value" />
+                <label class="plp-browse-types__label" data-bind="attr: { for: 'shredder-type-' + value }, css: { 'is-selected': $parent.selectedShredderType() === value, 'is-faded': $parent.selectedShredderType() !== null && $parent.selectedShredderType() !== value }">
+                  <img class="plp-browse-types__image" data-bind="attr: { src: image, alt: '' }" />
+                  <span class="plp-browse-types__name" data-bind="text: name"></span>
+                </label>
+              </div>
+            </div>
+
           </div>
 
         </div>
@@ -2346,12 +2350,33 @@
                     </ul>
                   </div>
 
-                  <div class="plp-ci-item__model">
-                    <div class="model-num-txt">Item No.</div>
-                    <div
-                      class="plp-ci-item__model-num"
-                      data-bind="text: itemNumber">
+                  <div class="plp-ci-item__model-rating d-flex justify-content-between align-items-start">
+
+                    <!-- Product - Model/Item Number -->
+                    <div class="plp-ci-item__model">
+                      <div class="model-num-txt">Item No.</div>
+                      <div class="plp-ci-item__model-num" data-bind="text: itemNumber"></div>
                     </div>
+
+                    <!-- Product - Rating -->
+                    <div class="plp-ci-item__rating" data-bind="attr: { 'aria-label': ratingDisplay + ' out of 5 stars' }">
+                      <div class="plp-rating-stars" aria-hidden="true">
+
+                        <!-- Empty Gray Stars -->
+                        <div class="plp-rating-stars__empty">
+                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+
+                        <!-- Filled Gold Stars -->
+                        <div class="plp-rating-stars__filled" data-bind="style: { '--rating-fill': ratingPercentage + '%' }">
+                          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+
+                      </div>
+
+                      <span class="plp-rating-value" data-bind="text: ratingDisplay"></span>
+                    </div>
+
                   </div>
 
                   <div class="plp-ci-item__colors">

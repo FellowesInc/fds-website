@@ -1,3 +1,4 @@
+
 .hero-banner-section img {
   width: 100%;
   height: 500px;
@@ -36,16 +37,47 @@
   text-transform: uppercase;
 }
 
-.plp-browse-types__grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
+/* Shared Header and Category Container */
+.plp-browse-types__inner {
+  --category-count: 4;
+  --category-gap: 12px;
+
+  width: calc(
+    ((100% - 3 * var(--category-gap)) / 4) *
+    var(--category-count) +
+    (var(--category-count) - 1) * var(--category-gap)
+  );
+
+  max-width: 100%;
+  margin-inline: auto;
 }
 
+/* Header */
+.plp-browse-types__header {
+  width: 100%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #D7D7D7;
+  margin-bottom: 1rem;
+}
+
+/* Flexbox Container */
+.plp-browse-types__flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--category-gap);
+}
+
+/* Category Items */
 .plp-browse-types__item {
+  flex: 0 0 calc(
+    (100% - (var(--category-count) - 1) * var(--category-gap)) /
+    var(--category-count)
+  );
   min-width: 0;
 }
 
+/* Category Labels */
 .plp-browse-types__label {
   display: block;
   width: 100%;
@@ -55,85 +87,38 @@
   transition: opacity 0.3s ease;
 }
 
+/* Category Images */
 .plp-browse-types__image {
   display: block;
   width: 100%;
   height: auto;
 }
 
+/* Category Names */
 .plp-browse-types__name {
   display: block;
   margin-top: 10px;
   font-weight: 500;
 }
 
-.plp-browse-types__header {
-  padding-bottom: 10px;
-  border-bottom: 1px solid #D7D7D7;
-  margin-bottom: 1rem;
-}
-
-/* Selected category */
+/* Selected Category */
 .plp-browse-types__label.is-selected {
   opacity: 1;
 }
 
-/* Non-selected categories */
+/* Non-selected Categories */
 .plp-browse-types__label.is-faded {
   opacity: 0.5;
 }
 
-/* Keyboard focus */
+/* Keyboard Focus */
 .plp-browse-types__item
 .btn-check:focus-visible + .plp-browse-types__label {
   outline: 2px solid currentColor;
   outline-offset: 4px;
 }
 
-/* Tablet */
-@media (max-width: 991px) {
-  .plp-browse-types__grid {
-    gap: 8px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 575px) {
-  .plp-browse-types__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-  }
-}
-
-/* Reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .plp-browse-types__label {
-    transition: none;
-  }
-}
-
-@media (min-width: 768px) {
-  .plp-browse-types__header {
-    margin-bottom: 2rem;
-  }
-}
-
-.results-section-counter {
-    margin-bottom: 1rem;
-}
-
-.filter-section__header {
-    -webkit-padding-after: 1rem;
-    padding-block-end: 1rem;
-    -webkit-border-after: 1px solid var(--fds-grey-400);
-    border-block-end: 1px solid var(--fds-grey-400);
-}
-
-.results-section__title {
-    font-size: var(--fds-fs-325);
-    font-weight: 600;
-}
-
+/* Clear Filter Button */
 .plp-browse-types__clear {
   background: none;
   border: none;
@@ -159,6 +144,64 @@
   outline: 2px solid #000;
   outline-offset: 4px;
 }
+
+/* Tablet */
+@media (max-width: 991px) {
+  .plp-browse-types__inner {
+    --category-gap: 8px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+  .plp-browse-types__inner {
+    width: 100%;
+    --category-gap: 12px;
+  }
+
+  .plp-browse-types__item {
+    flex: 0 0 calc((100% - 12px) / 2);
+  }
+}
+
+/* Header Spacing */
+@media (min-width: 768px) {
+  .plp-browse-types__header {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .plp-browse-types__label,
+  .plp-browse-types__clear {
+    transition: none;
+  }
+}
+
+/* ==========================================
+   RESULTS SECTION
+========================================== */
+
+.results-section-counter {
+  margin-bottom: 1rem;
+}
+
+.filter-section__header {
+  -webkit-padding-after: 1rem;
+  padding-block-end: 1rem;
+  -webkit-border-after: 1px solid var(--fds-grey-400);
+  border-block-end: 1px solid var(--fds-grey-400);
+}
+
+.results-section__title {
+  font-size: var(--fds-fs-325);
+  font-weight: 600;
+}
+
+/* ==========================================
+   ADDITIONAL CONTENT SECTIONS
+========================================== */
 
 .cover-img {
   height: 285px;
