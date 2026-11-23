@@ -57,6 +57,7 @@
 .plp-browse-types__item {
   flex: 0 0 calc((100% - 36px) / 4);
   min-width: 0;
+  position: relative;
 }
 
 /* Category Labels */
@@ -215,5 +216,74 @@
 
   .section-text {
     font-size: 20px;
+  }
+}
+
+
+/* ==========================================
+   BROWSE BY TYPE - RADIO INPUT POSITIONING
+========================================== */
+
+.plp-browse-types__item {
+  position: relative;
+}
+
+/* Keep hidden radio inputs within their category */
+.plp-browse-types__item .btn-check {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Preserve visible keyboard focus */
+.plp-browse-types__item .btn-check:focus-visible
+  + .plp-browse-types__label {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+
+.wts-section {
+  background-color: #000;
+}
+
+.wts-section-title {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .wts-section-title {
+    font-size: 45px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .wts-section {
+    background-image: url(../img/shredder-ecomm/wts-section-bg.webp);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .wts-section .row {
+    width: 90%;
+  }
+
+  .wts-section-title {
+    text-align: start;
+    font-size: 70px;
   }
 }
